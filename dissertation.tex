@@ -1,0 +1,83 @@
+\documentclass{ucbthesis}
+\usepackage{graphicx} % ADDED BY AUDRIC COLLIGNON 06/07/2012: insert figures
+\usepackage{rotating} % ADDED BY AUDRIC COLLIGNON 07/23/2012: tables in landscape mode
+\usepackage{lscape} % ADDED BY AUDRIC COLLIGNON 07/23/2012: table in landscape mode
+\RequirePackage{lineno} % ADDED BY AUDRIC COLLIGNON 07/23/2012: LINE NUMBERING PACKAGE - REMOVE FROM FINAL VERSION
+
+\usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
+\renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
+
+% If the Grad. Division insists that the first paragraph of a section
+% be indented (like the others), then include this line:
+% \usepackage{indentfirst}
+
+\bibliography{references}
+
+\begin{document}
+
+\linenumbers % ADDED BY AUDRIC COLLIGNON 07/23/2012: LINE NUMBERING COMMAND - REMOVE FROM FINAL VERSION
+
+% Declarations for Front Matter
+
+\title{Title with Proper Capitalization here}
+\author{Megan E. Williams}
+\degreesemester{Fall}
+\degreeyear{2014}
+\degree{Doctor of Philosophy}
+\chair{Professor Mark T. Stacey}
+\othermembers{Assistant Professor Stephanie M. Carlson\\Associate Professor Fotini Katapodes Chow\\Professor John L. Largier}
+\numberofmembers{4}
+\field{Engineering - Civil and Environmental Engineering}
+\campus{Berkeley}
+
+\maketitle
+%\approvalpage %!!! REMOVE IN FINAL VERSION !!!
+%\copyrightpage  % INCLUDE IN FINAL VERSION
+
+%\include{abstract/abstract}  % PUT THIS BACK WHEN YOU'VE WRITTEN AN ABSTRACT.
+
+\begin{frontmatter}
+
+\begin{dedication}
+\null\vfil
+\begin{center}
+write dedication here...
+%To Julia \\
+%To my parents Marie and Yann \\
+%To my grandparents Arlette, Norah and Yves
+\end{center}
+\vfil\null
+\end{dedication}
+
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+
+\begin{acknowledgements}
+write acknowledgements here...
+
+\end{acknowledgements}
+
+\end{frontmatter}
+
+\pagestyle{headings}  % !!! I think this has to stay out at the end?!!!
+
+%\include{chapter1/chapter1}
+
+\include{chapter2/chapter2}
+
+%\include{chapter3/chapter3}
+
+%\include{chapter4/chapter4}
+
+%\include{chapter5/chapter5}
+
+%\include{chapter6/chapter6}
+
+% \appendix
+
+%\printbibliography
+
+\end{document}

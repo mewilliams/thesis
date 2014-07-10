@@ -1,0 +1,526 @@
+\chapter{Vertical Turbulent Mixing}
+\label{chTurbulence}
+
+This chapter addresses the second research question described in section \ref{researchQuestions}. Turbulence dynamics are described by the TKE equation, an advection-diffusion equation with source and sink terms \parencite{Stacey:2012p5324}:
+\begin{equation}
+\label{TKEequation}
+\frac{\partial q^2}{\partial t} + \overline{u}\frac{\partial q^2}{\partial x} +  \overline{v}\frac{\partial q^2}{\partial y} +  \overline{w}\frac{\partial q^2}{\partial z} = \frac{\partial}{\partial x} \left(K_x \frac{\partial q^2}{\partial x} \right) + \frac{\partial}{\partial y} \left(K_y \frac{\partial q^2}{\partial y} \right) + \frac{\partial}{\partial z} \left(K_z \frac{\partial q^2}{\partial z} \right) + 2P + 2B - 2\epsilon
+\end{equation}
+where $q^2$, $P$, $B$, $\epsilon$ are the TKE, TKE shear production, buoyancy flux and TKE dissipation rate introduced in section \ref{background}, equations (\ref{TKEdefinition})-(\ref{buoyancyFlux}). $K_x$, $K_y$ and $K_z$ are turbulent diffusion coefficients. The TKE shear production $P$, TKE dissipation rate $\epsilon$ and buoyancy flux $B$ in the channel and on the slope are estimated and compared using the data from the channel (ch) and slope mid (slm) moorings (Figure \ref{fieldSite}) during the first nine days of the winter experiment ($t=55\, \mathrm{days}$ to $t=64\, \mathrm{days}$), a period which captures both changes in tidal forcing (spring-neap transition) and freshwater inflows. This analysis also relies on the salinity and velocity profiles from the 5 March 2009 transect survey, which showed the strongest density gradients and lateral circulation of all the transect surveys as a result of the 2/3 March 2009 storm. 
+
+As discussed in chapter \ref{chCirculation}, the lateral circulation on the slope is the most prominent dynamical feature at the shoal-channel interface.  The lateral circulation can have two effects on turbulence dynamics: it can directly impact (\ref{TKEequation}) through the lateral advection term $\overline{v}\left(\partial q^2 / \partial y \right)$, but it can also have indirect effects on the source term, the TKE shear production $P$. The objectives of this chapter are therefore to characterize turbulence dynamics at the shoal-channel interface and analyze the effects of the lateral circulation.
+ 
+
+%***********************************************************************************************************************************************************************************************
+% MEAN FLOW OBSERVATIONS
+
+\section{Mean flow observations}
+
+The velocity profiles are decomposed as the sum of a mean and a fluctuating component $u(z,t)=\overline{u}(z,t) + u'(z,t)$ where the mean component $\overline{u}(z,t)$ is computed by averaging 900 ensembles of raw velocity data in the channel and on the slope, which corresponds to a 15-min block-average in the channel and a 21-min block-average on the slope. This value of 900 ensembles is long enough to reduce the noise in the estimates of the turbulent quantities presented in section \ref{sectionTurbObs} but small enough to preserve the intratidal variability. In this system, salinity dominates density variations and the effects of temperature are neglected. 
+
+The first half of the record ($t=55\, \mathrm{days}$ to $t=60\, \mathrm{days}$) was characterized by spring tides with an amplitude of about $1 \, \mathrm{m}$ ($2 \, \mathrm{m}$ between high and low waters) and peak longitudinal velocities at the surface $\left| \overline{u} \right| \simeq 1 \, \mathrm{m}\,\mathrm{s}^{-1}$ in the channel and $\left| \overline{u} \right| \simeq 0.7 \, \mathrm{m}\,\mathrm{s}^{-1}$ on the slope (Figure \ref{meanFlow}a,b). During this period, the surface salinity in the channel and on the slope oscillates between $s \simeq 28 \, \mathrm{psu}$ at high slack water and $s \simeq 27 \, \mathrm{psu}$ at low slack water (Figure \ref{meanFlow}e,f). The second half of the record ($t=60\, \mathrm{days}$ to $t=64\, \mathrm{days}$) was characterized by smaller floods and every other ebb tide. During these smaller floods, the peak longitudinal velocities at the surface were $\left| \overline{u} \right| \simeq 0.5 \, \mathrm{m}\,\mathrm{s}^{-1}$ in the channel and  $\left| \overline{u} \right| \simeq 0.4 \, \mathrm{m}\,\mathrm{s}^{-1}$ on the slope (Figure \ref{meanFlow}a,b). During the smaller ebbs the peak longitudinal velocities at the surface were $\overline{u} \simeq 0.4 \, \mathrm{m}\,\mathrm{s}^{-1}$ in the channel and  $\overline{u} \simeq 0.3 \, \mathrm{m}\,\mathrm{s}^{-1}$ on the slope (Figure \ref{meanFlow}a,b). As a result of the 2/3 March 2009 rainstorm, the surface salinity decreases to $s \simeq 27 \, \mathrm{psu}$ at high slack water and drops below $s \simeq 25 \, \mathrm{psu}$ in the channel and on the slope during the $t=63.9\,\mathrm{days}$ low slack water (Figure \ref{meanFlow}e,f). In the channel, the mean lateral velocity remains small ($\overline{v} < 0.1 \, \mathrm{m}\,\mathrm{s}^{-1}$) throughout most of this record (Figure \ref{meanFlow}c). On the slope, a lateral circulation develops during most of the ebbs on record as discussed in chapter \ref{chCirculation}, with peak lateral velocities at the end of the ebb around $\overline{v} \simeq 0.15 \, \mathrm{m}\,\mathrm{s}^{-1}$ near the bed and $\overline{v} \simeq -0.15 \, \mathrm{m}\,\mathrm{s}^{-1}$ near the surface (Figure \ref{meanFlow}d).
+
+The 5 March transect survey spanned over four hours and forty minutes of a large ebb tide ($2.5\,\mathrm{m}$ and seven hours eighteen minutes from higher high to lower low water) and over four hours and twenty minutes of the successive smaller flood tide ($2\,\mathrm{m}$ and seven hours thirty-six minutes from lower low to lower high water). During the surveyed ebb, peak longitudinal velocities at the surface were $\overline{u} \simeq 1 \, \mathrm{m}\,\mathrm{s}^{-1}$ in the channel and $\overline{u} \simeq 0.9 \, \mathrm{m}\,\mathrm{s}^{-1}$ on the slope (Figure \ref{meanFlowZoom}a,b). During the following flood, peak longitudinal velocities at the surface were $\overline{u} \simeq -0.8 \, \mathrm{m}\,\mathrm{s}^{-1}$ in the channel and $\overline{u} \simeq -0.8 \, \mathrm{m}\,\mathrm{s}^{-1}$ on the slope (Figure \ref{meanFlowZoom}a,b). A lateral circulation develops and reverses three times during this period, with lateral velocities peaking on the slope at the end of the ebb ($t = 63.85 \, \mathrm{days}$ to $t = 63.90 \, \mathrm{days}$) $\overline{v} \simeq 0.2 \, \mathrm{m}\,\mathrm{s}^{-1}$ near the bed and $\overline{v} \simeq -0.15 \, \mathrm{m}\,\mathrm{s}^{-1}$ near the surface (Figure \ref{meanFlowZoom}d). In the channel, the salinity field was nearly homogeneous at the beginning of the survey, with partial stratification developing through the second half of the ebb (top to bottom density difference at the end of the ebb was $\Delta \rho \simeq 3 \, \mathrm{kg} \, \mathrm{m}^{-3}$) and vanishing progressively during the flood back to a nearly homogeneous salinity field at the end of the survey (Figure \ref{meanFlowZoom}e). The salinity on the slope follows closely, except that the stratification during the ebb is weaker (top to bottom density difference at the end of the ebb was $\Delta \rho \simeq 2 \, \mathrm{kg} \, \mathrm{m}^{-3}$) than in the channel (Figure \ref{meanFlowZoom}f).
+
+Similarly to the lateral circulation, the vertical shear $\partial u / \partial z$ on the slope displays significant intratidal variability during the ebb: it increases at the beginning of the ebb from $t = 63.70 \, \mathrm{days}$ to $t = 63.77 \, \mathrm{days}$  as the tide is accelerating (Figure \ref{meanFlowZoom}b), but decreases shortly after, from $t = 63.77 \, \mathrm{days}$ to $t = 63.79 \, \mathrm{days}$, just as the circulation on the slope reverses ($\overline{v} > 0$ near the surface and $\overline{v} < 0$ near the bed, Figure \ref{meanFlowZoom}d). It increases again toward the end of the ebb between $t = 63.80 \, \mathrm{days}$ and $t = 63.85 \, \mathrm{days}$ when the circulation on the slope reverses again ($\overline{v} < 0$ near the surface and $\overline{v} > 0$ near the bed, Figure \ref{meanFlowZoom}d), even though the flow is decelerating and the vertical shear $\partial u / \partial z$ is decreasing in the channel (Figure \ref{meanFlowZoom}a).
+
+To summarize, these observed mean velocities and salinity profiles highlight important differences between the slope and the channel. In particular, the vertical shear $\partial u / \partial z$ and density gradient $\partial \rho / \partial z$ display more intratidal variability on the slope than in the channel, especially during the ebb.
+
+
+%***********************************************************************************************************************************************************************************************
+% TURBULENCE OBSERVATIONS
+
+\section{Turbulence observations}
+\label{sectionTurbObs}
+
+\subsection{TKE shear production}
+\label{subsectionP}
+The Reynolds stress profiles $\overline{u^{\prime} w^{\prime}}(z,t)$ and $\overline{v^{\prime} w^{\prime}}(z,t)$ are estimated using the beam velocities variance method introduced by \textcite{LOHRMANN:1990p5422}. As mentioned in the previous section, we use 15-min averages in the channel and 21-min averages on the slope to compute the Reynolds averages. Following \textcite{Stacey:1999p886}, we evaluate the standard error in these Reynolds stress estimates to be $7.5\, \mathrm{cm^{2}\,s^{-2}}$ in the channel and $6.4\, \mathrm{cm^{2}\,s^{-2}}$ on the slope. The signal to noise ratio of the transverse Reynolds stress component $\overline{v^{\prime} w^{\prime}}$ was too small to be reliably used in this analysis and from here on we focus exclusively on the component $\overline{u^{\prime} w^{\prime}}$ aligned with the primary flow direction. To further reduce the noise, we filter the Reynolds stress profiles with a moving-average with window size $\Delta t = 45\,\mathrm{min} \times \Delta z = 2.5 \, \mathrm{m}$ in the channel and $\Delta t = 60\,\mathrm{min} \times \Delta z = 2.25 \, \mathrm{m}$ on the slope. A subset of $\overline{u^{\prime} w^{\prime}}(z,t)$ during the 5 March 2009 transect survey is presented in Figure \ref{shearProductionZoom}a,b. As expected, we find the Reynolds stress  $\overline{u^{\prime} w^{\prime}}$ to be of opposite sign compared to the mean primary flow velocity $\overline{u}$ ($\overline{u^{\prime} w^{\prime}} < 0$ and $\overline{u} > 0$ during the ebb; $\overline{u^{\prime} w^{\prime}} > 0$ and $\overline{u} < 0$ during the flood). During most of the record, the Reynolds stress magnitude $\left| \overline{u^{\prime} w^{\prime}}\right|$ is larger near the bed ($\left| \overline{u^{\prime} w^{\prime}}\right| \simeq 7 \, \mathrm{cm^2�\, s^{-2}}$ in the channel and $\left| \overline{u^{\prime} w^{\prime}}\right| \simeq 5 \, \mathrm{cm^2�\, s^{-2}}$ on the slope during peak ebb), except late in the ebb on the slope, when $\left| \overline{u^{\prime} w^{\prime}}\right|$ becomes larger ($\left| \overline{u^{\prime} w^{\prime}}\right| \simeq 5 \, \mathrm{cm^2�\, s^{-2}}$) halfway up the water column (Figure \ref{shearProductionZoom}b, $t=63.85\,\mathrm{days}$).
+
+To estimate the TKE shear production:
+\begin{equation}
+ P(z,t)=-\overline{u^{\prime} w^{\prime}}\frac{\partial \overline{u}}{\partial z} - \overline{v^{\prime} w^{\prime}}\frac{\partial \overline{v}}{ \partial z}
+ \label{shearProduction}
+ \end{equation}
+we assume the eddy viscosity $\nu_{t}$ to be isotropic in the horizontal plane:
+\begin{equation}
+ \nu_{t}=-\frac{\overline{u^{\prime} w^{\prime}}}{\partial \overline{u} / \partial z}=-\frac{\overline{v^{\prime} w^{\prime}}}{\partial \overline{v} / \partial z}
+ \label{eddyViscosity}
+ \end{equation}
+and substitute (\ref{eddyViscosity}) in (\ref{shearProduction}) to estimate the shear production $P$ based on $\overline{u^{\prime} w^{\prime}}$, $\partial \overline{u} / \partial z$ and $\partial \overline{v} / \partial z$ only:
+\begin{equation}
+ P(z,t)=-\overline{u^{\prime} w^{\prime}}\frac{\partial \overline{u}}{\partial z} \left[ 1 + \left( \frac{\partial \overline{v} / \partial z}{\partial \overline{u} / \partial z} \right)^{2} \right]
+ \label{shearProduction}
+ \end{equation}
+The mean vertical velocity gradients $\partial \overline{u} / \partial z$ and $\partial \overline{v} / \partial z$ are processed with a fifth-order spline operator to reduce the noise before substitution in (\ref{shearProduction}). A subset of the resulting shear production profiles are presented over the same period as the Reynolds stresses in Figure \ref{shearProductionZoom}c,d. Although the fraction in (\ref{shearProduction}) results in increased noise especially when the tide reverses around $t=63.9 \, \mathrm{days}$, the TKE shear production profiles $P(z,t)$ are similar to the Reynolds stress profiles $\overline{u^{\prime} w^{\prime}}(z,t)$: $P$ is larger near the bed ($P \simeq 0.7 \, \mathrm{cm^2�\, s^{-3}}$ in the channel and $P \simeq 0.4 \, \mathrm{cm^2�\, s^{-3}}$ on the slope during peak ebb) except for the period late in the ebb when it becomes larger ($P \simeq 0.7 \, \mathrm{cm^2�\, s^{-3}}$) in the upper half of the water column on the slope (Figure \ref{shearProductionZoom}d, $t=63.85\,\mathrm{days}$). These results show that TKE shear production $P$ in the channel is localized in the bottom boundary layer throughout the tidal cycle. On the slope, which defines the interface between channel and shoal, TKE shear production $P$ is also localized in the bottom boundary layer for most of the tidal cycle, except late in the ebb when stronger vertical shears $\partial \overline{u} / \partial z$ and $\partial \overline{v} / \partial z$ develop in the upper half of the water column (Figure \ref{meanFlowZoom}b,d).
+
+To further investigate the contribution of bed friction to turbulence dynamics at the shoal-channel interface, we compare the observed depth-averaged TKE shear production $\left\langle P\right\rangle$ to the bottom-drag power $C_D \left| \left\langle \overline{u} \right\rangle \right|^{3}/H$. The bottom-drag power is a simple scaling for $\left\langle P\right\rangle$ in an unstratified channel flow: integrating shear production by part over depth yields:
+\begin{equation}
+\left\langle P\right\rangle = \frac{1}{H} \int_{0}^{H} -\overline{u^{\prime} w^{\prime}}\frac{\partial \overline{u}}{\partial z} dz = -\frac{1}{H} \left[\, \overline{u} \overline{u^{\prime} w^{\prime}}\,\right]_{0}^{H} + \frac{1}{H} \int_{0}^{H} \overline{u} \frac{\partial \overline{u^{\prime} w^{\prime}}}{\partial z} dz
+\label{shearProductionIPP}
+\end{equation}
+which can then be simplified by assuming no surface stress:
+\begin{equation}
+\overline{u^{\prime} w^{\prime}}(z=H) = 0
+\label{noSurfaceStress}
+\end{equation}
+and a linear Reynolds stress profile combined with a quadratic drag law:
+\begin{equation}
+\frac{\partial \overline{u^{\prime} w^{\prime}}}{\partial z} = \frac{u*\left| u* \right|}{H} = \frac{C_D \left\langle \overline{u} \right\rangle \left| \left\langle \overline{u} \right\rangle \right|}{H}
+\label{linearRS}
+\end{equation}
+Substituting (\ref{noSurfaceStress}) and (\ref{linearRS}) in (\ref{shearProductionIPP}) yields then:
+\begin{equation}
+\left\langle P\right\rangle = \frac{C_D \left\langle \overline{u} \right\rangle^2 \left| \left\langle \overline{u} \right\rangle \right|}{H} =  \frac{C_D\left| \left\langle \overline{u} \right\rangle \right|^3}{H}
+\label{shearProductionFinal}
+\end{equation}
+Over the nine-day record available, we find the estimates of depth-averaged TKE shear production $\left\langle P\right\rangle$ and the bottom-drag power $C_D \left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ to be strongly correlated both in the channel and on the slope (Table \ref{table1} and Figure \ref{shearProductionVSpower}), which supports the hypothesis that bed friction is the main process generating turbulence in this system (we blanked the periods when the wind speed was greater than $5\, \mathrm{m \, s^{-1}}$ to minimize the risks of wave-contamination, although this had only a small impact on the correlation and drag coefficients in Table \ref{table1}). However, this bottom-drag power scaling fails to reproduce the periods of large shear production $\left\langle P\right\rangle$ observed on the slope during some of the ebb tides (Figure \ref{shearProductionVSpower}b: highlighted events), which suggests that turbulence is generated by a process other than bed friction during these periods. These results also show that this late-ebb peak in shear production first identified in Figure \ref{shearProductionZoom}d is not an isolated event as it occurs during five out of the seventeen ebb tides sampled over the nine-day period analyzed in this work. The drag coefficients estimated through a linear regression between $\left\langle P\right\rangle$ and  $\left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ are smaller than the canonical value $C_D=2.5\times 10^{-3}$ by a factor 3 in the channel and 5 on the slope (Table \ref{table1}). This discrepancy can be explained partly by the long averaging periods used to compute the Reynolds averages (15 min in the channel and 21 min on the slope) and the moving average applied to Reynolds stresses to further reduce noise, which both act to smooth observations and therefore lead to underestimated Reynolds stresses and TKE shear production. Different bed properties at the location of the experiment might also contribute to this discrepancy.
+
+
+\subsection{TKE dissipation Rate}
+
+\label{subsectionEpsilon}
+The TKE dissipation rate profiles $\epsilon(z,t)$ in the channel and on the slope are estimated following the structure function method presented by \textcite{Wiles:2006p5323}: the second order structure function of the ADCP along-beam velocities $D(z,r) = \overline{(u'(z) - u'(z+r))^2}$ is fitted to a model derived from Taylor's cascade theory:
+ \begin{equation}
+ D(z,r) = N + C_{v}^2 \epsilon^{2/3}r^{2/3}
+ \label{model}
+ \end{equation} 
+where $N$ is an offset due to uncertainty in the velocity measurements and $C_{v}^2= 2.1$ is an empirical constant used in radar meteorology and adopted by \textcite{Wiles:2006p5323}. Similarly to the TKE shear production estimates, we used $15$-min bins in the channel and $21$-min bins on the slope to compute Reynolds averages, as well as vertical ranges $1 \, \mathrm{m} \leq r \leq 3 \, \mathrm{m}$ in the channel and $0.5 \, \mathrm{m} \leq r \leq 2 \, \mathrm{m}$ on the slope to fit the structure function $D(z,r)$ to the theoretical model (\ref{model}). The lower bounds are set by twice the ADCP bin height because velocity measurements from adjacent bins are not independent, as explained in \cite{Wiles:2006p5323}. Different values for the upper bounds were tested, ranging from $2\,\mathrm{m}$ to $5\,\mathrm{m}$ in the channel and from $1\,\mathrm{m}$ to $2.5\,\mathrm{m}$ on the slope. The upper bound values were selected qualitatively within these ranges: large enough to reduce noise but small enough to preserve vertical structure. For each time ensemble, this method yields a vertical profile of dissipation rate $\epsilon(z)$ for each of the four ADCP beams, which we logarithmically averaged to derive a single estimated profile of TKE dissipation rate. Finally, these dissipation rate profiles are multiplied by an empirical constant factor $1/0.68$ used by \textcite{Wiles:2006p5323} to match microstructure profiler measurements. Similarly to \textcite{Wiles:2006p5323}, our dissipation rate estimates of the upstream-facing ADCP beam were the largest of the four beams, while the estimates of the downstream-facing beam were the smallest. In stratified and partially-stratified flows additional constraints are imposed on this technique because the theoretical model (\ref{model}) applies to turbulent motions in unstratified flows and for length scales $r$ in the inertial subrange. More specifically, when density stratification is present, the upper bound of the inertial subrange is defined by the Ozmidov scale $l_O = (\epsilon / N^3)^{1/2}$ where $N=\left[-(g / \rho)(\partial \rho / \partial z)\right]^{1/2}$ is the buoyancy frequency, and therefore the vertical range used to fit the structure function $D(z,r)$ to the model (\ref{model}) must not extend close to or beyond the Ozmidov scale $l_O$, i.e. $l_K \ll r \ll l_O$ where $l_K$ is the Kolmogorov length scale. In this case, we combined the shear production estimates from the moored ADCPs with the density profiles from the 5 March 2009 transect survey to derive a similar length scale based on the TKE shear production $P$ instead of the TKE dissipation rate $\epsilon$:
+\begin{equation}
+l_N = \left(\frac{P}{N^3}\right)^{1/2}
+\label{ozmidovScale}
+\end{equation}
+as suggested in \textcite{Stacey:1999p2609}.
+
+Contours of the production-based Ozmidov scale $l_N$ are presented during the period of the 5 March 2009 transect survey on Figure \ref{dissipationRateZoom}a,b. In the channel, this length scale remains greater than the mean channel depth $l_N > 15 \, \mathrm{m}$ throughout the period sampled, which suggests that turbulence there is not affected by density stratification at the length scales $1 \, \mathrm{m} \leq r \leq 3 \, \mathrm{m}$ used to fit the structure function $D(z,r)$ to the model (\ref{model}). On the slope, $l_N$ drops below $5 \, \mathrm{m}$ near the surface at the beginning of the flood (Figure \ref{dissipationRateZoom}b), and the range $0.5 \, \mathrm{m} \leq r \leq 2 \, \mathrm{m}$ used to fit the structure function $D(z,r)$ to the model (\ref{model}) might not be appropriate at this period of the tidal cycle. Consequently, the structure function method is expected to yield reasonnable estimates of TKE shear production in this partially-stratified system except on the slope at the beginning of the flood. However, this issue does not affect the conclusions reached in this study as most of the following discussion focuses on the ebb tide.
+
+The profiles of the TKE dissipation rates $\epsilon$ are presented during the same period on Figure \ref{dissipationRateZoom}a,b. In the channel, dissipation rates are maximum $\epsilon \simeq 0.1 \, \mathrm{cm^2�\, s^{-3}}$ during peak ebb and flood ($t \simeq 63.80 \, \mathrm{days}$ and $t \simeq 64.05 \, \mathrm{days}$) and minimum $\epsilon \simeq 0.03 \, \mathrm{cm^2�\, s^{-3}}$ at low water ($t \simeq 63.90 \, \mathrm{days}$). On the slope, dissipation rates are maximum $\epsilon \simeq 0.15 \, \mathrm{cm^2�\, s^{-3}}$ late in the ebb ($t \simeq 63.85 \, \mathrm{days}$) and minimum $\epsilon \simeq 0.03 \, \mathrm{cm^2�\, s^{-3}}$ early in the flood ($t \simeq 64.0 \, \mathrm{days}$). Similarly to the shear production estimates presented in the previous section, these results highlight the late ebb as the period of peak turbulent dissipation on the slope.
+
+The depth-averaged TKE dissipation rates $\left\langle \epsilon \right\rangle$ also compare favorably to the bottom drag power $C_D \left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ over the nine-day record (Table \ref{table1} and Figure \ref{dissipationRateVSpower}). As for the shear production, the periods when the wind speed was greater than $5\, \mathrm{m \, s^{-1}}$  were blanked. The bottom-drag scaling also failed here to reproduce the late-ebb peak in dissipation rate $\left\langle \epsilon \right\rangle$ on the slope (Figure \ref{dissipationRateVSpower}b: highlighted events), which provides an additional evidence that a mechanism different than bed friction is driving turbulence dynamics at the shoal-channel interface during these periods. Four other late-ebb peaks in dissipation rate similar to the one identified in Figure \ref{dissipationRateZoom}b were observed throughout the nine-day period analyzed in this work, which provides additional evidences that this event is not isolated. The correlation and drag coefficients estimated through a linear regression between $\left\langle \epsilon \right\rangle$ and  $\left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ are smaller than the canonical value $C_D=2.5\times 10^{-3}$ and those estimated from the shear production $\left\langle P \right\rangle$ (Table \ref{table1}). These differences can be partially explained by the fact that dissipation rates might be further underestimated in this case than in \textcite{Wiles:2006p5323} (therefore requiring a correction factor greater than $1/0.68$ mentioned above), but also by the fact that in steady and homogeneous stratified turbulence not all TKE produced is dissipated as heat by viscosity since a fraction is converted to potential energy through mixing of the density field, i.e. $\left\langle \epsilon \right\rangle \leq \left\langle P \right\rangle$. This fraction is quantified by the buoyancy flux $B$.
+
+
+\subsection{Buoyancy flux}
+
+The buoyancy flux $B$ introduced in (\ref{buoyancyFlux}) was estimated indirectly from the Reynolds stress $\overline{u' w'}$ because direct measurements of $\overline{\rho' w'}$ were not available. The vertical eddy diffusivity $K_\rho$ is assumed equal to the vertical eddy viscosity $\nu_t$:
+\begin{equation}
+\label{reynoldsAnalogy}
+K_\rho = \frac{-\overline{\rho' w'}}{\partial \overline{\rho} / \partial z} = \nu_t  = \frac{-\overline{u' w'}}{\partial \overline{u} / \partial z} 
+\end{equation}
+which allows us to estimate the buoyancy flux $B$ as:
+\begin{equation}
+\label{buoyancyFluxEstimate}
+B = - \frac{g}{\rho_0} \overline{\rho' w'} =  - \frac{g}{\rho_0} \left( \frac{\overline{u' w'}}{\partial \overline{u} / \partial z}  \right) \frac{\partial \overline{\rho}}{\partial z} =  \left( \frac{\overline{u' w'}}{\partial \overline{u} / \partial z}  \right) N^2
+\end{equation}
+where $N^2$ is the squared buoyancy frequency defined in section \ref{buoyancyFreq}. The assumption (\ref{reynoldsAnalogy}) is also called the Reynolds analogy. In stably stratified flows, the turbulent Prandtl number is typically greater than one $\mathrm{Pr_t} = \nu_t / K_\rho > 1$ \parencite{Kundu:2008p6122}, and as a result (\ref{buoyancyFluxEstimate}) can be interpreted as an upper-bound for $B$.
+
+Vertical profiles of the buoyancy flux were estimated from density profiles collected during the 05 March 2009 transect survey and Reynolds stress and velocity profiles from the channel and slope mid ADCPs. The results are presented on Figure \ref{buoyancyFluxZoom}. In the channel, the buoyancy flux is negative during the ebb (sink of TKE) and positive during the flood (source of TKE). This pattern is consistent with the tidal straining mechanism previously discussed by \textcite{Rippeth:2001p5568} and \textcite{Stacey:2012p5324}:  during the ebb, the faster flow near the surface advects freshwater from up-estuary quicker than near the bottom which increases stable stratification and provides a sink for TKE; during the flood denser water is advected faster near the surface than near the bed which can drive unstable convection and provide a source of TKE. Such asymmetry is not observed on the slope (Figure \ref{buoyancyFluxZoom}b) where the buoyancy flux is negative throughout the period sampled. It also appears to be strongest late in the ebb and early in the flood, when the vertical density gradient is the strongest. The strong buoyancy flux late in the ebb (period $t\simeq63.85$days) is a result of the strong TKE shear production events identified in the previous two subsections and shows that these events have important implications for vertical mixing on the slope.
+
+ 
+To summarize, these observations of Reynolds stresses $\overline{u^{\prime} w^{\prime}}$, TKE shear production $P$, TKE dissipation rate $\epsilon$ and buoyancy flux $B$ at the shoal-channel interface in partially-stratified conditions confirm the leading role of bed friction in generating turbulence, but also reveal the dominant contribution of mid-water column shear $\partial \overline{u} / \partial z$ and $\partial \overline{v} / \partial z$ at the end of the ebb. During this period, the dominant flow feature at the shoal-channel interface is the transverse circulation developing on the slope (Figure {\ref{meanFlowZoom}d, $63.85\, \mathrm{days} \leq t \leq 63.90 \, \mathrm{days}$}), which effects on vertical mixing are still poorly characterized. The following section proposes a theoretical framework to quantify and compare these effects.
+
+
+%***********************************************************************************************************************************************************************************************
+% ROLE OF THE LATERAL CIRCULATION
+
+\section{Effects of the Lateral Circulation on Stability}
+\label{effectsCirculationStability}
+
+\subsection{Framework}
+
+In stratified and partially-stratified flows, the gradient Richardson number $\mathrm{Ri_g}$ introduced in (\ref{gradient Richardson number}) is the dimensionless number commonly used to assess the stability. The direction and magnitude of the lateral circulation is quantified by the streamwise vorticity $\omega_x = \partial \overline{w} / \partial y -�\partial \overline{v}/\partial z$ which can be simplified to $\omega_x \simeq -�\partial \overline{v}/\partial z$ in this shallow system because the characteristic horizontal length scale is much greater than the characteristic vertical length scale, as previously discussed in section \ref{dynamicsLateralCirculation}. To assess how the lateral circulation affects the stability of the water column, the contributions of $\omega_x$ to changes in the gradient Richardson number $\partial \mathrm{Ri_g} / \partial t$ must be identified. Taking the time derivative of (\ref{gradient Richardson number}) yields:
+\begin{equation}
+\frac{\partial \mathrm{Ri_g}}{\partial t} =  \frac{1}{S^2} \left[ -\frac{g}{\rho_0} \frac{\partial}{\partial t} \left( \frac{\partial \overline{\rho}}{\partial z}\right) - 2 \mathrm{Ri_g} \frac{\partial \overline{u}}{\partial z} \frac{\partial}{\partial t} \left( \frac{\partial \overline{u}}{\partial z}\right) -2 \mathrm{Ri_g} \frac{\partial \overline{v}}{\partial z} \frac{\partial}{\partial t} \left( \frac{\partial \overline{v}}{\partial z}\right)    \right]
+\label{drigdt_v1}
+\end{equation}
+in which $\omega_x$ can be readily substituted:
+\begin{equation}
+\frac{\partial \mathrm{Ri_g}}{\partial t} =  \frac{1}{S^2} \left[ -\frac{g}{\rho_0} \frac{\partial}{\partial t} \left( \frac{\partial \overline{\rho}}{\partial z}\right) - 2 \mathrm{Ri_g} \frac{\partial \overline{u}}{\partial z} \frac{\partial}{\partial t} \left( \frac{\partial \overline{u}}{\partial z}\right) -2 \mathrm{Ri_g} \omega_x    \frac{\partial \omega_x}{\partial t}   \right]
+\label{drigdt_v2}
+\end{equation}
+The two time derivatives on the right hand side (r.h.s.) of (\ref{drigdt_v2}) can be related to vorticity $\omega_x$ by taking the vertical derivative $\partial / \partial z$ of the conservation of mass and longitudinal momentum equations. In an incompressible flow ($\mathrm{div}(\underline{u})=0$) the Reynolds-averaged conservation of mass writes as an advection-diffusion equation:
+\begin{equation}
+\frac{\partial \overline{\rho}}{\partial t} + \overline{u} \frac{\partial \overline{\rho}}{\partial x} +  \overline{v} \frac{\partial \overline{\rho}}{\partial y} +  \overline{w} \frac{\partial \overline{\rho}}{\partial z} = \frac{\partial}{\partial z}\left( K_{t} \frac{\partial \overline{\rho}}{\partial z} \right)
+\label{conservationOfMass}
+\end{equation}
+where $K_{t}$ is the vertical eddy diffusivity. Under the Boussinesq approximation, the Reynolds-averaged longitudinal momentum equation writes:
+\begin{equation}
+\frac{\partial \overline{u}}{\partial t} + \overline{u} \frac{\partial \overline{u}}{\partial x} +  \overline{v} \frac{\partial \overline{u}}{\partial y} +  \overline{w} \frac{\partial \overline{u}}{\partial z} = -\frac{1}{\rho_0}\frac{\partial \overline{p}}{\partial x} + f\overline{v} + \frac{\partial}{\partial z}\left( \nu_{t} \frac{\partial \overline{u}}{\partial z} \right)
+\label{momentum1}
+\end{equation}
+where $\overline{p}$ is the pressure, $f\simeq 8.9 \, \times \, 10^{-5} \,�\mathrm{s^{-1}}$ is the Coriolis frequency at the latitude of the field site ($37^{\circ}34^{\prime}35^{\prime \prime}$N), and $\nu_{t}$ is the vertical eddy viscosity. Taking the vertical derivative $\partial / \partial z$ of (\ref{conservationOfMass}) and (\ref{momentum1}) yields two equations:
+\begin{equation}
+\frac{\partial}{\partial t} \left( \frac{\partial \overline{\rho}}{\partial z} \right) = - \frac{\partial}{\partial z} \left(  \overline{u} \frac{\partial \overline{\rho}}{\partial x} \right) -\frac{\partial}{\partial z} \left( \overline{v} \frac{\partial \overline{\rho}}{\partial y} \right) - \frac{\partial}{\partial z} \left( \overline{w} \frac{\partial \overline{\rho}}{\partial z} \right) + \frac{\partial^2}{\partial z^2}\left( K_{t} \frac{\partial \overline{\rho}}{\partial z} \right)
+\label{ddz_com}
+\end{equation}
+\begin{equation}
+\frac{\partial}{\partial t} \left( \frac{\partial \overline{u}}{\partial z} \right) = - \frac{\partial}{\partial z} \left(  \overline{u} \frac{\partial \overline{u}}{\partial x} \right) -\frac{\partial}{\partial z} \left( \overline{v} \frac{\partial \overline{u}}{\partial y} \right) - \frac{\partial}{\partial z} \left( \overline{w} \frac{\partial \overline{u}}{\partial z} \right)  -\frac{1}{\rho_0} \frac{\partial}{\partial z}\left(\frac{\partial \overline{p}}{\partial x}\right) + f\frac{\partial \overline{v}}{\partial z} + \frac{\partial^2}{\partial z^2}\left( \nu_{t} \frac{\partial \overline{u}}{\partial z} \right)
+\label{ddz_momentum}
+\end{equation}
+in which the vorticity $\omega_x \simeq -�\partial \overline{v}/\partial z$ can be isolated:
+\begin{equation}
+\frac{\partial}{\partial t} \left( \frac{\partial \overline{\rho}}{\partial z} \right) = \omega_x \frac{\partial \overline{\rho}}{\partial y} + R_\rho
+\label{ddz_comV2}
+\end{equation}
+\begin{equation}
+\frac{\partial}{\partial t} \left( \frac{\partial \overline{u}}{\partial z} \right) =  \omega_x \frac{\partial \overline{u}}{\partial y} - f \omega_x + R_u
+\label{ddz_momentumV2}
+\end{equation}
+where $R_\rho$ and $R_u$ are the remainder terms not involving the vorticity:
+\begin{equation}
+R_\rho = - \frac{\partial}{\partial z} \left(  \overline{u} \frac{\partial \overline{\rho}}{\partial x} \right) -  \overline{v} \frac{\partial}{\partial z} \left( \frac{\partial \overline{\rho}}{\partial y} \right) - \frac{\partial}{\partial z} \left( \overline{w} \frac{\partial \overline{\rho}}{\partial z} \right) + \frac{\partial^2}{\partial z^2}\left( K_{t} \frac{\partial \overline{\rho}}{\partial z} \right)
+\label{r_rho}
+\end{equation}
+\begin{equation}
+R_u = - \frac{\partial}{\partial z} \left(  \overline{u} \frac{\partial \overline{u}}{\partial x} \right) - \overline{v} \frac{\partial}{\partial z} \left( \frac{\partial \overline{u}}{\partial y} \right) - \frac{\partial}{\partial z} \left( \overline{w} \frac{\partial \overline{u}}{\partial z} \right)  -\frac{1}{\rho_0} \frac{\partial}{\partial z}\left(\frac{\partial \overline{p}}{\partial x}\right) + \frac{\partial^2}{\partial z^2}\left( \nu_{t} \frac{\partial \overline{u}}{\partial z} \right)
+\label{r_u}
+\end{equation}
+Finally, substituting (\ref{ddz_comV2}) and (\ref{ddz_momentumV2}) in (\ref{drigdt_v2}) leads to
+\begin{equation}
+\frac{\partial \mathrm{Ri_g}}{\partial t}=\frac{1}{S^{2}}\left[\underbrace{\omega_{x}\left(-\frac{g}{\rho_{0}}\frac{\partial \overline{\rho}}{\partial y}\right)}_{density\, straining}+\underbrace{\omega_{x}\left(-2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}\right)}_{shear\, straining}+\underbrace{\omega_{x}\left(2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}f\right)}_{Coriolis}+\underbrace{\omega_{x}\left(-2\mathrm{Ri_g} \frac{\partial \omega_x}{\partial t}\right)}_{unsteadiness}+R\right]
+\label{drigdt_final}
+\end{equation}
+with:
+\begin{equation}
+R = -\frac{g}{\rho_0} R_\rho - 2 \mathrm{Ri_g} \frac{\partial \overline{u}}{\partial z} R_u 
+\label{remainder}
+\end{equation}
+
+The first two terms on the r.h.s. of (\ref{drigdt_final}) represent the straining of lateral density and velocity gradients $\partial \overline{\rho} / \partial y$ and $\partial \overline{u} / \partial y$ by the lateral circulation. We expect these two terms to be important in this system, especially during the ebb when the lateral gradients at the shoal-channel interface $\partial \overline{\rho} / \partial y \leq 0$ (salinity lower in the channel than on the shoal) and $\partial \overline{u} / \partial y \geq 0$ (flow faster in the channel than on the shoal) are the strongest. The Coriolis term on the r.h.s. of (\ref{drigdt_final}) represents the conversion of shear in the lateral velocity component $\partial \overline{v} / \partial z$ to vertical shear in the longitudinal (primary) velocity component  $\partial \overline{u} / \partial z$ by Earth's rotation. Finally, the unsteadiness term represents the effects of the temporal variations of the lateral circulation: an accelerating circulation corresponds to an increasing magnitude of the vertical shear in the lateral velocity component $\left| \partial \overline{v} / \partial z \right|$, which then acts to decrease $\mathrm{Ri_g}$.
+
+It is important to note that the terms and mechanisms associated with the lateral circulation and described in the previous paragraph do not act alone in controlling water column stability and some of the processes collapsed in the remainder term $R$ might be equally or more important, such as vertical turbulent mixing generated by bed friction and the straining of the longitudinal density gradient $\partial \overline{\rho} / \partial x$ analyzed by \textcite{SIMPSON:1990p5698} for instance. However discussing the role of these other processes is beyond the scope of this work. A method to assess the effects of the lateral circulation and the associated mechanisms independently of the remainder $R$ is proposed in section \ref{discussionCirculationTurbulence}.
+
+
+\subsection{Special Cases}
+To better illustrate the processes at play in this framework, two simple cases can be considered. The first case is a steady ($\partial \omega_x / \partial t = 0$), density-driven circulation in a non-rotating system ($f = 0$), illustrated in Figure \ref{simpleCases}a. In such case, the lateral circulation affects stability through the density and shear straining terms only:
+\begin{equation}
+\frac{\partial \mathrm{Ri_g}}{\partial t}=\frac{1}{S^{2}}\left[\underbrace{\omega_{x}\left(-\frac{g}{\rho_{0}}\frac{\partial \overline{\rho}}{\partial y}\right)}_{density\, straining}+\underbrace{\omega_{x}\left(-2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}\right)}_{shear\, straining}+R\right]
+\label{drigdt_case1}
+\end{equation}
+Consequently, the lateral circulation will have a destabilizing effect if:
+\begin{equation}
+\underbrace{\omega_{x}\left(-\frac{g}{\rho_{0}}\frac{\partial \overline{\rho}}{\partial y}\right)}_{density\, straining} < \underbrace{\omega_{x}\left(2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}\right)}_{shear\, straining}
+\label{ineqACase1}
+\end{equation}
+In other words, the lateral circulation will act to decrease $\mathrm{Ri_g}$ if the conversion of lateral shear $\partial \overline{u} / \partial y$ to vertical shear $\partial \overline{u} / \partial z$ (shear straining term) occurs faster than the conversion of lateral density gradient $\partial \overline{\rho} / \partial y$ to density stratification $\partial \overline{\rho} / \partial z$ (density straining term). Furthermore, we can assume that $\omega_x (\partial \overline{\rho} / \partial y) < 0$ since in this case denser water always flows under lighter water, and write (\ref{ineqACase1}) in a dimensionless form:
+\begin{equation}
+\frac{1}{2\mathrm{Ri_g}} < \frac{\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}}{-\frac{g}{\rho_{0}}\frac{\partial \overline{\rho}}{\partial y}}
+\label{ineqBCase1}
+\end{equation}
+In the situation illustrated in Figure \ref{simpleCases}a, the lateral circulation acts to increase vertical shear $\partial \overline{u} / \partial z$ on the slope by advecting slower shoal water under faster channel water. But the circulation also acts to increase density stratification  $\partial \overline{\rho} / \partial z$ on the slope by advecting denser shoal water under lighter channel water. The density and shear straining mechanisms therefore have competing effects on $\mathrm{Ri_g}$ and the destabilizing influence of shear straining will dominate in this example if (\ref{ineqBCase1}) is verified.
+
+The second case is a steady ($\partial \omega_x / \partial t = 0$), rotation-driven circulation without lateral density gradient ($\partial \overline{\rho} / \partial y = 0$), illustrated in Figure \ref{simpleCases}b. In such case, the lateral circulation affects stability through the shear straining and Coriolis terms only:
+\begin{equation}
+\frac{\partial \mathrm{Ri_g}}{\partial t}=\frac{1}{S^{2}}\left[\underbrace{\omega_{x}\left(-2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}\right)}_{shear\, straining}+\underbrace{\omega_{x}\left(2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}f\right)}_{Coriolis}+R\right]
+\label{drigdt_case2}
+\end{equation}
+from which it can be inferred that the lateral circulation will have a destabilizing effect if:
+\begin{equation}
+\underbrace{\omega_{x}\left(2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}f\right)}_{Coriolis} < \underbrace{\omega_{x}\left(2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}\right)}_{shear\, straining}
+\label{ineqACase2}
+\end{equation}
+In this case, the lateral circulation will act to decrease $\mathrm{Ri_g}$ if the conversion of lateral shear $\partial \overline{u} / \partial y$ to vertical shear $\partial \overline{u} / \partial z$ (shear straining term) occurs faster than the conversion of the transverse component of the shear  $\partial \overline{v} / \partial z$ to the longitudinal component of the shear  $\partial \overline{u} / \partial z$ by rotation (Coriolis term). Furthermore, we can assume in this case that $\omega_x (\partial \overline{u} / \partial z) > 0$ in the Northern hemisphere since rotation acts to deflect flows toward the right, and write (\ref{ineqACase2}) in a dimensionless form:
+\begin{equation}
+f < \frac{\partial \overline{u}}{\partial y}
+\label{ineqBCase2}
+\end{equation}
+The example on Figure \ref{simpleCases}b illustrate an example of the opposite case: $f > 0 > \partial \overline{u} / \partial y$. In this example, the rotation-driven lateral circulation advects faster channel water below slower shoal water, which acts to reduce the vertical shear $\partial \overline{u} / \partial z$ on the slope and therefore increase $\mathrm{Ri_g}$.
+
+Although these two limiting cases allow for consideration of specific thresholds, we've showed in chapter \ref{chCirculation} that lateral density gradients, unsteadiness and Coriolis all contribute to the dynamics of the lateral circulation in this system, so that all four terms in (\ref{drigdt_final}) need to be accounted for. In the following discussion, this framework is applied to the observations from South San Francisco Bay in order to assess the effects of the lateral circulation on turbulence dynamics at this shoal-channel interface.
+
+
+\subsection{Discussion of observations}
+\label{discussionCirculationTurbulence}
+
+As mentioned in the previous sections, the lateral circulation is the dominant flow feature on the slope during the late ebb period (Figure {\ref{meanFlowZoom}d, $63.85\, \mathrm{days} \leq t \leq 63.90 \, \mathrm{days}$}). This circulation advects slower water from the shoal below faster water from the channel and as a result increases the vertical shear $\partial \overline{u} / \partial z$ (shear straining term in equation \ref{drigdt_final}), but it also increases the density stratification $\partial \overline{\rho} / \partial z$ as salinity is higher over the shoal than at the surface in the channel (density straining term in equation \ref{drigdt_final}). In such a situation (Figure \ref{transect}), these two mechanisms have therefore competing effects on the stability. To determine the net effect of this late-ebb circulation on $\mathrm{Ri_g}$, and assess if it really impacts stability, the four terms identified in (\ref{drigdt_final}) and associated with the circulation can be compared directly to the residual term. However, this residual term is hard to estimate in practice because of the spatial derivatives and eddy viscosities and diffusivities involved in (\ref{remainder}), and we propose here an alternate approach. Four timescales characteristic of the four processes identified in (\ref{drigdt_final}) can be estimated and compared:
+\begin{equation}
+\tau_{\rho} = \frac{S^2}{\omega_{x}\left(-\frac{g}{\rho_{0}}\frac{\partial \overline{\rho}}{\partial y}\right)}
+\label{tau_density}
+\end{equation}
+\begin{equation}
+\tau_{u} = \frac{S^2}{\omega_{x}\left(-2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}\frac{\partial \overline{u}}{\partial y}\right)}
+\label{tau_shear}
+\end{equation}
+\begin{equation}
+\tau_{f} = \frac{S^2}{\omega_{x}\left(2\mathrm{Ri_g}\frac{\partial \overline{u}}{\partial z}f\right)}
+\label{tau_rotation}
+\end{equation}
+\begin{equation}
+\tau_{t} = \frac{S^2}{\omega_{x}\left(-2\mathrm{Ri_g} \frac{\partial \omega_x}{\partial t}\right)}
+\label{tau_unsteadiness}
+\end{equation}
+These timescales are defined positive if the associated mechanism acts to increase $\mathrm{Ri_g}$ (stabilizing effect) or negative if it acts to decrease $\mathrm{Ri_g}$ (destabilizing effect). Furthermore, their magnitude provides a way to estimate the strength of their associated mechanisms: a small timescale (e.g. $\tau \ll T_{M2} / 2 \simeq 6.2 \, \mathrm{hours}$) suggests that the associated mechanism is important whereas a large timescale (e.g. $\tau \gg T_{M2} / 2$) suggests that the associated mechanism acts too slowly to impact stability over the duration of a single tide. In essence, this approach is similar to comparing the four terms associated with the lateral circulation in (\ref{drigdt_final}) with the term $\partial \mathrm{Ri_g} / \partial t$ instead of the remainder $R$ and assuming that in partially-stratified shoal-channel estuaries, the gradient Richardson number $\mathrm{Ri_g}$ is typically close to one, while the timescale characteristic of its fluctuations is close to the duration of a tide, i.e. half the M2 tidal period $T_{M2} / 2$.
+
+These four timescales are estimated at the middle of the slope from the velocity and density profiles collected during the 5 March transect survey. More precisely, the vertical gradients $\partial \overline{u} / \partial z$, $\partial \overline{v} / \partial z$ and $\partial \overline{\rho} / \partial z$ are estimated at the middle of the slope with centered finite differences. The lateral gradients $\partial \overline{u} / \partial y$ and $\partial \overline{\rho} / \partial y$ are estimated at the same location with centered finite differences of the velocity and density profiles in the channel and on the shoal:
+\begin{equation}
+\left(\frac{\partial \overline{u}}{\partial y}\right)_{slope}(z,t) \simeq \frac{\overline{u}_{channel}(z,t) - \overline{u}_{shoal}(z,t)}{\Delta y}
+\label{dudy}
+\end{equation}
+\begin{equation}
+\left(\frac{\partial \overline{\rho}}{\partial y}\right)_{slope}(z,t) \simeq \frac{\overline{\rho}_{channel}(z,t) - \overline{\rho}_{shoal}(z,t)}{\Delta y}
+\label{drhody}
+\end{equation}
+where $\Delta_y = 800 \, \mathrm{m}$. We expect these finite differences to underestimate the lateral gradients because $\Delta_y$ is most likely greater than the actual lengthscale characteristic of lateral variations, which is set by the width of the shoal-channel interface $W = \Delta_y / 2 = 400 \, \mathrm{m}$. Consequently, this method most likely yields upper bounds for  the timescales $\tau_u$ and $\tau_{\rho}$, which is not an issue in this case because the timescales $\tau_{\rho}$, $\tau_u$, $\tau_{f}$ and $\tau_t$ are well separated, as described below. To focus on the temporal variability, equations (\ref{tau_density})-(\ref{tau_unsteadiness}) were depth-averaged and the results are presented in Figure \ref{rigTimescales}b, along with the profiles $\mathrm{Ri_g}(z,t)$ (Figure \ref{rigTimescales}a) during the 5 March 2009 transect survey. During the first six transects ($63.72\, \mathrm{days} \leq t \leq 63.82 \, \mathrm{days}$), $\mathrm{Ri_g}$ appears to be smaller near the bed (Figure \ref{rigTimescales}a), which is consistent with 
+maximal TKE shear production in this region. Only the shear straining mechanism appears to be important during this period as only $\tau_{u} < T_{M2} / 2$ for most of these first six transects. During the late ebb period ($63.85\, \mathrm{days} \leq t \leq 63.90 \, \mathrm{days}$), the estimated profiles of $\mathrm{Ri_g}$ suggest that the middle of the water column on the slope is unstable ($\mathrm{Ri_g} < 1/4$) while the near-bed and near-surface region appear to be stably stratified ($\mathrm{Ri_g} > 1/4$). During that same period, only the shear straining and density straining timescales $\tau_{u}$ and $\tau_{\rho}$ are significantly smaller than $T_{M2} / 2 \simeq 6.2$ hours, $\tau_{u}$ being negative and  $\tau_{\rho}$ positive (Figure \ref{rigTimescales}b). Furthermore, $\left| \tau_u(t=63.89 \,�\mathrm{days}) \right| \simeq 0.3 \, \mathrm{hours} < \left| \tau_{\rho}(t=63.89 \,�\mathrm{days}) \right| \simeq 1.2 \, \mathrm{hours}$, which suggests that the destabilizing influence of the straining of the lateral shear overcomes the stabilizing influence of the straining of the lateral density gradient by the late-ebb lateral circulation. At the beginning of the flood ($63.99\, \mathrm{days} \leq t \leq 64.01 \, \mathrm{days}$), the four timescales become positive and smaller than $T_{M2} / 2 $, which suggests that the lateral circulation contributes through all four mechanisms to the increase in stratification occurring at this time (Figure \ref{rigTimescales}a). 
+
+These timescales suggest therefore that the lateral circulation developing on the slope late in the ebb has a net destabilizing effect, by converting the lateral shear at the shoal-channel interface $\partial \overline{u} / \partial y$ to vertical shear $\partial \overline{u} / \partial z$ faster than it converts the lateral density gradient  $\partial \overline{\rho} / \partial y$ to stratification $\partial \overline{\rho} / \partial z$. These results support the hypothesis that the lateral circulation is driving the observed peaks of TKE shear production $P$ and dissipation rate $\epsilon$ described in sections \ref{sectionTurbObs}\ref{subsectionP} and \ref{sectionTurbObs}\ref{subsectionEpsilon}. We expect a similar domination of shear straining in regions of strong lateral shear and weak lateral density gradient, such as areas of sharp bathymetric variations or in the wake of headlands \parencite{Farmer:2002p3544} in partially stratified estuaries. 
+%---
+% extra table here
+
+
+\begin{table}[t]
+\caption{Correlation coefficients between the bottom-drag power $C_D \left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ and depth-averaged TKE shear production $\left\langle P \right\rangle$ or depth-averaged TKE dissipation rate $\left\langle \epsilon \right\rangle$. The drag coefficients $C_{D}$ are estimated through a linear regression between  $\left\langle P \right\rangle$ or $\left\langle \epsilon \right\rangle$ and $\left| \left\langle \overline{u} \right\rangle \right|^{3}/H$.}
+\label{table1}
+\begin{center}
+\begin{tabular}{ccccc}
+\hline\hline
+ & $\left\langle P \right\rangle$ channel & $\left\langle P \right\rangle$ slope & $\left\langle \epsilon \right\rangle$ channel & $\left\langle \epsilon \right\rangle$ slope \\
+\hline
+ Correlation Coefficient: & 0.86 & 0.82 & 0.75 & 0.69 \\
+ Drag Coefficient $C_{D}$: & $8.3 \times 10^{-4}$ & $5.0 \times 10^{-4}$ & $4.0 \times 10^{-4}$ & $ 3.6 \times 10^{-4}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+%***********************************************************************************************************************************************************************************************
+% MODELING VERTICAL MIXING
+
+\section{Modeling Turbulence Dynamics}
+\label{modelingTurbulenceDynamics}
+
+It was shown in previous sections \ref{sectionTurbObs} and \ref{effectsCirculationStability} that the lateral circulation has a strong indirect effect on turbulence dynamics at the shoal-channel interface through the destabilizing increase of vertical shear, which results in enhanced TKE shear production $P$ late in the ebb on the slope. To assess the direct effect of the lateral circulation on the TKE equation (\ref{TKEequation}) through the lateral advection term $\overline{v}\left(\partial q^2 / \partial y \right)$, knowledge of the TKE $q^2$ in the channel and on the slope is required. While $q^2$ has been previously estimated from ADCP data \parencite{Stacey:1999p886,Stacey:1999p2609}, the assumptions used in these studies are valid for unstratified channel flows and cannot be used reliably in this system because of the stratification and strong transverse flows. To estimate $q^2$, we use instead the General Ocean Turbulence Model (GOTM), a water-column (1D) numerical model with state-of the art turbulence closure schemes \parencite{Umlauf:2007p5322}. 
+
+\subsection{Model parameters}
+
+Turbulence at the channel and slope mid moorings are modeled with GOTM: at each location the model is forced with the mean observed profiles of velocities $(\overline{u}(z,t), \overline{v}(z,t))$ from the moored ADCPs and density $\overline{\rho}(z,t)$ from the CTD profiles collected during the 05 March 2009 transect survey. At each timestep, the model uses these mean profiles to solve for various turbulent quantities. The model outputs used are the TKE shear production $P$ for validation and the TKE $q^2$ for estimating lateral advection of TKE.
+
+The mean observed velocity and density profiles are first pre-processed before forcing the model:
+\begin{enumerate}
+\item \textbf{Mapping}: observed mean velocity profiles $(\overline{u}(z,t), \overline{v}(z,t))$ from the moored Ch and SlM ADCPs and observed mean density profiles $\overline{\rho}(z,t)$ from the CTD profiles collected during the 05 March 2009 transect survey are mapped to the same vertical coordinate system, defined by $z=0$ at the bed at the channel mooring and increasing $z$ in the upward direction. 
+\item \textbf{Splining}: observed mean profiles $(\overline{u}(z,t), \overline{v}(z,t))$ and $\overline{\rho}(z,t)$ are smoothed in the vertical direction using a 5th order spline operator.   
+The vertical gradients of the observed mean profiles, used by the model to estimate TKE shear production $P$, Richardson Gradient Number $\mathrm{Ri_g}$, are polluted by high wavenumber noise. The spline operator filters out this noise and keeps the large-scale (low wavenumber) vertical gradients intact. 
+\item \textbf{Extrapolation}: observed mean velocity profiles $(\overline{u}(z,t), \overline{v}(z,t))$ do not extend all the way to the bed because of instrument limitations, and therefore the lower part of the bottom boundary layer is not observed (about $1.8\,\mathrm{m}$ in the channel and $1.5\,\mathrm{m}$ on the slope). However, this region is critical to turbulence dynamics because most of the TKE shear production occurs there, and the observations must then be extrapolated to this near bed region. The velocity profiles are extrapolated with second-order polynomial functions $U(z) = az^2 + bz +c$, where the coefficients $a$, $b$ and $c$ are defined by the following boundary conditions: $U= 0$ at $z=z_{bed}$ (no-slip at the bed); $U = \overline{u}_{observed}$ and $dU / dz =  \partial \overline{u}_{observed} / \partial z$ at $z=z_1$, the height where the first observation is available (continuous velocity profile and vertical gradient).
+\end{enumerate}
+
+All the model runs are set up as follow:
+\begin{enumerate}
+\item \textbf{Boundary conditions}: no-slip at the bottom, free-slip (no momentum flux) at the surface, no buoyancy flux at the bottom and the surface boundaries.
+\item \textbf{Discretization}: vertical grid resolution $\Delta z = 1\,\mathrm{cm}$, time step $\Delta t = 10\,\mathrm{s}$. The time stepping scheme is implicit and unconditionally stable. The time step was chosen small enough so as to keep the spin-up time of turbulent quantities small ($<15\,\mathrm{min}$).
+\item \textbf{Simulated periods}: the 05 March 2009 ($t=63.7-64.1$ days) transect survey.
+\end{enumerate}
+
+In GOTM, vertical turbulent fluxes of momentum $\overline{u'w'}$ and $\overline{v'w'}$ and density $\overline{\rho' w'}$ are computed as diffusive, down-gradient fluxes:
+\begin{equation}
+\label{gotmReynoldsStressUW}
+\overline{u'w'} = - \nu_t \frac{\partial \overline{u}}{\partial z}
+\end{equation}
+\begin{equation}
+\label{gotmReynoldsStressVW}
+\overline{v'w'} = - \nu_t \frac{\partial \overline{v}}{\partial z}
+\end{equation}
+\begin{equation}
+\label{gotmReynoldsStressRHOW}
+\overline{\rho' w'} = - \nu_t^B \frac{\partial \overline{\rho}}{\partial z}
+\end{equation}
+
+The turbulent diffusivities of momentum $\nu_t$ and density $\nu_t^B$ are then computed as the products of a dimensionless coefficient called stability function, a velocity scale, typically the square root of TKE $q$ and a lengthscale $l$:
+\begin{equation}
+\nu_t = c_{\mu} q l
+\end{equation}
+\begin{equation}
+ \nu_t^B = c'_{\mu} q l
+ \end{equation}
+
+The depth and time-varying velocity and length scales $q(z,t)$ and $l(z,t)$ are computed from dynamical equations while the stability functions $c_{\mu}(z,t)$ and $c'_\mu(z,t)$ are computed from algebraic empirical relations. It is important to note that GOTM is a 1D model and as result it is assumed that velocities $(\overline{u}, \overline{v})$ and turbulent quantities are homogeneous horizontally, or more realistically that the horizontal advection terms in the TKE equation (\ref{TKEequation}) are negligible compared to the local shear production $P$ and dissipation rate $\epsilon$. This assumption will be justified a-posteriori in the following subsections.
+
+\subsection{Comparison of model outputs and observations}
+
+Four cases (A-D) were run (Table \ref{table2}), each with a different set of stability function, TKE equation and lengthscale equation, to test the sensitivity of the model to the choice of turbulence closure. The modeled TKE shear production $P_{model}$ is compared to the observation $P_{obs}$ at the channel and slope mid locations in Figures \ref{gotmCaseAX2}-\ref{gotmCaseDX2}. We find that the model is only weakly sensitive to the choice of turbulence closure as $P_{model}$ is almost identical in the four cases.
+
+The modeled shear production $P_{model}$ is about four times larger than the observed value $P_{obs}$. The smallest $P_{model}$ was found in case C (Figure \ref{gotmCaseCX2}) and the largest $P_{model}$ in case B (Figure \ref{gotmCaseBX2}). A few explanations for the discrepancy between the magnitude of $P_{model}$ and $P_{obs}$ can be proposed. First, the observations $P_{obs}$ are likely to under-estimate $P$ by a factor 3 in the channel and 5 on the slope because of the averaging involved in the data processing, as mentioned previously in section \ref{subsectionP}. It is also possible that the model over-estimates $P$ because the shear in the near-bed region is different in reality from the quadratic extrapolation described above, but also because stable stratification damps turbulence more in reality than in the model. 
+
+The vertical and temporal structure of $P_{model}$ is reasonably close to the structure of $P_{obs}$, except for the end of the simulated period ($t > 64.05$ days). In particular, the model reproduces well the evolution of $P$ during the late ebb period on the slope: like the observations, $P_{model}$ displays large values in the upper half of the water column from $t=63.85$ days  to $t=63.87$ days when the lateral circulation is the strongest. 
+
+To summarize, the model reproduces the main features of the turbulence dynamics at the shoal-channel interface, which suggests that the TKE $q^2$ computed by the model can be used reliably to estimate the lateral advection term of (\ref{TKEequation}).
+
+\subsection{Lateral advection of TKE}
+
+Vertical profiles of TKE $q^2(z,t)$ at the channel and slope mid locations are computed for the period of the 05 March 2009 transect survey using the turbulence closure models of case D (Table \ref{table2}). The lateral advection term of the TKE equation (\ref{TKEequation}) is estimated on the slope as a finite difference:
+\begin{equation}
+\overline{v} \frac{\partial q^2}{\partial z}(z,t) \simeq \left( \frac{\overline{v}_{ch}(z,t) + \overline{v}_{slm}(z,t)}{2}�\right) \left( \frac{q^2_{ch}(z,t) - q^2_{slm}(z,t)}{\Delta y}      \right)
+\end{equation}
+where $\Delta y = 333\, \mathrm{m}$ is the distance between the channel and slope mid moorings. This approach yields an estimate of the lateral advection term of order $10^{-2}\,\mathrm{cm^2\,s^{-1}}$, smaller then the TKE shear production $P$ by a factor 10-100 (Figure \ref{gotmLateralAdvection}). This result is consistent with the a priori assumption that horizontal advection is negligible compared to TKE shear production and dissipation rates.
+
+%***********************************************************************************************************************************************************************************************
+% SUMMARY
+\section{Summary}
+
+Vertical profiles of TKE shear production $P(z,t)$, TKE dissipation rate $\epsilon(z,t)$ and buoyancy flux $B(z,t)$ were estimated at the channel and slope mid location using observations from the moored ADCPs and the CTD profiles performed during the 05 March 2009 transect survey. TKE is generated in the bottom boundary layer as a result of the no-slip condition at the bed, except for occasional bursts of TKE shear production, dissipation rate and buoyancy flux observed on the slope late in the ebb. These events are associated with enhanced vertical shear in the upper half of the water column, away from the bottom boundary. 
+
+The connections between these events and the lateral circulation developing at the same period are explored by assessing the effects of the lateral circulation the vertical stability of the flow. It is found in this case that the lateral circulation strains transverse velocity $\partial \overline{u} / \partial y$ and density $\partial \overline{\rho} / \partial y$  gradients and converts them to vertical gradients $\partial \overline{u} / \partial z$ and $\partial \overline{\rho} / \partial z$. The net effect is dominated by the straining of the lateral velocity gradient, such that the lateral circulation has a net destabilizing effect in this system. This result supports the hypothesis that the lateral circulation is responsible for the late ebb intensification of turbulence on the slope. 
+
+The role of lateral advection of TKE is explored using a 1D water column numerical model. The model is forced with the observed velocity $(\overline{u}(z,t), \overline{v}(z,t))$ and density profiles $\overline{\rho}(z,t)$ which are then used to compute turbulent quantities. The model is found to reproduce reasonably the main features of the flow at the channel and slope mid locations. The TKE profiles computed by the model are used to estimate the lateral advection term $\overline{v}\left(\partial q^2 / \partial y \right)$ of the TKE equation (\ref{TKEequation}), which is found to be 10-100 times smaller than the TKE shear production and TKE dissipation rate. 
+
+To conclude, the lateral circulation developing during the ebb at the shoal-channel interface has an indirect impact on turbulence dynamics and vertical mixing on the slope: through the straining of the transverse gradients, it increases vertical shear faster than vertical stratification, such that local TKE shear production is enhanced. However, the direct impact quantified by the lateral advection term is found to be small.
+
+
+%***********************************************************************************************************************************************************************************************
+% FIGURES
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/meanFlow.jpg}\\
+  \caption{Mean flow observations during the first half of the winter experiment: longitudinal velocity $\overline{u}$ in the channel (a) and on the slope (b), lateral velocity $\overline{v}$ in the channel (c) and on the slope (d), near-surface salinity in the channel (e) and on the slope (f). The shaded areas highlight the period of the 5 March 2009 transect survey analyzed in this work. The black lines represent the surface elevation.}
+  \label{meanFlow}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/meanFlowZoom.pdf}\\
+  \caption{Mean flow observations during the 5 March 2009 transect survey: longitudinal velocity $\overline{u}$ from the moored ADCP in the channel (a) and on the slope (b), lateral velocity $\overline{v}$ from the moored ADCP in the channel (c) and on the slope (d), salinity profiles from the transect survey in the channel (e) and on the slope (f). The black lines represent the surface elevation.}
+  \label{meanFlowZoom}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/shearProductionZoom.jpg}\\
+  \caption{Estimates of Reynolds Stresses $\overline{u^{\prime}w^{\prime}}$ in the channel (a) and on the slope (b) and TKE shear production $P$ in the channel (c) and on the slope (d) during the 5 March 2009 transect survey. The black lines represent the surface elevation.}
+  \label{shearProductionZoom}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/shearProductionVSpowerV3.pdf}\\
+  \caption{Depth-averaged TKE shear production $\left\langle P \right\rangle$ (gray lines) and bottom-drag power $C_D \left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ (black lines) in the channel (a) and on the slope (b) during the first half of the winter experiment. Missing values of $\left\langle P \right\rangle$ correspond to periods when the wind speed was greater than $5\, \mathrm{m\, s^{-1}}$. The shaded areas highlight the ebb tides. The arrows highlight events discussed in the text. The 5 March 2009 transect survey spans through half of the last highlighted ebb and half of the successive flood.}
+  \label{shearProductionVSpower}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/dissipationRateZoomV2.pdf}\\
+  \caption{Estimates of the TKE dissipation rate $\epsilon$ in the channel (a) and on the slope (b) during the 5 March 2009 transect survey. The black contours represent the points where $l_N = 10 \, \mathrm{m}$ (solid) and  $l_N = 5 \, \mathrm{m}$ (dashed). The black lines represent the surface elevation.}
+  \label{dissipationRateZoom}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/dissipationRateVSpowerV4.pdf}\\
+  \caption{Depth-averaged TKE dissipation rate $\left\langle \epsilon \right\rangle$ (gray lines) and bottom-drag power $C_D \left| \left\langle \overline{u} \right\rangle \right|^{3}/H$ (black lines) in the channel (a) and on the slope (b) during the first half of the winter experiment. Missing values of $\left\langle \epsilon \right\rangle$ correspond to periods when the wind speed was greater than $5\, \mathrm{m\, s^{-1}}$. The shaded areas highlight the ebb tides. The arrows highlight events discussed in the text. The 5 March 2009 transect survey spans through half of the last highlighted ebb and half of the successive flood.}
+  \label{dissipationRateVSpower}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/buoyancyFluxZoom.pdf}\\
+  \caption{Estimates of the buoyancy flux $B$ in the channel (a) and on the slope (b) during the 5 March 2009 transect survey. The black lines represent the surface elevation.}
+  \label{buoyancyFluxZoom}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/simpleCases.pdf}\\
+  \caption{Examples of steady, density-driven (a) and rotation-driven (b) transverse circulations. The solid black lines represent the bed, the solid gray lines represent the surface and the dashed line represents the density interface. The arrows represent the direction of the lateral flow and circulation.}
+  \label{simpleCases}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/transect.pdf}\\
+  \caption{The late ebb circulation: lateral velocity $\overline{v}$ and longitudinal velocity $\overline{u}$ (contours) at the shoal-channel interface (a) and salinity $s$ (b) measured during the eighth transect of the 5 March 2009 survey ($63.85\,\mathrm{days} \leq t \leq 63.87\,\mathrm{days}$). The arrows highlight the direction of the lateral flow on the slope. The star symbols represent the approximate locations of the channel and slope moorings.}
+  \label{transect}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/rig_timescalesV2.pdf}\\
+  \caption{Profiles of $\mathrm{log(4Ri_g)}$ on the slope during the 5 March 2009 transect survey (a) and 
+  characteristic timescales (b) of the four mechanisms representing the effects of the lateral circulation on stability defined in (\ref{tau_density})-(\ref{tau_unsteadiness}): density straining timescale $\tau_{\rho}$ ($\times$), shear straining timescale $\tau_{u}$ ($+$), rotation timescale $\tau_f$ ($\bullet$) and unsteadiness timescale $\tau_t$ ($\top$). A positive timescale represents a stabilizing effect, i.e. the associated mechanism acts to increase $\mathrm{Ri_g}$. The black contours show the points where the Reynolds stress $\overline{u^{\prime} w^{\prime}} = - 4 \, \mathrm{cm^2\,s^{-2}}$ (solid) and $\overline{u^{\prime} w^{\prime}} = - 1 \, \mathrm{cm^2\,s^{-2}}$ (dashed). The shaded areas highlight timescales smaller than half the M2 tidal period (6.2 hours).}
+  \label{rigTimescales}
+\end{figure}
+
+%\begin{figure}[t]
+%  \noindent
+%  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX1_kEps_GLS_S&G95.pdf}\\
+%  \caption{TKE shear production $P$ during the 27 February 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case A) in the channel (c) and on the slope (d). The model case A is described in Table \ref{table2}.}
+%  \label{gotmCaseAX1}
+%\end{figure}
+%
+%
+%\begin{figure}[t]
+%  \noindent
+%  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX1_kEps_GLS_M&A54.pdf}\\
+%  \caption{TKE shear production $P$ during the 27 February 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case B) in the channel (c) and on the slope (d). The model case B is described in Table \ref{table2}.}
+%  \label{gotmCaseBX1}
+%\end{figure}
+%
+%\begin{figure}[t]
+%  \noindent
+%  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX1_kEps_DynDissRate_S&G95.pdf}\\
+%  \caption{TKE shear production $P$ during the 27 February 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case C) in the channel (c) and on the slope (d). The model case C is described in Table \ref{table2}.}
+%  \label{gotmCaseCX1}
+%\end{figure}
+%
+%\begin{figure}[t]
+%  \noindent
+%  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX1_MY_GLS_S&G95.pdf}\\
+%  \caption{TKE shear production $P$ during the 27 February 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case D) in the channel (c) and on the slope (d). The model case D is described in Table \ref{table2}.}
+%  \label{gotmCaseDX1}
+%\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX2_kEps_GLS_S&G95.pdf}\\
+  \caption{TKE shear production $P$ during the 05 March 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case A) in the channel (c) and on the slope (d). The model case A is described in Table \ref{table2}. The black solid line represents the surface elevation. The black dashed line represents the elevation of the lowest observation available.}
+  \label{gotmCaseAX2}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX2_kEps_GLS_M&A54.pdf}\\
+  \caption{TKE shear production $P$ during the 05 March 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case B) in the channel (c) and on the slope (d). The model case B is described in Table \ref{table2}. The black solid line represents the surface elevation. The black dashed line represents the elevation of the lowest velocity observation available.}
+  \label{gotmCaseBX2}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX2_kEps_DynDissRate_S&G95.pdf}\\
+  \caption{TKE shear production $P$ during the 05 March 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case C) in the channel (c) and on the slope (d). The model case C is described in Table \ref{table2}. The black solid line represents the surface elevation. The black dashed line represents the elevation of the lowest velocity observation available.}
+  \label{gotmCaseCX2}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/gotm_shearProdX2_MY_GLS_S&G95.pdf}\\
+  \caption{TKE shear production $P$ during the 05 March 2009 transect survey: observations in the channel (a) and on the slope (b), and model outputs (case D) in the channel (c) and on the slope (d). The model case D is described in Table \ref{table2}. The black solid line represents the surface elevation. The black dashed line represents the elevation of the lowest velocity observation available.}
+  \label{gotmCaseDX2}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent
+  \includegraphics[width=40pc,angle=0]{chapter4/figures/lateralAdvectionTKE.pdf}\\
+  \caption{Lateral advection of TKE $\overline{v} (\partial q^2 / \partial y)$ on the slope. The black solid line represents the surface elevation. The black dashed line represents the elevation of the lowest velocity observation available.}
+  \label{gotmLateralAdvection}
+\end{figure}
+
+
+%***********************************************************************************************************************************************************************************************
+% TABLES
+
+\begin{table}[t]
+\caption{Turbulence closure models tested. The Generic Length Scale model was introduced by  \textcite{Umlauf:2003p6143}. The Dynamic Dissipation Rate model is described by \textcite{RODI:1987p6154}.}
+\label{table2}
+\begin{center}
+\begin{tabular}{cccc}
+\hline\hline
+ Case & TKE $q^2$ models & Lengthscale $l$ models & Stability functions models \\
+\hline
+ A & $k-\epsilon$ & General Length Scale & \textcite{SCHUMANN:1995p6133} \\
+ B & $k-\epsilon$ & General Length Scale & Munk and Anderson (1954) \\
+ C & $k-\epsilon$ & Dynamic Dissipation Rate & \textcite{SCHUMANN:1995p6133} \\
+ D & Mellor-Yamada & General Length Scale & \textcite{SCHUMANN:1995p6133} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
