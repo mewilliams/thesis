@@ -1,7 +1,6 @@
 \chapter{tidally discontinuous estuarine forcing chapter}
-\label{chCirculation}
+\label{chTidallyDiscontHydrodynamics}
 
-This chapter addresses the first research question described in section \ref{researchQuestions}. The processes controlling the lateral circulation dynamics are identified and compared using the observations. The intratidal variations of the lateral circulation are the main focus of this chapter, although the sensitivity to subtidal changes in tidal amplitude (neap-spring cycle) and stratification (changes in river discharge) is briefly discussed at the end. 
 
 
 %***********************************************************************************************************************************************************************************************
@@ -929,8 +928,18 @@ Coast. Shelf Sci}., 60(4), 629\textendash 636, doi:doi:10.1016/j.ecss.2004.03.00
 
 
 \begin{figure}[t]
-\includegraphics{chapter3/img/fig1a.pdf}
-\includegraphics[height=9cm]{chapter3/img/figure1b_ed2.tif}\\
+\begin{subfigure}{.5\textwith}
+	\centering
+	\includegraphics[width=.8\linewidth]{chapter3/figures/fig1a.pdf}
+	\caption{1a}
+	\label{fig:sfig1a_coastline}
+\end{subfigure}
+\begin{subfigure}{.5\textwith}
+	\centering
+	\includegraphics[width=.8\linewidth]{chapter3/figures/figure1b_ed2.tif}
+	\caption{1b}
+	\label{fig:sfig1b_pdomap}
+\end{subfigure}
 \caption{(a) The Pescadero estuary sits on the California coast between Monterey
 and San Francisco Bays. The location of sensors referenced for tidal
 and wave conditions are shown. (b) The coastline and depth at high
@@ -942,7 +951,7 @@ connects the estuary to a northern pond through culverts.}
 
 
 \begin{figure}
-\includegraphics{img/figure2_externalsensors}
+\includegraphics[width=\linewidth]{chapter3/figures/figure2_externalsensors.pdf}
 
 \protect\caption{Conditions during field deployment. The freshwater streamflow into
 the estuary (a) is scaled up by watershed area from the USGS Pescadero
@@ -959,7 +968,7 @@ collected for the entire shaded period. \label{f2_QTHs}}
 
 
 \begin{figure}
-\includegraphics{img/figure3_3day}
+\includegraphics{chapter3/figures/figure3_3day.pdf}
 
 \protect\caption{Time series of water level (a), depth-averaged velocity (b), and estuarine
 significant wave height (c). Ocean water level variations (a - gray
@@ -976,7 +985,7 @@ been color-coded to presence of of this infragravity forcing (black
 
 
 \begin{figure}
-\includegraphics{img/figure0_schematic}
+\includegraphics{chapter3/figures/figure0_schematic}
 
 \protect\caption{For most of the mixed semidiurnal tidal cycle, the estuary and ocean
 water levels are approximately the same, allowing for connection between
@@ -985,11 +994,11 @@ daily low low state, the ocean retreats below the mouth of the perched
 estuary.\label{f4_wl_schematic}}
 \end{figure}
 
-
+%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
 \begin{figure}
-\includegraphics{img/fig4_onetide_ADV}
-
-\includegraphics{img/fig4_zoomed_ADV}\protect\caption{Measurements from an ADV measuring 20 cm above the bed at the NM station.
+\includegraphics{chapter3/figures/fig4_onetide_ADV.pdf}
+\includegraphics{chapter3/figures/fig4_zoomed_ADV.eps}
+\protect\caption{Measurements from an ADV measuring 20 cm above the bed at the NM station.
 (a) is the pressure record and (b) shows u and v components of velocity
 where u is principle flow determined by the 7.5 day dataset, and v
 is lateral flow orthogonal to u. The remaining plots (c-f) show two
@@ -1002,7 +1011,7 @@ burst has been removed due to apparent aliasing. \label{f5_adv}}
 
 
 \begin{figure}
-\includegraphics[width=18cm]{img/fig5_vps_U_P_edited}
+\includegraphics[width=18cm]{chapter3/figures/fig5_vps_U_P_edited.pdf}
 
 \protect\caption{Variance preserving spectra of (a) depth (1 Hz CTD measurement), (b)
 u, and (c) v (8 Hz ADV measurements). Where data exists, spectra are
@@ -1013,8 +1022,10 @@ low tides. \label{f6_spectra}}
 \end{figure}
 
 
+%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
 \begin{figure}
-\includegraphics{img/figure7_alternate}\includegraphics{img/figure7d_wavesetup_swh_vs_setup}\protect\caption{The relation between ocean water level and estuarine water level depends
+\includegraphics{chapter3/figures/figure7_alternate.pdf}
+\includegraphics{chapter3/figures/figure7d_wavesetup_swh_vs_setup.pdf}\protect\caption{The relation between ocean water level and estuarine water level depends
 on ocean wave conditions for much of the tide. By subtracting the
 semidiurnal high tide in San Francisco (a, gray line) from the high
 tide water level in Pescadero (a, black/red line), the resulting setup
@@ -1029,10 +1040,11 @@ in ocean significant wave height (f). \label{f7_setup}}
 \end{figure}
 
 
+%%%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
 \begin{figure}
-\includegraphics{img/figure8_u_h}
+\includegraphics{chapter3/figures/figure8_u_h.pdf}
 
-\includegraphics[scale=0.6]{img/f_extra_FC_cd}
+\includegraphics[scale=0.6]{figures/f_extra_FC_cd.pdf}
 
 \protect\caption{The general trend of oscillation between ocean/wave forced and non-wavy
 persists through the spring-neap cycle, shown by three weeks of estuarine
@@ -1047,7 +1059,7 @@ to reach a frictional state. \label{f8_ltHU}}
 
 
 \begin{figure}
-\includegraphics{img/figure10_KE_all}\protect\caption{Velocity and kinetic energy measurements by the ADV at NM. Principle
+\includegraphics{chapter3/figures/figure10_KE_all.pdf}\protect\caption{Velocity and kinetic energy measurements by the ADV at NM. Principle
 flow $u$ is depicted in black and lateral flow $v$ is gray in (a),
 and kinetic energy of both horizontal components of velocity is given
 in (b). \label{f9_KE}}
@@ -1055,17 +1067,19 @@ in (b). \label{f9_KE}}
 
 
 \begin{figure}
-\includegraphics{img/mouth_yz_schematic}\protect\caption{At low water, the inlet tends to be channelized and flow is laterally
+\includegraphics{chapter3/figures/mouth_yz_schematic.pdf}\protect\caption{At low water, the inlet tends to be channelized and flow is laterally
 restricted. As the water level increases, flow across the flat beach
 is possible, introducing further non-linearities to wave motions.
 \label{f10_mouth_yz}}
 \end{figure}
 
 
-\begin{figure}
-\includegraphics[width=17cm]{img/figure_saltprofile_xz_edited}
 
-\includegraphics[width=16cm]{img/figure_saltprofile_h_u_t}
+%%%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
+\begin{figure}
+\includegraphics[width=17cm]{chapter3/figures/figure_saltprofile_xz_edited.pdf}
+
+\includegraphics[width=16cm]{chapter3/figures/figure_saltprofile_h_u_t.pdf}
 
 \protect\caption{Interpolated salt cross-sections of the Pescadero estuary for six
 different times (a-f) on the tidal cycle, shown in (g,h). Location
@@ -1076,8 +1090,7 @@ velocity at DC corresponding to the salt-profiles above. \label{f10_Sxz}}
 
 
 \begin{figure}
-\includegraphics[width=19cm]{img/figure9_z_t_salt_vel_shear_wcb_edited}
-
+\includegraphics[width=19cm]{chapter3/figures/figure9_z_t_salt_vel_shear_wcb_edited.pdf}
 \protect\caption{Salinity, velocity, and vertical shear with time for three conditions
 during the field deployment. The first column (a,c,g) shows conditions
 during a spring tide with higher freshwater flow. The second column
@@ -1086,25 +1099,5 @@ and the third column (c,f,i) gives spring conditions for larger spring
 tides than previously and with less freshwater flow into the estuary.
 \label{f11_SUtz}}
 \end{figure}
-
-
-%**********************************************************************************************************************************************************************************************
-% TABLES 
-%
-%\begin{table}[t]
-%\caption{Magnitude of the terms from the longitudinal vorticity budget (\ref{omegaX budget}) %over the slope. The terms are given in $ 10^{-5}\, \mathrm{s^{-2}}$.}\label{t2}
-%\begin{center}
-%\begin{tabular}{ccccc}
-%\hline\hline
-%$Terms$ & & $T4$ & $T7$ & $T10$\\
-%\hline
-%$\partial \omega_x / \partial t$ & $\simeq$ & -1 & 2 & -2  \\
-%$\partial / \partial z \left( v \partial v / \partial y \right)$ & $\simeq$ & 0.1 & 0.5 & 0.5  \\
-%$f\partial u / \partial z $ & $\simeq$ & 0.5 & 1 & 0.5 \\
-%$-g\beta \partial s / \partial y $ & $\simeq$ & -2 & 2 & -2 \\
-%\hline
-%\end{tabular}
-%\end{center}
-%\end{table}
 
 
