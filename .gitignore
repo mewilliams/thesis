@@ -43,7 +43,7 @@ Thumbs.db
 *.aux
 *.xml
 *.toc
-*.bib
+#*.bib
 *.lof
 
 # pdf #
