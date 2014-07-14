@@ -5,15 +5,17 @@
 \RequirePackage{lineno} % ADDED BY AUDRIC COLLIGNON 07/23/2012: LINE NUMBERING PACKAGE - REMOVE FROM FINAL VERSION
 \usepackage{textcomp}  %Added 07/11/2014 by M. Williams.. to get copyright symbol in ch2
 \usepackage{subcaption}
-
-\usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
-\renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
+\usepackage{natbib}
+%\usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
+%\renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
 
 % If the Grad. Division insists that the first paragraph of a section
 % be indented (like the others), then include this line:
 % \usepackage{indentfirst}
 
-\bibliography{references}
+\bibliography{EntireZoteroLibrary}
+\bibliographystyle{plainnat}  % who knows where this should go.. 
+
 
 \begin{document}
 
@@ -50,7 +52,7 @@
 %\end{dedication}
 
 % % PUT ALL OF THESE BACK LATER: ---------------------
-%\tableofcontents
+\tableofcontents
 %\clearpage
 %\listoffigures
 %\clearpage
@@ -67,11 +69,11 @@
 
 \pagestyle{headings}  % !!! I think this has to stay out at the end?!!!
 
-%\include{chapter1/chapter1}
+\include{chapter1/chapter1}
 
 \include{chapter2/chapter2}
 
-%\include{chapter3/chapter3}
+\include{chapter3/chapter3}
 
 %\include{chapter4/chapter4}
 
@@ -80,7 +82,11 @@
 %\include{chapter6/chapter6}
 
 % \appendix
+\bibliographystyle{plainnat}  % who knows where this should go.. 
 
-%\printbibliography
+
+\printbibliography
+
+\bibliographystyle{plainnat}  % who knows where this should go.. 
 
 \end{document}
