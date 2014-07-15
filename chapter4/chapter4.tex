@@ -3,12 +3,28 @@
 
 
 \section{Introduction}
+Salt transport in small, intermittently closed estuaries... \emph{tends to be frontal, sharp gradients - both in vertical and in horizontal}
+
 Salt moves in and out of the Pescadero estuary as described in chapter~\ref{ch3}. The water column remains stratified, and a mixed water column only exists when high freshwater flows have forced all salt from the confines of the estuary. But, with tidal velocities and infragravity oscillations acting on the stratified salt field, there must be some mixing and it behooves us to try to quantify mixing and its effects. \emph{why?}
 
-\emph{Background on what I'm trying to do.  Cite Ralston & Stacey 2005- Longitudinal dispersion}
+
+
+\emph{Background on what I'm trying to do.  Cite Ralston \& Stacey 2005- Longitudinal dispersion... tidal straining (Simpson et al, 1990, Burchard \& Baumert 1998?),.. longitudinal dispersion (Okubu, 1973; Lissa's thesis paper?)}
+
+\emph{salt is conservative, implications for temperature, plankton, other stuff that advects and diffuses around...}
+
+
 
 \section{Methods}
-Focusing on velocity and salinity measurements made during the April - June 2012 field deployment (described in detail in the previous chapter).
+
+Depth-averaged 1-d advection-diffusion of salinity:
+\begin{eqnarray}
+\frac{dS}{dt} + U\frac{dS}{dx} = K_x\frac{d^2S}{dx^2} \label{eq:1dadvdiff}
+\end{eqnarray}
+
+
+Focusing on velocity and salinity measurements made during the April - June 2012 field deployment (described in detail in the previous chapter).... An ADV collected point velocity measurements colocated with a CTD measuring 20 cm above the bed \emph{(confirm)}. Longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so \emph{locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dyanamics of a whole system is difficult...}, so we rely on an \emph{approach based on...}
+
 
 \begin{itemize} \item{velocity and salt measurements averaged on X window} \item{then fake x made} \end{itemize}
 
@@ -16,18 +32,56 @@ Focusing on velocity and salinity measurements made during the April - June 2012
 u = \frac{dx}{dt} \label{eq:uEdxdt}\\
 \int{<u>dt} = \int{dx} = x \label{eq:intuEx}
 \end{eqnarray}
-So, by taking the integral of the ADV velocity, equation~\ref{eq:intuEx} gives a way to transform a point velocity measurement into an approximation of \emph{X or Length or...}. 
+So, by taking the integral of the ADV velocity, equation~\ref{eq:intuEx} allows us to transform a point velocity and salinity measurement into an approximation of \emph{X or Length or...}. 
 
 
-\section{Here i'm going to write the advection-diffusion equations}
-\begin{eqnarray}
-\frac{dS}{dt} + u\frac{dS}{dx} = K_x\frac{d^2S}{dx^2} \label{eq:1dadvdiff}
-\end{eqnarray}
+
+
 
 
 \section{Observations}
+\emph{Mark says: start with time series of U and S, go from there to 1-d approximation}
+
 \emph{Insert figure: U and S from colocated ADV, CTD vs. time}
 
 
 
 \section{Quantifying $K_x$}
+\emph{use ds/dx to quantify kx, discusses nick points.}
+\section{Things to discuss}
+\begin{itemize}
+	\item Does this extend across all tides (I'm thinking spring-neap cycle)
+	\item Does this extend across seasons (with open mouth state)?
+	\item Dependent on freshwater... \emph{not sure what my thoughts are here, but it's in a sribbled note}
+	\item \emph{Vertical... figure last}
+\end{itemize}
+
+
+
+\emph{spring-neap:
+more salt pushed up estuary, interactin with bathymetry happesn at higher salinities, nick point occurs at 15 instead of 10. somewhere up estaury, change in salinity field that is advected back past us. }
+
+\section{Limitations on analysis}
+
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/fourbigfloodsSX.png} 
+\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth} \label{fig:fourfloods}
+\end{figure}
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/fourbigebbsSX.png} \caption{flip the axis in your head to match the previous plot} \label{fig:fourebbs}
+\end{figure}
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/img376.png} \caption{So then you approximate dS/dx from previous plots...} \label{fig:fourebbs}
+\end{figure}
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/verticalsalinity.png} \caption{So then you approximate dS/dx from previous plots...} \label{fig:fourebbs}
+\end{figure}
+
