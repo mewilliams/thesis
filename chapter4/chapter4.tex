@@ -13,30 +13,55 @@ Salt moves in and out of the Pescadero estuary as described in chapter~\ref{ch3}
 
 \emph{salt is conservative, implications for temperature, plankton, other stuff that advects and diffuses around...}
 
+\emph{want to quantify mixing!}
 
 
 \section{Methods}
 
-Depth-averaged 1-d advection-diffusion of salinity:
+We start with the depth-averaged 1-d advection-diffusion of salinity,
 \begin{eqnarray}
 \frac{dS}{dt} + U\frac{dS}{dx} = K_x\frac{d^2S}{dx^2} \label{eq:1dadvdiff}
 \end{eqnarray}
-...
+where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$} is the longitudinal dispersion coefficient \emph{(or mixing term..)}. In an estuary, the salt structure is advected upstream and downstream with the tides. Moving the frame of reference along with these tides, \emph{U=0} relative to the reference frame and equation~\ref{eq:1dadvdiff} becomes
+\begin{eqnarray}
+\frac{dS}{dt} = K_x\frac{d^2S}{dx^2} \label{eq:1ddiff}
+\end{eqnarray}
+. An analytical solution to equation~\ref{eq:1ddiff} can be obtained using the following boundary and initial conditions:
+\begin{eqnarray}
+S(x,t=0) = step-function\label{eq:1ddiffIC}\\
+S(x=\inf,t) = S_o\label{eq:1ddiffBC1}\\
+S(x=-\inf,t) = 0\label{eq:1ddiffBC2}\\
+\end{eqnarray}
+where \emph{S$_o$} is the \emph{ocean salinity and/or upper end of step function}. \emph{Somehow, using these initial and boundary conditions, you get to:}
 \begin{eqnarray}
 S(x,t) = \frac{S_o}{2}(1+erf(\frac{x-x_c}{\sqrt{4K_xt}})) \label{eq:S}
 \end{eqnarray}
+where \emph{x$_c$} is the center of the salt front. 
+
+With point measurements obtained in the Pescadero estuary, values for \emph{K$_x$} can be obtained: 
 
 Focusing on velocity and salinity measurements made during the April - June 2012 field deployment (described in detail in the previous chapter).... An ADV collected point velocity measurements colocated with a CTD measuring 20 cm above the bed \emph{(confirm)}. Longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so \emph{locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dyanamics of a whole system is difficult...}, so we rely on an \emph{approach based on...}
-
-
-\begin{itemize} \item{velocity and salt measurements averaged on X window} \item{then fake x made} \end{itemize}
-
 \begin{eqnarray}
-u = \frac{dx}{dt} \label{eq:uEdxdt}\\
-\int{<u>dt} = \int{dx} = x \label{eq:intuEx}
+U = \frac{dx}{dt} \label{eq:uEdxdt}\\
+\int{Udt} = \int{dx} = x \label{eq:intuEx}
 \end{eqnarray}
 So, by taking the integral of the ADV velocity, equation~\ref{eq:intuEx} allows us to transform a point velocity and salinity measurement into an approximation of \emph{X or Length or...}. 
 
+to actually make this dataset, velocity and salt measurements were averaged on a \emph{X min} moving window to eliminate oscillations with infragravity motions. 
+
+\emph{how do you get K$_x$ out of that error function?}
+By rearranging equation~\ref{eq:S} and taking the inverse error function ($erf^{-1}$) of the left hand side, 
+\begin{eqnarray}
+erf^{-1}(\frac{2S}{S_o}-1) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
+\end{eqnarray}
+equation~\ref{eq:linfitS} 
+which can be linearly fit (y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$, and then using a value of t obtained by the time when the 15 PSU isohaline passed the sensors, K$_x$ was obtained.  \emph{take home message: K$_x$ is an order of magnitude higher in lower salinities than higher salinities. }
+
+
+\emph{how did you determine t?}
+The time value used to 
+
+A first approximation at \emph{t} would be to set the step function as the salt front advected past the sensors on the flood, and use the time from the passing of the front to the return of the front on ebb as \emph{t}. However, this will overestimate \emph{K$_x$} because while the flood front is sharp, it is not infinitely sharp.  Instead, estimating that... 
 
 
 
