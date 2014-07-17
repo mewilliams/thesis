@@ -29,8 +29,8 @@ where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$
 . An analytical solution to equation~\ref{eq:1ddiff} can be obtained using the following boundary and initial conditions:
 \begin{eqnarray}
 S(x,t=0) = step-function\label{eq:1ddiffIC}\\
-S(x=\inf,t) = S_o\label{eq:1ddiffBC1}\\
-S(x=-\inf,t) = 0\label{eq:1ddiffBC2}\\
+S(x=\infty,t) = S_o\label{eq:1ddiffBC1}\\
+S(x=-\infty,t) = 0\label{eq:1ddiffBC2}\\
 \end{eqnarray}
 where \emph{S$_o$} is the \emph{ocean salinity and/or upper end of step function}. \emph{Somehow, using these initial and boundary conditions, you get to:}
 \begin{eqnarray}
@@ -54,8 +54,7 @@ By rearranging equation~\ref{eq:S} and taking the inverse error function ($erf^{
 \begin{eqnarray}
 erf^{-1}(\frac{2S}{S_o}-1) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
 \end{eqnarray}
-equation~\ref{eq:linfitS} 
-which can be linearly fit (y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$, and then using a value of t obtained by the time when the 15 PSU isohaline passed the sensors, K$_x$ was obtained.  \emph{take home message: K$_x$ is an order of magnitude higher in lower salinities than higher salinities. }
+equation~\ref{eq:S} is linearized \emph{um?} and a linear fit ((y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$) is applied. By using a value of t obtained by the time when the 15 PSU isohaline passed the sensors, K$_x$ was obtained.  \emph{take home message: K$_x$ is an order of magnitude higher in lower salinities than higher salinities. }
 
 
 \emph{how did you determine t?}
@@ -67,6 +66,10 @@ A first approximation at \emph{t} would be to set the step function as the salt 
 
 \section{Observations}
 \emph{Start with time series of U and S, go from there to 1-d approximation}
+
+The time series of collocated averaged velocity and salinity at NM are shown in figure~\ref{fig:UandSvsTch4}. Gaps in measurements occur when the water level is very low and sensors were out of the water. With coastal California's mixed semidiurnal tide, the time series shows that salt water does not remain in the system on the low high tide as long as it does on the high high tide. \emph{Limited velocity measurements on the smaller flood limits the ability to apply our analysis to those... so here we focus only on the tidal cycle associated with high high water level}. 
+
+Shown in the plots of salinity versus time (Figure~\ref{fig:UandSvsTch4}b) is that the sharp salinity front advects in, and a more relaxed salinity front advects out of the system. Furthermore, lower salinities demonstrate a much more relaxed salinity structure than higher salinities on ebb. \emph{need to make sure that isn't just a function of how fast the water is moving}.
 
 \emph{Insert figure: U and S from colocated ADV, CTD vs. time}
 
@@ -100,7 +103,9 @@ The salt structure advecting in is almost a step function, but not quite. By set
 \begin{eqnarray}
 erf^{-1}(\frac{2S}{S_o}-1) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
 \end{eqnarray}
-which can be linearly fit (y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$, and then using a value of t obtained by the time when the 15 PSU isohaline passed the sensors, K$_x$ was obtained.  \emph{take home message: K$_x$ is an order of magnitude higher in lower salinities than higher salinities. }
+which can be linearly fit (y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$, and then using a value of t obtained by the time when the 15 PSU isohaline passed the sensors, K$_x$ was obtained.  
+
+
 
 could be more scientifically sound:
 \begin{itemize}
