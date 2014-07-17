@@ -16,7 +16,7 @@ Salt moves in and out of the Pescadero estuary as described in chapter~\ref{ch3}
 \emph{want to quantify mixing!}
 
 
-\section{Methods}
+\section{Methods} \label{sec:ch4methods}
 
 We start with the depth-averaged 1-d advection-diffusion of salinity,
 \begin{eqnarray}
@@ -67,11 +67,13 @@ A first approximation at \emph{t} would be to set the step function as the salt 
 \section{Observations}
 \emph{Start with time series of U and S, go from there to 1-d approximation}
 
-The time series of collocated averaged velocity and salinity at NM are shown in figure~\ref{fig:UandSvsTch4}. Gaps in measurements occur when the water level is very low and sensors were out of the water. With coastal California's mixed semidiurnal tide, the time series shows that salt water does not remain in the system on the low high tide as long as it does on the high high tide. \emph{Limited velocity measurements on the smaller flood limits the ability to apply our analysis to those... so here we focus only on the tidal cycle associated with high high water level}. 
+The time series of collocated averaged velocity and salinity at NM are shown in figure~\ref{fig:UandSvsTch4}. Gaps in measured data occur when the water level is very low and sensors were out of the water. With coastal California's mixed semidiurnal tide, the time series shows that salt water does not remain in the system on the low high tide as long as it does on the high high tide. \emph{Limited velocity measurements on the smaller flood limits the ability to apply our analysis to those... so here we focus only on the tidal cycle associated with high high water level}. 
 
-Shown in the plots of salinity versus time (Figure~\ref{fig:UandSvsTch4}b) is that the sharp salinity front advects in, and a more relaxed salinity front advects out of the system. Furthermore, lower salinities demonstrate a much more relaxed salinity structure than higher salinities on ebb. \emph{need to make sure that isn't just a function of how fast the water is moving}.
+Shown in the plots of salinity versus time (Figure~\ref{fig:UandSvsTch4}b) is that the sharp salinity front advects in, and a more relaxed salinity \emph{front} advects out of the system. Furthermore, lower salinities demonstrate a much more relaxed salinity structure than higher salinities on ebb. The relaxed salt structure that moves back out of the estuary is not uniform across salinities, with a more relaxed structure apparent at lower values of \emph{S}. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, the time series is transformed into a spatial record as described in the section~\ref{sec:ch4methods}. 
 
-\emph{Insert figure: U and S from colocated ADV, CTD vs. time}
+Figure~\ref{fig:SvsXall} shows the salt front on flood (a) and on ebb (b) for the four large tides on 21 - 25 April, 2012. This spatial mapping of the salinity field shows that the estuary transforms the \emph{spatially.. uniform? continuous? non-disjointed} salinity structure on the flood into two \emph{XXXX}. 
+
+Using this data, equation~\ref{eq:S} is fit and values of \emph{K$_x$} are calculated for the upper and lower salinities in the four tidal cycles (Figures~\ref{fig:Kx421}-~\ref{fig:Kx424}), and the results are tabuled in table \emph{(figure out how to label table)}. 
 
 
 
@@ -148,7 +150,7 @@ Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_o}$ & 
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/SvsXfloodebb} 
-\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth (a) and four ebbs (b)} \label{fig:}
+\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth (a) and four ebbs (b)} \label{fig:SvsXall}
 \end{figure}
 
 \begin{figure}
