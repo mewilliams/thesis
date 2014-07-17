@@ -21,7 +21,10 @@ Depth-averaged 1-d advection-diffusion of salinity:
 \begin{eqnarray}
 \frac{dS}{dt} + U\frac{dS}{dx} = K_x\frac{d^2S}{dx^2} \label{eq:1dadvdiff}
 \end{eqnarray}
-
+...
+\begin{eqnarray}
+S(x,t) = \frac{S_o}{2}(1+erf(\frac{x-x_c}{\sqrt{4K_xt}})) \label{eq:S}
+\end{eqnarray}
 
 Focusing on velocity and salinity measurements made during the April - June 2012 field deployment (described in detail in the previous chapter).... An ADV collected point velocity measurements colocated with a CTD measuring 20 cm above the bed \emph{(confirm)}. Longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so \emph{locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dyanamics of a whole system is difficult...}, so we rely on an \emph{approach based on...}
 
@@ -37,10 +40,8 @@ So, by taking the integral of the ADV velocity, equation~\ref{eq:intuEx} allows 
 
 
 
-
-
 \section{Observations}
-\emph{Mark says: start with time series of U and S, go from there to 1-d approximation}
+\emph{Start with time series of U and S, go from there to 1-d approximation}
 
 \emph{Insert figure: U and S from colocated ADV, CTD vs. time}
 
@@ -63,6 +64,51 @@ more salt pushed up estuary, interactin with bathymetry happesn at higher salini
 
 \section{Limitations on analysis}
 
+\section{Figure and table placeholders}
+
+
+
+\subsection{quick description of getting K$_x$ values}
+The salt structure advecting in is almost a step function, but not quite. By setting a step function at the mouth, and approximating advection velocities U = 0.1 m s$^{-1}$ and a lenght from the ocean to NM of 100 m, initial time, t$_o$ is 1000 s. This initial time was then added to the time between the 15 PSU isopycnal passing by the CTD so that the time used to in the best fit of \emph{error function part} is t = t$_o$ + t$_{time between 15 PSU measurements}$... 
+
+\emph{real steps to get K$_x$:} get time between S = 15 PSU passing NM sensors.  estimate ~ 17 min from step function to flood S(x),... make equation~\ref{eq:S} 
+\begin{eqnarray}
+erf^{-1}(\frac{2S}{S_o}-1) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
+\end{eqnarray}
+which can be linearly fit (y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$, and then using a value of t obtained by the time when the 15 PSU isohaline passed the sensors, K$_x$ was obtained.  \emph{take home message: K$_x$ is an order of magnitude higher in lower salinities than higher salinities. }
+
+could be more scientifically sound:
+\begin{itemize}
+	\item S$_{transition}$ was eyeballed. Should be done with a more rigorous method. 
+	\item t was eyeballed.
+	\item S$_o$ is 32 to 33.5 depending on code crashing... 
+\end{itemize}
+
+\emph{I could imagine adjusting t based on some mid low/high salinity (10 and 20)}
+
+% --------------TABLES ----------------%
+\renewcommand{\arraystretch}{1.3}
+
+\begin{center}
+\begin{tabular}{| l || c | c | c | c |}
+\hline
+Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_o}$ & t\\
+\hline \hline
+21 Apr & 11.5? & 50.6 m$^2$ s$^{-1}$ & 2.1 m$^2$ s$^{-1}$ & 6.2 h\\ 
+
+22 Apr & 10.5? & 66.8 m$^2$ s$^{-1}$ & 2.7 m$^2$ s$^{-1}$ & 7.2 h\\ 
+
+23 Apr & 14.5? & 37.8 m$^2$ s$^{-1}$ & 3.9 m$^2$ s$^{-1}$ & 6.6 h\\ 
+
+24 Apr & 15.5? & 38 m$^2$ s$^{-1}$ & 5.6 m$^2$ s$^{-1}$ & 7.0 h\\ 
+\hline \label{tab:Kxtable}
+\end{tabular}
+\end{center}
+
+
+
+
+
 % -------------- FIGURES -------------- %
 
 \begin{figure}
@@ -71,21 +117,43 @@ more salt pushed up estuary, interactin with bathymetry happesn at higher salini
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/fourbigfloodsSX.png} 
-\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth} \label{fig:fourfloods}
+	\includegraphics[width=\textwidth]{chapter4/figures/SvsXfloodebb} 
+\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth (a) and four ebbs (b)} \label{fig:}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/Kx_124_165_t_22300} 
+\caption{21 April, 2012. } \label{fig:Kx421}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/Kx_183_263_t_25900} 
+\caption{22 April, 2012. } \label{fig:Kx422}
+\end{figure}
+
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/Kx_279_357_t_23800} 
+\caption{23 April, 2012. } \label{fig:Kx423}
+\end{figure}
+
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/Kx_376_454_t_25180} 
+\caption{24 April, 2012. \emph{I forgot to flip one axis.}} \label{fig:Kx424}
+\end{figure}
+
+
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{chapter4/figures/DC_salt_421_425}
+	\caption{Two K$_x$ structure due to vertical processes...} \label{fig:SDCApr2012}
 \end{figure}
 
 
 \begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/fourbigebbsSX.png} \caption{flip the axis in your head to match the previous plot} \label{fig:fourebbs}
+	\includegraphics[width=\textwidth]{chapter4/figures/DC_surfaceonly_421_513}
+	\caption{Surface salinity sensor, DC. \emph{thing to note: second pulse of salty water follows spring-neap}} \label{fig:SsurfLT}
 \end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/img376.png} \caption{So then you approximate dS/dx from previous plots...} \label{fig:fourebbs}
-\end{figure}
-
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/verticalsalinity.png} \caption{So then you approximate dS/dx from previous plots...} \label{fig:fourebbs}
-\end{figure}
-
