@@ -4,26 +4,21 @@
 \usepackage{lscape} % ADDED BY AUDRIC COLLIGNON 07/23/2012: table in landscape mode
 \RequirePackage{lineno} % ADDED BY AUDRIC COLLIGNON 07/23/2012: LINE NUMBERING PACKAGE - REMOVE FROM FINAL VERSION
 \usepackage{textcomp}  %Added 07/11/2014 by M. Williams.. to get copyright symbol in ch2
-<<<<<<< HEAD
-%\usepackage{subcaption}
+\usepackage{subcaption}
 \usepackage{epstopdf}
 \usepackage{epsfig}
 
-\usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
+\usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, url=false, clearlang=true, isbn=false, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
 \renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
-=======
-\usepackage{subcaption}
-\usepackage{natbib}
-%\usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
-%\renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
->>>>>>> 8d907728e501d2b5d242cc57cc9e5839217ed0a4
+\urlstyle{same}
+
 
 % If the Grad. Division insists that the first paragraph of a section
 % be indented (like the others), then include this line:
 % \usepackage{indentfirst}
-
+%\bibliographystyle{plain}
 \bibliography{EntireZoteroLibrary}
-\bibliographystyle{plainnat}  % who knows where this should go.. 
+\bibliography{research}
 
 
 \begin{document}
@@ -80,7 +75,7 @@
 
 %\include{chapter1/chapter1}
 
-\include{chapter2/chapter2}
+%\include{chapter2/chapter2}
 
 \include{chapter3/chapter3}
 
@@ -91,11 +86,9 @@
 %\include{chapter6/chapter6}
 
 % \appendix
-%\bibliographystyle{plainnat}  % who knows where this should go.. 
 
 
 \printbibliography
 
-%\bibliographystyle{plainnat}  % who knows where this should go.. 
 
 \end{document}
