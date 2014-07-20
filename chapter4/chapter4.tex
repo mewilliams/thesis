@@ -13,7 +13,7 @@ Salt transport in small, intermittently closed estuaries... \emph{tends to be fr
 
 Salt moves in and out of the Pescadero estuary as described in chapter~\ref{ch3}. The water column remains stratified, and a mixed water column only exists when high freshwater flows have forced all salt from the confines of the estuary. But, with tidal velocities and infragravity oscillations acting on the stratified salt field, there must be some mixing and it behooves us to try to quantify mixing and its effects. \emph{why?}
 
-
+\emph{Dispersion processes... turbulent mixing, shear dispersion, ... scale processes?}
 
 \emph{Background on what I'm trying to do.  Cite Ralston \& Stacey 2005- Longitudinal dispersion... tidal straining (Simpson et al, 1990, Burchard \& Baumert 1998?),.. longitudinal dispersion (Okubu, 1973; Lissa's thesis paper?)}, here I will cite \parencite{Ralston:2005aa} and maybe also John Simpson's paper \parencite{Simpson:1990aa}. 
 
@@ -26,51 +26,12 @@ Salt moves in and out of the Pescadero estuary as described in chapter~\ref{ch3}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \parencite{Ralston:2005aa}: \emph{Similar thing, different estuary}
 Ralston and Stacey \cite{Ralston:2005aa} used a 1-d framework to quantifiy frontal mixing within the intertidal zone of mudflats in San Francisco Bay. They found \emph{K$_x$} of 10 m\textsuperscript{2} s\textsuperscript{-1} of the frontal salinity structure, and attributed this mixing to ...
 
 
 
-
-
-
-
-
 \emph{GIDDINGS et al. 2012} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \emph{salt is conservative, implications for temperature, plankton, other stuff that advects and diffuses around...}
@@ -83,6 +44,8 @@ Ralston and Stacey \cite{Ralston:2005aa} used a 1-d framework to quantifiy front
 %% 1D Advection-diffusion
 \subsection{1D advection-diffusion} \label{ssec:1dadvdif}
 
+\emph{This form assumes K$_x \ne f(x)$. Big problem?}
+
 We start with the depth-averaged 1-d advection-diffusion of salinity,
 \begin{eqnarray}
 \frac{dS}{dt} + U\frac{dS}{dx} = K_x\frac{d^2S}{dx^2} \label{eq:1dadvdiff}
@@ -93,7 +56,7 @@ where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$
 \end{eqnarray}
 . An analytical solution to equation~\ref{eq:1ddiff} can be obtained using the following boundary and initial conditions:
 \begin{eqnarray}
-S(x,t=0) = step-function\label{eq:1ddiffIC}\\
+S(x,t=0) = step function\label{eq:1ddiffIC}\\
 S(x=\infty,t) = S_0\label{eq:1ddiffBC1}\\
 S(x=-\infty,t) = 0\label{eq:1ddiffBC2}\\
 \end{eqnarray}
@@ -159,7 +122,7 @@ Comparison to theory, hypothesized mechanisms of dispersion, reasons for the two
 \begin{eqnarray}
 K_x = 5.93hu_* \label{eq:Kshear}
 \end{eqnarray}
-\emph{from Elder, 1959} where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity $u_*=\sqrt{\tau_0/\rho}$... 
+\emph{from Elder, 1959 and/or Fischer textbook} where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity $u_*=\sqrt{\tau_0/\rho}=c_D^{1/2}U$... In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} is \pm 0.4 m s\textsuperscript{-1} due to tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as X, ... 
 
 
 \begin{eqnarray}
@@ -171,7 +134,7 @@ K = \frac{K^{'}}{1+r} + \frac{ru_0^2}{2k(1+r)^2(1+r+\omega / k)} \label{eq:KxOku
 
 \section{Why these $K_x$?}
 
-The method of \emph{making $\int{S}dt = X$} allows the observation of the spatial structure of the salinity field.  As the method is reliant on the salinity field advecting past the sensors, it lacks the ability to inform where mixing is occuring, whether it is a continuous process or controlled by a bathymetric feature elsewhere in the estuary. 
+The method of \emph{making $\int{U}dt = X$} allows the observation of the spatial structure of the salinity field.  As the method is reliant on the salinity field advecting past the sensors, it lacks the ability to inform where mixing is occuring, whether it is a continuous process or controlled by a bathymetric feature elsewhere in the estuary. 
 
 \subsection{Why this two-part structure?}
 
@@ -185,10 +148,10 @@ The structure seen in the mid-column at DC or at the NM collocated ADV and CTD i
 
 \subsection{Where does it come from?}
 
-Several mechanisms are likely to trap and slowly release water to create the \emph{thing} we see \emph{happening at the surface}. Sensors are located primarily in the lower estuary, and no surface sensor measurements were made upstream of DC, so \emph{an analysis of where that pulse comes from is what they would call an 'educated guess'}. At least three features of the Pescadero estuary could contribute to the bimodal surface salinity spike seen in conjunction with the high high tide:
+Several mechanisms may allow the trapping and release of water that induces a second phase of salinity mixing... Sensors are located primarily in the lower estuary, and no surface sensor measurements were made upstream of DC, so these hypotheses are not readily testible. At least three features of the Pescadero estuary could contribute to the bimodal surface salinity spike seen in conjunction with the high high tide:
 
 \subsubsection{Confluence of two creeks}
-Approximately \emph{1000 m} upstream from the mouth of the Pescadero estuary, two creeks form a confluence. Salt water carried by the flood tide may move up the Pescadero Creek or up the Butano Creek. In a third process described below, it may also move through a culvert into channels to the shallow North Pond. \emph{description of tidal trapping here}
+Approximately \emph{1000 m} upstream from the mouth of the Pescadero estuary, two creeks form a confluence (Figure~\ref{fig:geMarsh}. Salt water carried by the flood tide may move up the Pescadero Creek or up the Butano Creek. In a third process described below, it may also move through a culvert into channels to the shallow North Pond. \emph{description of tidal trapping here}
 
 \subsubsection{Marsh}
 The Pescadero Creek flows into the lower estuary through a relatively constricted, channelized creek bed.  Meanwhile, the Butano Creek flow through an extensive salt marsh. This marsh floods significantly with a closed mouth (cf Chapter~\ref{ch2}), but as is the nature of salt marshes, some flooding occurs tidally. \emph{words on dispersion and vegetation}. 
@@ -196,21 +159,16 @@ The Pescadero Creek flows into the lower estuary through a relatively constricte
 \emph{why this might be possible:}  Bed salinity measurements in the Pescadero and Butano Creeks suggest that within the Pescadero Creek (upstream of the confluence of both the Butano and the culverts to the North Pond) do not demonstrate the same structure seen downstream of these controls. However, bed salinity measurements in the Butano Creek do show a slight sign of this structure. \emph{[INSERT FIGURE OF BED SALINITY AT THOSE TWO MOORINGS HERE]} The instruments were fixed closer to the bed than the colocated ADV and CTD, so these measurements may not directly translate... but do suggest something is going on in the salt marshes.  
 
 \subsubsection{Culverts and flow to North Pond}
-The North Pond in the Pescadero marsh is connected to the Pescadero creek through a channel and dilapidated culverts (Figure~\ref{fig:photoCulverts}. \emph{The culverts through a levee were designed to be able to regulate flow to the North Pond via gates, but the gates have rusted and culverts remain perennially open.} The highly constricted flow \emph{means I think this is the most likely mechanism for retaining flow... causing that second pulse}.  
+The North Pond in the Pescadero marsh is connected to the Pescadero creek through a channel and dilapidated culverts (Figures~\ref{fig:geNP} and~\ref{fig:photoCulverts}). \emph{The culverts through a levee were designed to be able to regulate flow to the North Pond via gates, but the gates have rusted and culverts remain perennially open.} The highly constricted flow \emph{means I think this is the most likely mechanism for retaining flow... causing that second pulse}.  
 
 In any of these mechanisms, lower salinity water is subject to \emph{these effects} because density effects mean higher salinity water does not access the shallow marsh or culverted environments... 
 
-\subsection{But how does the weird structure change with tides?}
-\emph{Explain figure ~\ref{fig:SsurfLT}}
-Longer term measurements support \emph{the hypothesis} of...
-
-Figure~\ref{fig:SsurfLT} shows surface salinity at DC. Early in the time series, the \emph{estuary is in a} spring tide, neap tides are from \emph{these dates} and then the spring tide...\emph{eh, probably should put a depth record on this one}. Lower values of \emph{S$_T$} on 21 and 22 April correspond with second pulses of salt water with lower salinity. Higher values on 23 and 24 April correspond with pulses of salt water of higher salinity. The longer term figure clearly shows that this second pulse of salt water follows the spring tides and shuts down during the neap tide. \emph{previous stuff makes sense} because as the water level gets higher during the spring, higher salinity water will have access to shallower \emph{regions}, trapping higher salinity water... 
+\subsection{Variation in two-phase K$_x$ structure}
+Figure~\ref{fig:SsurfLT} shows surface salinity at DC. Early in the time series, the \emph{estuary is in a} spring tide, neap tides are from \emph{these dates} and then the spring tide...\emph{eh, probably should put a depth record on this one}. Lower values of \emph{S$_T$} on 21 and 22 April correspond with second pulses of salt water with lower salinity as shown by the green line in figure~\ref{fig:DC_salt_421_425}c. Higher values on 23 and 24 April correspond with pulses of salt water of higher salinity. The longer term figure shows that this second pulse of salt water follows the spring tides and shuts down during the neap tide. \emph{previous stuff makes sense} because as the water level gets higher during the spring, higher salinity water will have access to shallower \emph{regions}, trapping higher salinity water... 
 
 Differences between the salinity magnitude of the first and second spring tides is attributed to two factors: the first is that the second spring tide had higher water levels than the first spring tide (\emph{figure from ch 3?}), and the second is that lower freshwater discharge was present during the second spring. 
 
 
-
-\emph{use ds/dx to quantify kx, discusses nick points.}
 \section{Things to discuss}
 \begin{itemize}
 	\item Does this extend across all tides (I'm thinking spring-neap cycle)
@@ -224,13 +182,10 @@ Differences between the salinity magnitude of the first and second spring tides 
 \emph{spring-neap:
 more salt pushed up estuary, interacting with bathymetry happesn at higher salinities, nick point occurs at 15 instead of 10. somewhere up estaury, change in salinity field that is advected back past us. }
 
-\subsection{And what about just \emph{K$_x$} vs. tides?}
-\emph{higher velocities, more mixing?}
-Higher salinity \emph{K$_x$} were higher with the second two tides than the first two, corresponding to \emph{more springy} conditions. An increase in tidal velocities with springier tides \emph{shoudl increase mixing... parameterize Kx with u*}. 
 
 \emph{why the heck do surface Kx go down then? How about wind?}
 
-\section{Limitations on analysis}
+\section{Assumptions & sensitivity to these assumptions (Limitation on analyses?)}
 
 The first-order approximation of \emph{K$_x$} values is dependent on several assumtions: 
 
