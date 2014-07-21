@@ -6,11 +6,15 @@
 \usepackage{textcomp}  %Added 07/11/2014 by M. Williams.. to get copyright symbol in ch2
 \usepackage{subcaption}
 \usepackage{epstopdf}
+%\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}  % for dealing with tif
+%\AppendGraphicsExtensions{.tif}
 \usepackage{epsfig}
 
 \usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, url=false, clearlang=true, isbn=false, ]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
 \renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
 \urlstyle{same}
+
+
 
 
 % If the Grad. Division insists that the first paragraph of a section
@@ -19,6 +23,12 @@
 %\bibliographystyle{plain}
 \bibliography{EntireZoteroLibrary}
 \bibliography{research}
+
+\AtEveryBibitem{\clearlist{language}} % clears language
+\AtEveryBibitem{\clearfield{note}}    % clears notes
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
+
 
 
 \begin{document}
@@ -56,11 +66,11 @@
 %\end{dedication}
 
 % % PUT ALL OF THESE BACK LATER: ---------------------
-%\tableofcontents
-%\clearpage
-%\listoffigures
-%\clearpage
-%\listoftables
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
 
 %\begin{acknowledgements}
 %write acknowledgements here...
@@ -73,15 +83,15 @@
 
 \pagestyle{headings}  % !!! I think this has to stay out at the end?!!!
 
-%\include{chapter1/chapter1}
+\include{chapter1/chapter1}
 
-%\include{chapter2/chapter2}
+\include{chapter2/chapter2}
 
-%\include{chapter3/chapter3}
+\include{chapter3/chapter3}
 
 \include{chapter4/chapter4}
 
-%\include{chapter5/chapter5}
+\include{chapter5/chapter5}
 
 %\include{chapter6/chapter6}
 
