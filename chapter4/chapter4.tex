@@ -32,7 +32,7 @@ Ralston and Stacey \cite{Ralston:2005aa} used a 1-d framework to quantifiy front
 \emph{salt is conservative, implications for temperature, plankton, other stuff that advects and diffuses around...}
 
 \emph{want to quantify mixing!}
-
+\emph{range of K$_x$ for other estuaries? salt-wedge in particular. }
 
 \section{Methods} \label{sec:ch4methods}
 
@@ -74,39 +74,38 @@ Focusing on velocity and salinity measurements made during the April - June 2012
 U = \frac{dx}{dt} \label{eq:uEdxdt}\\
 \int{Udt} = \int{dx} = X \label{eq:intuEx}
 \end{eqnarray}
-By taking the integral of the ADV velocity, equation~\ref{eq:intuEx} allows us to transform the time series of velocity and salinity measurements into a spatial representation of salinity.
+By taking the integral of the ADV velocity, equation~\ref{eq:intuEx} allows us to transform the time series of velocity ($U(x_{NM},t)$) and salinity ($S(x_{NM},t)$) measurements (Figure~\ref{fig:UandSvsT}) into a spatial representation of salinity ($S(x)$, Figure~\ref{fig:SvsXall}).
 
 %%%% Data Processing Specifics
 \subsection{Data processing specifics} \label{ssec:DataProcessing}
 To make this dataset, velocity measurements were burst-averaged (\emph{8.3 min. burst?... specifics in previous chapter}) and an 800 sec moving average was applied to the CTD measurements.  Averaging was intended to remove the infragravity oscillation component of velocity and salinity measurements to focus on tidal processes. 
 
-To get \emph{K$_x$} from the recreated \emph{S(x)}, equation~\ref{eq:S} was rearranged:
+To get \emph{K$_x$} from the recreated \emph{S(x)}, equation~\ref{eq:S} was rearranged into the linear form:
 \begin{eqnarray}
 erf^{-1}\left(\frac{2S}{S_0}-1\right) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
 \end{eqnarray}
-equation~\ref{eq:S} is linearized \emph{um?} and a linear fit ((y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$) is applied. To solve for $K_x$, a value of \emph{t} must be determined, and in this case it is appropriate to use the time between when the front floods past the sensors and subsequent ebb of said front. This method assumes an infitely sharp front initially passes by the sensors, and will overestimate \emph{K$_x$}, thus an estimation on the initial time from a sharp front to the flood front is made. By setting a step function at the mouth, and approximating advection velocities U = 0.1 m s$^{-1}$ and a lenght from the ocean to NM of 100 m, initial time, t$_o$ is 1000 s. This time is then added to the time between a selected isopycnal passing by the sensor. Specific considerations in selecting the isopycnal to follow, and implications will be discussed \emph{later (in sec. X)}. 
+and a linear fit ((y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$) is applied. Given a linear regression fit value for \emph{a}, to solve for $K_x$, a value of \emph{t} must be determined. In this case it is appropriate to use the time between when the front floods past the sensors and subsequent ebb of said front. This method assumes an infinitely sharp front at time $t_0$. Setting $t_0$ as the time at which the front floods past the sensors will overestimate \emph{K$_x$}. Thus, an estimation on the initial time from a sharp front to the flood front is made. By setting a step function at the mouth, and approximating advection velocities U = 0.1 m s$^{-1}$ and a length from the ocean to NM of 100 m, initial time, t$_0$ is 1000 s. This time is then added to the time between a selected isopycnal passing by the sensor. Specific considerations in selecting the isopycnal to follow, and implications will be discussed \emph{later (in sec. X)}. 
 
 
 
 \section{Observations} \label{sec:ObsCh4}
-The time series of collocated averaged velocity and salinity at NM are shown in figure~\ref{fig:UandSvsTch4}. Gaps in measured data occur when the water level is very low and sensors were out of the water. With coastal California's mixed semidiurnal tide, the time series shows that salt water does not remain in the system on the low high tide as long as it does on the high high tide. Here we focus only on the tidal cycle associated with high high water level. 
+Time series of collocated velocity and salinity measurements at NM are shown in figure~\ref{fig:UandSvsTch4}. Gaps in measured data occur when the water level is very low and sensors were out of the water. In response to coastal California's mixed semidiurnal tide, the time series shows that salt water does not remain in the system on the low high tide as long as it does on the high high tide. Here we focus only on the tidal cycle associated with high high water level. 
 
-The time series plots of salinity and velocity (Figure~\ref{fig:UandSvsTch4}b) show that the sharp salinity front advects in, and a more relaxed salinity \emph{front} advects out of the system. Lower salinities demonstrate a much more relaxed salinity structure than higher salinities on ebb, but this feature is not present on flood. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, the time series is transformed into a spatial record as described in section~\ref{sec:ch4methods}. 
+The time series plots of salinity and velocity (Figure~\ref{fig:UandSvsTch4}b) show that the transition from fresh to saline water occurs rapidly on the flood and the return to fresh water on ebb is a longer duration process. On ebb, lower salinities demonstrate a much more relaxed salinity structure than higher salinities. The flood salinities do not exhibit this feature. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, as well as to approach a quantification of \emph{K$_x$}, the time series is transformed into a spatial record as described in section~\ref{sec:ch4methods}. 
 
-Figure~\ref{fig:SvsXall} shows the salt front on flood (a) and on ebb (b) for the four large tides on 21 - 25 April, 2012. This spatial mapping of the salinity field shows that the estuary transforms the \emph{spatially.. uniform? continuous? non-disjointed} salinity structure on the flood into a salinity field with two distict characters.
+Figure~\ref{fig:SvsXall} shows the salt front on flood (a) and on ebb (b) for the four large tides on 21 - 25 April, 2012. Spatial mapping of the salinity field shows that the estuary transforms  the salinity front from a smooth, sharp structure on flood to a two-part relaxed structure on ebb, where the lower salinity's structure is much more relaxed than the higher salinity structure. This non uniform structure suggests that calculating two different values of \emph{K$_x$} for the higher and lower salinities is necessary.
 
-Values of \emph{K$_x$} are calculated for the upper and lower salinities in the four tidal cycles (Figures~\ref{fig:Kx421}-~\ref{fig:Kx424}) using this data. Time \emph{t} values for \emph{K$_x$} calculations are taken to be the time between when the 10 PSU and 20 PSU isopycnals flood and ebb past the sensor for lower and higher salinity \emph{K$_x$} values, respectively. These values of \emph{K$_x$} show that dispersion is much greater at lower salinities than at higher salinities in the Pescadero estuary. The results are tabuled in table ~\ref{tab:Kxtable}. Values of \emph{K$_x$} are an order of magnitude higher in lower salinities than in higher salinities. Dispersion coefficients in lower salinity water (\emph{K$_{x,S=0 \rightarrow S_T}$}), where \emph{S$_T$} is the salinity of the transition in structure, are higher in the first two days than in the last two. Dispersion coefficients in higher salinity water (\emph{K$_{x,S=S_T \rightarrow S_0}$}) are lower in the first two days than in the second two days. 
+Values of \emph{K$_x$} are calculated for the upper and lower salinities in the four tidal cycles using this data (Figures~\ref{fig:Kx421}-~\ref{fig:Kx424}). Values of \emph{t} for \emph{K$_x$} calculations are taken to be the time between when the 10 PSU and 20 PSU isopycnals flood and ebb past the sensor for lower and higher salinity \emph{K$_x$} values, respectively. Values of \emph{K$_x$} show that dispersion is much greater at lower salinities than at higher salinities in the Pescadero estuary. Results are tabuled in table ~\ref{tab:Kxtable}. Values of \emph{K$_x$} are an order of magnitude higher in lower salinities than in higher salinities. Dispersion coefficients in lower salinity water (\emph{K$_{x,S=0 \rightarrow S_T}$}), where \emph{S$_T$} is the salinity of the transition in structure, are higher in the first two days than in the last two. Dispersion coefficients in higher salinity water (\emph{K$_{x,S=S_T \rightarrow S_0}$}) are lower in the first two days than in the second two days. 
 
 Comparison to theory, hypothesized mechanisms of dispersion, reasons for the two-phase structure of \emph{S(x)}, and changes with physical forcing are discussed below. 
 
 \section{Comparison to theoretical ways to estimate $K_x$}
 
-
-\emph{Actually, this is looking at dispersion due to vertical shear.. i think should be $K_z$... obviously much smaller...}
+Dispersion caused by vertical shear \emph{(in an unstratified water column?)} was empircally found by Elder to be
 \begin{eqnarray}
 K_x = 5.93hu_* \label{eq:Kshear}
 \end{eqnarray}
-\emph{from Elder, 1959 and/or Fischer textbook} where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity $u_*=\sqrt{\tau_0/\rho}=c_D^{1/2}U$... In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} is $\pm$ 0.4 m s\textsuperscript{-1} due to tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as X, ... 
+where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity defined by $u_*=\sqrt{\tau_0/\rho}$ where $\tau$ is a bed stress and $\rho$ is water density \emph{NEED ELDER REF.. or as found in Fischer}. The friction velocity is parameterized as $u_* = c__D^{1/2}U$... In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} is $\pm$ 0.4 m s\textsuperscript{-1} due to tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as X, ... 
 
 \emph{longitudinal dispersion via tidal trapping...}
 \begin{eqnarray}
