@@ -91,13 +91,67 @@ and a linear fit ((y = ax + b).. a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_
 \section{Observations} \label{sec:ObsCh4}
 Time series of collocated velocity and salinity measurements at NM are shown in figure~\ref{fig:UandSvsTch4}. Gaps in measured data occur when the water level is very low and sensors were out of the water. In response to coastal California's mixed semidiurnal tide, the time series shows that salt water does not remain in the system on the low high tide  as long as it does on the high high tide suggesting limited tidal excursion of the salt field. Here we focus only on the tidal cycle associated with high high water level, referred to in this test as the \textquotedblleft large tide.''
 
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{chapter4/figures/UandSvsT} 
+\caption{X-averaged velocity (a) and salinity (b) records X cm above the bed at station NM.} \label{fig:UandSvsTch4}
+\end{figure}
+
 The time series plots of salinity and velocity (Figure~\ref{fig:UandSvsTch4}b) show that the transition from fresh to saline water occurs rapidly on the flood and the return to fresh water on ebb is a longer duration process. Also, the ebb salinity field passes the sensors in two distinct segments. On ebb, lower salinities demonstrate a much more relaxed salinity structure than higher salinities. The flood salinities do not exhibit this feature. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, as well as to approach a quantification of \emph{K$_x$}, the time series is transformed into a spatial record as described in section~\ref{sec:ch4methods}. 
+
+\begin{figure}[hp]
+	\includegraphics[width=\textwidth]{chapter4/figures/SvsXfloodebb} 
+\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth (a) and four ebbs (b). In both figures, the profiles are centered around x=0 at the S = 15 PSU} \label{fig:SvsXall}
+\end{figure}
 
 Figure~\ref{fig:SvsXall} shows the salt front on flood (a) and on ebb (b) for the four large tides on 21 - 25 April, 2012. Spatial mapping of the salinity field shows that the estuary transforms  the salinity front from a smooth, sharp structure on flood to a two-part relaxed structure on ebb, where the lower salinity's structure is much more relaxed than the higher salinity structure. This mirrors the time series salinity and implies that the two-part salinity vs. time structure is showing a physical change in the salt field. This non uniform structure suggests that calculating two different values of \emph{K$_x$} for the higher and lower salinities is necessary.
 
 Values of \emph{K$_x$} are thus calculated for the upper and lower salinities in the four tidal cycles using this data (Table~\ref{tab:Kxtable} and Figures~\ref{fig:Kx421}-~\ref{fig:Kx424}) with averages across the four days of \emph{K$_x$} = 4.1 m$^2$s$^{-1}$ at higher salinity and \emph{K$_x$} = 45.4 m$^2$s$^{-1}$ at lower salinity. Values of \emph{t} for \emph{K$_x$} calculations are taken to be the time between when the 10 PSU and 20 PSU isopycnals flood and ebb past the sensor for lower and higher salinity \emph{K$_x$} values, respectively. Values of \emph{K$_x$} show that dispersion is much greater at lower salinities than at higher salinities in the Pescadero estuary.  Values of \emph{K$_x$} are an order of magnitude higher in lower salinities than in higher salinities. Dispersion coefficients in lower salinity water (\emph{K$_{x,S=0 \rightarrow S_T}$}), where \emph{S$_T$} is the salinity of the transition in structure, are higher in the first two days than in the last two. Dispersion coefficients in higher salinity water (\emph{K$_{x,S=S_T \rightarrow S_0}$}) are lower in the first two days than in the second two days. 
 
+% --------------TABLES ---------------------------------------------------------------%
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.3}
+
+	\begin{center}
+		\begin{tabular}{| l || c | c | c | c | c | c |}
+		\hline
+		Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_0}$ & x$_{c,fresher}$ & x$_{c,fresher}$\\
+		\hline \hline
+		21 Apr & 11.5 & 48.7 m$^2$ s$^{-1}$ & 2.3 m$^2$ s$^{-1}$ & -591 m & -9.4 m\\ 
+		22 Apr & 10.5 & 65.1 m$^2$ s$^{-1}$ & 3.1 m$^2$ s$^{-1}$ & -713 m & -60.2 m\\ 
+		23 Apr & 14.4 & 31.0 m$^2$ s$^{-1}$ & 5.2 m$^2$ s$^{-1}$ & 34.2 m & 18.95 m\\ 
+		24 Apr & 14.1 & 31.6 m$^2$ s$^{-1}$ & 5.9 m$^2$ s$^{-1}$ & -137.3 m & -3.9 m\\  \hline 
+	\end{tabular}
+	\caption{Values of \emph{K$_x$} for the large flood and ebb on four days  in April 2012.}\label{tab:Kxtable}
+\end{center}
+\end{table}
+% -------------------------------------------------------------------------------------%
+
+
 Comparison to theory, hypothesized mechanisms of dispersion, reasons for the two-phase structure of \emph{S(x)}, and changes with physical forcing are discussed below. 
+% Kx figures
+\begin{figure}[hp]
+	\includegraphics[width=.75\textwidth]{chapter4/figures/SvXwKx_124_165} 
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
+\end{figure}
+
+\begin{figure}[hp]
+	\includegraphics[width=.75\textwidth]{chapter4/figures/SvXwKx_183_263} 
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
+\end{figure}
+
+\begin{figure}[hp]
+	\includegraphics[width=.75\textwidth]{chapter4/figures/SvXwKx_279_357} 
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
+\end{figure}
+
+\begin{figure}[hp]
+	\includegraphics[width=.75\textwidth]{chapter4/figures/SvXwKx_376_454} 
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
+\end{figure}
+% end Kx figures
+
+
+
 
 \section{Comparison to theoretical ways to estimate $K_x$}
 
@@ -123,7 +177,7 @@ K = \frac{K^{'}}{1+r} + \frac{ru_0^2}{2k(1+r)^2(1+r+\omega / k)} \label{eq:KxOku
 
 \subsection{Why this two-part structure?}
 
-Calculation of \emphP{K$_x$} shows that at higher salinities ($S_T$ to $S_{ocean}$) dispersion is an order of magnitude less than dispersion in lower salinities ($S_{creek}$ to $S_T$). Having one-dimensionalized the estuary, there are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. 
+Calculation of \emph{K$_x$} shows that at higher salinities ($S_T$ to $S_{ocean}$) dispersion is an order of magnitude less than dispersion in lower salinities ($S_{creek}$ to $S_T$). Having one-dimensionalized the estuary, there are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. 
 
 \begin{figure}[h]
 \centering
@@ -147,11 +201,13 @@ Knowing that the Pescadero estuary is always vertically stratified, we begin to 
 
 \subsection{whatever i jsut wrote felt like it needed a break}
 
-To understand the vastly different values of \emph{K$_x$} in higher and lower salities, we look to time series of salinities at different depths in the estuary. Figure~\ref{fig:SDCApr2012} shows data from three CTDs vertically distributed in the water column at the upstream DC station, approximately \emph{how many?} m upstream from the NM station. The first subplot (a) shows the depth of each sensor. The bed sensor was fixed 20 cm above the bed and the surface sensor was floating on a buoy approximatly 20 cm below the surface. The middle sensor was hanging from a buoy such that at most times its line was slack, but at high enough water levels the line went taught and the sensor was pulled further underwater. The second subplot (b) gives salinity at these sensors. The mid-column sensor in (b) shows a similar structure to the CTD colocated with the ADV at NM (Figure~\ref{fig:UandSvsTch4}).
+To understand the vastly different values of \emph{K$_x$} in higher and lower salities, we look to time series of salinities at different depths in the estuary. Figure~\ref{fig:SDCApr2012} shows data from three CTDs vertically distributed in the water column at the upstream DC station, approximately 200 m upstream from the NM station. The first subplot (a) shows the depth of each sensor. The bed sensor was fixed 20 cm above the bed and the surface sensor was floating on a buoy approximatly 20 cm below the surface. The middle sensor was hanging from a buoy such that at most times its line was slack, but at high enough water levels the line went taught and the sensor was pulled further underwater. The second subplot (b) gives salinity at these sensors.
 
-The surface salinity at DC on the diurnal high high tide has two peaks (Figure ~\ref{fig:SDCApr2012}b, \emph{color} line). The first peak is attributed to advection of the salt field upstream with the flood tide, and the fast drop \emph{should be} the movement of saline surface waters back downstream with the coupled effect of \emph{ebbing tide} and buoyancy-driven restratification of the flow. A second peak in surface salinity occurs as the high salinity at depth begins to lower. This peak represents water that had been trapped upstream moving past the lower estuary sensors. 
+Some features of vertical salinity differences are apparent in this plot. The bed sensor (blue lines on figure~\ref{fig:SDCApr2012}) shows that during this period of time salt completely leaves the estuary daily on the large ebb, but does not freshen completely on the small ebb. (Figure~\ref{fig:UandSvsTch4} confirms salt advects out, but as shown in chapter 3, salt can become trapped in the deep region where the DC mooring is located). The mid-column sensor (blue lines on figure~\ref{fig:SDCApr2012}) in (b) shows a similar structure to the CTD colocated with the ADV at NM (Figure~\ref{fig:UandSvsTch4}). The surface salinity at DC on the diurnal high high tide has two peaks (Figure ~\ref{fig:SDCApr2012}b, green line). The first peak is attributed to advection of the salt field upstream with the flood tide, and the fast drop should be the movement of saline surface waters back downstream with the coupled effect of the ebbing tide and buoyancy-driven restratification of the flow. A second peak in surface salinity occurs as the high salinity at depth begins to lower. We hypothesize that this peak represents water that had been trapped upstream now moving past the lower estuary sensors. 
 
-The structure seen in the mid-column at DC or at the NM collocated ADV and CTD is thus evidence of mixing in the upper water colum between this second pulse more saline surface waters and salinities at upper and middle depth. 
+\emph{this sentence says we see vertical mixing happening in the surface because of that extra peak thing... }
+
+The structure seen in the mid-column at DC or at the NM collocated ADV and CTD is thus evidence of mixing in the upper water colum between this second pulse of salty surface waters and salinities at upper and middle depth. 
 
 \subsection{Where does it come from?}
 
@@ -192,63 +248,9 @@ Figure~\ref{fig:tvsS} ~\ref{fig:Kxvst}
 \emph{some conclusions here}
 Have simplified complex system to look at salt dispersion... suggests two-layer vertical processes... 
 
-% --------------TABLES ----------------%
-\begin{table}
-\renewcommand{\arraystretch}{1.3}
-
-	\begin{center}
-		\begin{tabular}{| l || c | c | c | c | c | c |}
-		\hline
-		Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_0}$ & x$_{c,fresher}$ & x$_{c,fresher}$\\
-		\hline \hline
-		21 Apr & 11.5 & 48.7 m$^2$ s$^{-1}$ & 2.3 m$^2$ s$^{-1}$ & -591 m & -9.4 m\\ 
-		22 Apr & 10.5 & 65.1 m$^2$ s$^{-1}$ & 3.1 m$^2$ s$^{-1}$ & -713 m & -60.2 m\\ 
-		23 Apr & 14.4 & 31.0 m$^2$ s$^{-1}$ & 5.2 m$^2$ s$^{-1}$ & 34.2 m & 18.95 m\\ 
-		24 Apr & 14.1 & 31.6 m$^2$ s$^{-1}$ & 5.9 m$^2$ s$^{-1}$ & -137.3 m & -3.9 m\\  \hline 
-	\end{tabular}
-	\caption{table caption}\label{tab:Kxtable}
-\end{center}
-\end{table}
-
-
-
-
 
 % -------------- FIGURES -------------- %
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/UandSvsT} 
-\caption{X-averaged velocity (a) and salinity (b) records X cm above the bed at station NM.} \label{fig:UandSvsTch4}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/SvsXfloodebb} 
-\caption{S(x) for four floods - April 2012, 20cm above bed, Near Mouth (a) and four ebbs (b). In both figures, the profiles are centered around x=0 at the S = 15 PSU} \label{fig:SvsXall}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_124_165} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_183_263} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
-\end{figure}
-
-
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_279_357} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
-\end{figure}
-
-
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_376_454} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
-\end{figure}
 
 
 
