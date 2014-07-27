@@ -9,13 +9,14 @@
 
 
 \section{Introduction}
-Salt transport in small, intermittently closed estuaries... \emph{tends to be frontal, sharp gradients - both in vertical and in horizontal}
+\emph{why, how to quantify mixing, what processes are involved in estuaries, and how about estuaries with peripheral stuff?}
+Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally.
 
-Salt moves in and out of the Pescadero estuary as described in chapter~\ref{ch3}. The water column remains stratified, and a mixed water column only exists when high freshwater flows have forced all salt from the confines of the estuary. But, with tidal velocities and infragravity oscillations acting on the stratified salt field, there must be some mixing and it behooves us to try to quantify mixing and its effects. \emph{why?}
+In the open state of the Pescadero estuary, salt moves in and out as described in chapter 3. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research and millenia of cooking pasta. Here, then, I set out to characterize salt mixing and dispersion in the Pescadero estuary. 
 
-\emph{Dispersion processes... turbulent mixing, shear dispersion, ... scale processes? --> why looking at K$_x$ instead of $K_z$}
+\emph{HOW TO QUANTIFY? Dispersion processes... turbulent mixing, shear dispersion, ... scale processes? --> why looking at K$_x$ instead of $K_z$}
 
-\emph{Background on what I'm trying to do.  Cite Ralston \& Stacey 2005- Longitudinal dispersion... tidal straining (Simpson et al, 1990, Burchard \& Baumert 1998?),.. longitudinal dispersion (Okubu, 1973; Lissa's thesis paper?)}, here I will cite \parencite{Ralston:2005aa} and maybe also John Simpson's paper \parencite{Simpson:1990aa}. 
+\emph{IMPORTANT ESTUARINE PROCESSES, AND OTHER WORK SIMILAR. Background on what I'm trying to do.  Cite Ralston \& Stacey 2005- Longitudinal dispersion... tidal straining (Simpson et al, 1990, Burchard \& Baumert 1998?),.. longitudinal dispersion (Okubu, 1973; Lissa's thesis paper?)}, here I will cite \parencite{Ralston:2005aa} and maybe also John Simpson's paper \parencite{Simpson:1990aa}. 
 
 
 \subsubsection{What papers are relevant here? Quickly describe them:}
@@ -39,8 +40,6 @@ Ralston and Stacey \cite{Ralston:2005aa} used a 1-d framework to quantifiy front
 %% 1D Advection-diffusion
 \subsection{1D advection-diffusion} \label{ssec:1dadvdif}
 
-\emph{This form assumes K$_x \ne f(x)$. Big problem?}
-
 We start with the depth-averaged 1-d advection-diffusion of salinity,
 \begin{eqnarray}
 \frac{\partial S}{\partial t} + U\frac{\partial S}{\partial x} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1dadvdiff}
@@ -59,26 +58,27 @@ where \emph{S$_0$} is the \emph{ocean salinity and/or upper end of step function
 \begin{eqnarray}
 S(x,t) = \frac{S_0}{2}\left(1+erf\left(\frac{x-x_c}{\sqrt{4K_xt}}\right)\right) \label{eq:S}
 \end{eqnarray}
-where \emph{x$_c$} is the center of the salt front. 
+where \emph{x$_c$} is the center of the salt front. With some observations, the value of \emph{K$_x$} can be obtained from this analytical solution.
 
 
 %%% Observations --> Analytical framework
 \subsection{Getting observations into the analytical framework} \label{ssec:ObsInto1DAdvDiff}
+To solve for \emph{K$_x$} in equation~\ref{eq:S}, the salinity structure in time and space within an estuary must be known. Salinity measurements were made in the Pescadero estuary with good temporal resolution and some longitudinal distribution during an April - June 2012 field campaign. However, longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dyanamics of a whole system is nearly impossible. So, we resort to recreating the salintiy structure in time using measurements from a collocated ADV and CTD. 
 
-
-With point measurements obtained in the Pescadero estuary, values for \emph{K$_x$} can be obtained: 
-
-Focusing on velocity and salinity measurements made during the April - June 2012 field deployment (described in detail in the previous chapter).... An ADV collected point velocity measurements colocated with a CTD measuring \emph{X} cm above the bed \emph{(20cm? 30 cm?)}. Longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so \emph{locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dyanamics of a whole system is difficult...}, so we recreate the salinity structure in time by assuming pure advection past the sensor. 
+The sensors give a time series of salinity and velocity (0.X m above the bed at NM). Since velocity is just the rate of change of distance with time,
 
 \begin{eqnarray}
 U = \frac{dx}{dt} \label{eq:uEdxdt}\\
+\end{eqnarray}
+taking the integral of velocity,
+\begin{eqnarray}
 \int{Udt} = \int{dx} = X \label{eq:intuEx}
 \end{eqnarray}
-By taking the integral of the ADV velocity, equation~\ref{eq:intuEx} allows us to transform the time series of velocity ($U(x_{NM},t)$) and salinity ($S(x_{NM},t)$) measurements (Figure~\ref{fig:UandSvsT}) into a spatial representation of salinity ($S(x)$, Figure~\ref{fig:SvsXall}).
+allows us to transform the time series of point measurements of velocity and salinity (Figure~\ref{fig:UandSvsTch4}) into a spatial representation of salinity ($S(x)$, Figure~\ref{fig:SvsXall}).
 
 %%%% Data Processing Specifics
 \subsection{Data processing specifics} \label{ssec:DataProcessing}
-To make this dataset, velocity measurements were burst-averaged (\emph{8.3 min. burst?... specifics in previous chapter}) and an 800 sec moving average was applied to the CTD measurements.  Averaging was intended to remove the infragravity oscillation component of velocity and salinity measurements to focus on tidal processes. 
+To make this dataset, velocity measurements were burst-averaged (\emph{8.3 min. burst?... specifics in previous chapter}) and an 800 s moving average was applied to the CTD measurements.  Averaging was intended to remove the infragravity oscillation component of velocity and salinity measurements to focus on tidal processes. 
 
 To get \emph{K$_x$} from the recreated \emph{S(x)}, equation~\ref{eq:S} was rearranged into the linear form:
 \begin{eqnarray}
@@ -206,33 +206,33 @@ Have simplified complex system to look at salt dispersion... suggests two-layer 
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_124_165} 
-\caption{21 April, 2012. } \label{fig:Kx421}
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_183_263} 
-\caption{22 April, 2012. } \label{fig:Kx422}
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
 \end{figure}
 
 
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_279_357} 
-\caption{23 April, 2012. } \label{fig:Kx423}
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
 \end{figure}
 
 
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/SvXwKx_376_454} 
-\caption{24 April, 2012.} \label{fig:Kx424}
+\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
 \end{figure}
 
 
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/DC_salt_421_425}
-	\caption{Two K$_x$ structure due to vertical processes...} \label{fig:SDCApr2012} \label{fig:DC_salt_421_425}
+	\caption{Sensor depth (a) and salinity measurements (b) at DC for the four days where K$_x$ is computed by sensors at NM. The midcolumn sensor (red) has a similar structure to that seen at the CTD collocated with the ADV, and the surface sensor (green) suggests that this structure is an effect of mixing a second pulse of saline water on ebb.} \label{fig:SDCApr2012} \label{fig:DC_salt_421_425}
 \end{figure}
 
 
