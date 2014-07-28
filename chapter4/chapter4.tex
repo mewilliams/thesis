@@ -231,14 +231,17 @@ Values of $K_x$ in saltier and fresher salinities remain an order of magnitude a
 
 Figure~\ref{fig:tvsS} ~\ref{fig:Kxvst}
 
-\emph{I used the value of t at 20 PSU for higher salinities and 10 PSU for lower salinities.  Figure ~\ref{fig:tvsS} shows that the time... isn't constant across these salinities.. will introduce error}.  Next figure ~\ref{fig:Kxvst} gives some approximate ranges of K$_x$ using different isopycnals as representative of the two salinity regimes \emph{(higher S: 18 - 25, lower S: 5 - 10)} and thus different times... 
+Using equation~\ref{eq:S} to get $K_x$ values required providing a value of time $t$. The time used was $t=t_0 + t_{isopycnal}$, where $t_{isopycnal}$ was the time between the flooding and ebbing of each isopycnal past the ADV and CTD at NM. Because different $K_x$ values were calculated from higher and lower salinities, the 20 PSU and 8 PSU isopycnals were selected as representative of the two separate water masses. 
 
+Figure~\ref{fig:tvsS} gives the time between each isopycnal for the four tides. Time is not constant, so selecting a value introduces bias to the $K_x$ calculation.
+
+Time $t_0$, the time from an infinitely sharp interface to the flood \emph{S(x)} structure was estimated to be 1000 s based on physical parameters within the estuary (cf section~\ref{ssec:DataProcessing}). $K_x$ values are also sensitive to this value.
+
+A longer $t$ lessens the dispersion coefficient $K_x$. The influence of selecting different isopycnals on the calculation of $K_x$ is shown in figure~\ref{fig:tvsS}. 
 
 \subsection{Influence of salt trap}
-Near the mouth, the water column was seen to freshen on the semidiurnal tide (Figure~\ref{fig:UandSvsTch4}) but in the deep channel X m upstream from the mouth, freshening only occurred on the large ebb (Figure~\ref{fig:DC_salt_421_425}). Using these methods, we assumed time based on the frontal passage of the collocated ADV and CTD, a time of less than one tidal cycle. However, it is not possible to distinguish high salinity water that has been trapped at depth in the deep channel for ... \emph{wait. I think the higher value of Kx in the second two tides is because that is trapped water and those t values are off. The first tide the DC pool was freshened so we're actually seeing one tidal excursion.}
+Near the mouth, the water column was seen to freshen on the semidiurnal tide (Figure~\ref{fig:UandSvsTch4}) but in the deep channel upstream, freshening sometimes only occurred on the large ebb (Figure~\ref{fig:DC_salt_421_425}). We assumed $t$ based on the passage of the salt front past the collocated ADV and CTD at NM, a time of less than one tidal cycle. However, some of the high salinity water passing the NM sensors on the large ebb will have been retained for an extra tidal cycle. Dispersion may be lower at high salinity than estimated here if the time high salinity water is retained is double our estimates. This may explain the different values of high salinity $K_x$ on 21 \& 22 April compared to on 23 \& 24 April. 
 
-\subsection{goodness of fit?}
-\emph{An R$^2$ value doesn't really mean anything because It's calculated on an inverse erf vs. another pile of variables. By inspection, the higher salinity K$_x$ on figures~\ref{fig:Kx423} and~\ref{fig:Kx424} don't seem to match up as well... probably explains the higher value of K$_x$ there more than anything previously stated. Not sure what to do here.}
 
 \section{Conclusions}
 
