@@ -34,7 +34,7 @@ Field measurements were made in the Pescadero estuary during four field deployme
  Measurements were not always continuous because instrument batteries sometimes died before being replaced and instruments were sometimes buried, failed, or damaged during the deployment. Later deployments utilized more instruments and so had better resolution in space.  The frequency of measurements was also increased in later deployments. 
 
 % Bathymetry map
-\begin{figure}
+\begin{figure}[h]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter2/figures/bathymetry_map_w_20112012_sensors} \caption{Bathymetry map of the Pescadero estuary. Locations of moorings from September 2011 - June 2012 are shown on this map. Mooring locations for November 2010 - May 2011 deployments are shown in Chapter 5. In the 2010-2011 deployment, DC and DS are in approximately the same location, and an upstream (US) station was located about 70 m upstream from DC/DS.}\label{fig:BathyCh2}
 \end{figure}
@@ -49,7 +49,7 @@ Sensors were located according to bathymetry. Early attempts to collect measurem
 Depth measurements were made using the pressure transducer on conductivity, temperature, depth (CTD) sensors attached to weighted milk crates (RBR XR-420 CTD, Figure~\ref{fig:CTDphoto}). The pressure values on the instruments were adjusted to changing atmospheric pressure using air pressure measurements from the Half Moon Bay airport (KHAF). An approximate density of $\rho$ = 1021 kg m\textsuperscript{-3} is used with the hydrostatic pressure equation ${p = \rho g h}$, slightly overestimating the depth when the estuary is fresh and density is lower than this value. Error in the pressure measurement using this assumption may be up to 2.5\%. Further error is introduced comparing pressure measurements in a quiescent water column to a quickly moving flow. Stagnation pressure \emph{p} is given by \emph{p = $\rho$ g h +  0.5 $\rho$ v\textsuperscript{2}}, where \emph{h} is water depth above the reference location, \emph{v} is velocity, \emph{g} is gravity and \emph{$\rho$} is water density \parencite{young_brief_2004}. Under quiescent flow, pressure values measured are hydrostatic pressure, so under small velocities, error in this assumption is small. If flow reaches 1 m s\textsuperscript{-1} in a 1 m water column, the pressure reading will increase by 5\% therefore depth calculated from these measurements not accounting for dynamic pressure will be slightly overestimated.
 
 % CTD mooring photograph
-\begin{figure}
+\begin{figure}[h!]
 \centering
 		\includegraphics[width=.6\textwidth]{chapter2/figures/PB110014_CTD_mooring} \caption{A mooring consisting of several CTDs and buoys attached to a weighted milk crate. Bed CTDs were attached 0.2 m above the bottom of the milk crate.}\label{fig:CTDphoto}
 
@@ -104,14 +104,14 @@ Windspeeds from the ocean are higher than those from the land (Figures~\ref{fig:
 
 
 % Figure - Met station windspeed and direction in Pescadero 
-\begin{figure} %\centering
+\begin{figure}[h!] %\centering
 	\includegraphics[width=\textwidth]{chapter2/figures/wind_vs_time_20111027_20120510} \caption{Wind measurements made in the Pescadero marsh. (a) is wind speed [m s\textsuperscript{-1}] at 3 m above the water surface. (b) is wind direction in degrees.}
 \label{fig:metstn_pdo_ws_wdir} 
 \end{figure}
 % End Figure - Met station windspeed and direction in Pescadero 
 
 % Figure - wind rose, pescadero data
- \begin{figure}
+ \begin{figure}[h]
  	\begin{center}
  		\includegraphics[height=10cm]{chapter2/figures/windrose_20111027_20120510} \caption{A wind measurement histogram shows that wind blows in two directions and faster velocity wind coems from the ocean direction (blowing SE).} \label{fig:metstn_pdo_windrose} 
  	\end{center}
@@ -128,7 +128,7 @@ Freshwater streamflow into the Pescadero estuary is estimated based on a United 
 
 
 % figure tide, Q, swh
-\begin{figure}
+\begin{figure}[hp]
 	\begin{center}
 		\includegraphics[width=\textwidth]{chapter2/figures/QTH_2010_2012.pdf} \caption{External conditions relevant to Pescadero estuarine dynamics include estimated freshwater discharge into the Pescadero estuary (a), tidal water level at San Francisco's Crissy Field (b), and ocean significant wave height (c). These values are given for calendar years 2010, 2011, and 2012.}\label{fig:QTH_2010_2012}  
 	\end{center}
@@ -139,29 +139,33 @@ Freshwater streamflow into the Pescadero estuary is estimated based on a United 
 The Mediterranean climate of California is highlighted by seasonal precipitation. Freshwater flow in the rainfall-dominated Pescadero Creek watershed follows this trend. Figure~\ref{fig:Q_1951_2012} shows median gauged creek flow at the USGS Pescadero gauge including data from 1951 to 2012 and the freshwater discharge curves for the water years of our study. 
 
 % figure Q stacked all years with study years.
-\begin{figure}
+\begin{figure}[p]
 	\begin{center}
 		\includegraphics[width=\textwidth]{chapter2/figures/Q_1951_to_2012_withstudyyears.pdf} \caption{Gauged freshwater discharge at the USGS Pescadero gauge (11162500) for the years of data collection compared to the median freshwater flow for water years 1951 - 2012.}\label{fig:Q_1951_2012}
 	\end{center}
 \end{figure}
 % end figure Q stacked all years with study years.
 
+
 \subsubsection{Tides}
 The nearest ocean tide gauges to the Pescadero estuary are operated by the National Oceanic and Atmospheric Administration (NOAA) at Crissy Field in San Francisco, California (Station 9414290) and in Monterey Harbor in Monterey, California (Station 9413450). Water level in both locations are recorded every six minutes, and one minute tsunami-capable unverified data is also recorded. The Northern Californian coast experiences a semidiurnal tide with a neap tide range of under 1 m and a spring tide range up to almost 3 m (Figure~\ref{fig:QTH_2010_2012}b). High and low tide levels in San Francisco during the deployment years were 2.34 m and -0.64 m MLLW, respectively. 
 
-\subsubsection{Ocean wave climate}
-Ocean wave conditions are obtained through the NOAA National Data Buoy Center (NDBC). NDBC buoy 46012 is located approximately 40 km WNW of the Pescadero estuary at 208.8 m depth. This buoy reports ocean significant wave height every hour. Deep water wave heights are larger than wave heights experienced at the coast, but larger waves 40 km from shore will cause larger waves at the coast thus we use this value as a proxy for coastal ocean conditions. Maximum wave heights in the ocean from 2010 - 2012 were over 7 m, and minimum were under 1 m (Figure~\ref{fig:QTH_2010_2012}c). Ocean wave heights also follow a seasonal trend with smaller waves in the summer months transitioning to larger wave climates in the fall, winter and spring months when storms on the Pacific Ocean generate large swell.
 
-\subsubsection{Wind}
-Wind conditions are approximated by measurements at the Half Moon Bay airport (KHAF) during periods before the wind anemometer was installed in the Pescadero estuary.  There is good agreement in wind speed and direction between KHAF and our measurement (Figure~\ref{fig:PDOvsKHAFwind}). Wind direction measurements agree better when wind speeds are high.
+
 
 % figure comparison of pdo and khaf winds
-\begin{figure}
+\begin{figure}[h!]
 \centering
 	\includegraphics[width=\linewidth]{chapter2/figures/pdo_vs_khaf_windmeas} \caption{Wind measurements in Half Moon Bay (black) and in Pescadero (red). Wind from the northwest blows off the ocean and agreement is better between KHAF and Pescadero measurements. High windspeeds show good agreement regardless of the direction.} \label{fig:PDOvsKHAFwind}
 \end{figure}
 % end figure comparison of pdo and khaf winds
 
+\subsubsection{Ocean wave climate}
+Ocean wave conditions are obtained through the NOAA National Data Buoy Center (NDBC). NDBC buoy 46012 is located approximately 40 km WNW of the Pescadero estuary at 208.8 m depth. This buoy reports ocean significant wave height every hour. Deep water wave heights are larger than wave heights experienced at the coast, but larger waves 40 km from shore will cause larger waves at the coast thus we use this value as a proxy for coastal ocean conditions. Maximum wave heights in the ocean from 2010 - 2012 were over 7 m, and minimum were under 1 m (Figure~\ref{fig:QTH_2010_2012}c). Ocean wave heights also follow a seasonal trend with smaller waves in the summer months transitioning to larger wave climates in the fall, winter and spring months when storms on the Pacific Ocean generate large swell.
+
+
+\subsubsection{Wind}
+Wind conditions are approximated by measurements at the Half Moon Bay airport (KHAF) during periods before the wind anemometer was installed in the Pescadero estuary.  There is good agreement in wind speed and direction between KHAF and our measurement (Figure~\ref{fig:PDOvsKHAFwind}). Wind direction measurements agree better when wind speeds are high.
 
 \subsubsection{Tsunami}
 The 2011 Tohoku earthquake generated a Pacific Ocean-wide tsunami. A description of the ocean state and the response of the Pescadero estuary to the forcing of the small amplitude tsunami that reached California is found in chapter 5.
@@ -175,6 +179,14 @@ The 2011 Tohoku earthquake generated a Pacific Ocean-wide tsunami. A description
 
 Two inlet conditions exist for the Pescadero estuary: open and closed (Figure~\ref{fig:kite_photos_open} and~\ref{fig:kite_photos_closed}).  These conditions set the hydrodynamic state of the estuary. The inlet continuously expands and contracts as nearshore sand transport competes with freshwater and ebb tidal scour. An open estuary is characterized by any period in which the estuarine water level falls with the outgoing tide (Figure~\ref{fig:depthclosuref11}, prior to 23 August), and a closed estuarine state is highlighted by the lack of outflowing water thus no falling depth (Figure~\ref{fig:depthclosuref11}, prior to 23 August). Within the open state, tides in the estuary may be an attenuated version of the ocean tides (Figure~\ref{fig:depthclosuref11}, prior to 20 August), and this state we will consider to be fully open. An extensive description of relevant hydrodynamic and salt transport processes in the fully open state is found in chapters 3 and 4.
 
+% figure: photograph mouth kite open
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[height=10cm]{chapter2/figures/kite20100415mouth} 
+	\end{center}
+\caption{The mouth of the Pescadero estuary in the open state on 15 April, 2010. The photograph was taken from a camera attached to a kite, and the kite string is visible in the image. Photograph credit: Rusty Holleman}\label{fig:kite_photos_open} \end{figure}
+% end figure: photograph mouth kite open
+
 % figure: water level with closure (CTD)
 \begin{figure}
 \centering
@@ -182,14 +194,6 @@ Two inlet conditions exist for the Pescadero estuary: open and closed (Figure~\r
 	\label{fig:depthclosuref11} 
 \end{figure}
 % end figure: water level with closure (CTD)
-
-% figure: photograph mouth kite open
-\begin{figure}
-	\begin{center}
-		\includegraphics[height=10cm]{chapter2/figures/kite20100415mouth} 
-	\end{center}
-\caption{The mouth of the Pescadero estuary in the open state on 15 April, 2010. The photograph was taken from a camera attached to a kite, and the kite string is visible in the image. Photograph credit: Rusty Holleman}\label{fig:kite_photos_open} \end{figure}
-% end figure: photograph mouth kite open
 
 Because the estuarine inlet is in a constantly unstable condition, an intermediate state between fully open and closed is also common in the Pescadero estuary.  In this state, the sandy inlet is constricted. Here, the estuarine water level rises and falls in response to ocean tides, but may only fill with the diurnal high high tide (Figure~\ref{fig:depthclosuref11}, 20-23 August) or be severely attenuated. We consider this condition to be a highly-constricted open state. The open state of the estuary is a continuum. Sand moves in and out of the inlet with tidal flow and waves. High freshwater discharge will scour the mouth.
 
@@ -209,7 +213,7 @@ A description of estuarine dynamics during the closed and transitioning states f
 The dominant forcing in open estuaries is due to tidally driven flows. When the mouth of intermittently closed estuaries chokes closed, tidal momentum and buoyancy fluxes are cut off. Thus, we look to other estuarine processes to set hydrodynamics within the closed Pescadero estuary. 
 
 % figure: photograph mouth kite closed
-\begin{figure}
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[height=10cm]{chapter2/figures/kite20101119mouth} 
 	\end{center}
@@ -295,7 +299,7 @@ On November 23, wind forcing was seaward, small surface velocities in the Pescad
 
 
 % figure: wind event nov. 2010 - 6 subplots
-\begin{figure}[t]
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=.9\linewidth]{chapter2/figures/wind_event_nov2010ef}
 \caption{Observations of wind setup and the inlet breach on 24-25 November, 2010. Plotted are wind measurements at KHAF (a) and (b), ADCP velocity measurements color range $\pm $0.5 m s$^{-1}$ (c) and (d) and the DS (solid line) and US (dashed line) CTD mooring measurements (e) and (f). Observations show a wind setup event on 23 November, and a rapid draining of the estuary which resulted in full mixing of the water column at the DS and US moorings.}
@@ -305,7 +309,7 @@ On November 23, wind forcing was seaward, small surface velocities in the Pescad
 
 
 % figure: schematic - 3 layer flow.
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=.5\linewidth]{chapter2/figures/closedthreelayerflow}
 \caption{Three layer flow may occur with wind stress on the surface of the closed lagoon coupled with the effects of stratification and bathymetry.} \label{fig:schematic3lf}
@@ -317,7 +321,7 @@ From this point, the wind direction slowly shifted to become landward, and on No
 
 
 % figure: schematic - upwelling
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 	\includegraphics[width=.5\linewidth]{chapter2/figures/upwellingschematic}
 \caption{High, persistent winds push surface waters and may upwell the more dense bottom waters.} \label{fig:schematicupwelling}
@@ -356,7 +360,8 @@ The dramatic breach event is obvious when the lagoon was quickly draining, but v
 
 % figure conditions QTH nov breaches
 \begin{figure}[h]
-	\includegraphics[width=\linewidth]{chapter2/figures/QTH_nov_breach}
+\centering
+	\includegraphics[width=.9\linewidth]{chapter2/figures/QTH_nov_breach}
 \caption{Freshwater streamflow (a,b) into the estuary, tidal conditions (c,d) and ocean wave conditions (d,f) surrounding breach events in November 2010 and November 2011. The red line gives the time of maximum water level preceding the water draw down.} \label{fig:QbreachNov}
 \end{figure}
 % end figure conditions QTH nov breaches
@@ -364,6 +369,7 @@ The dramatic breach event is obvious when the lagoon was quickly draining, but v
 
 %figure conditions QTH spring 2012 breaches
 \begin{figure}[h]
+\centering
 \includegraphics[width=.9\linewidth]{chapter2/figures/QTH_sp2012_breach}
 \caption{Freshwater streamflow (a) into the estuary, tidal conditions (b) and ocean wave conditions (c) surrounding breach events in January, February, and March 2012. The red line gives the time of maximum water level preceding the water draw down.} \label{fig:QbreachSpring2012}
 \end{figure}
@@ -375,14 +381,14 @@ Streamflow measurements show an elevated freshwater discharge in conjunction wit
 
 
 % figure nov 2011 breach
-\begin{figure}[h]
+\begin{figure}[p]
 	%\centering
 	\includegraphics[width=.9\linewidth]{chapter2/figures/breach_nov2011ef} \caption{Observations of the inlet breach on 10-11 November, 2011. Plotted are wind measurements in the Pescadero marsh (a) and (b), velocity [color range $\pm$0.5 m s$^{-1}$] (c) and (d) and the DC CTD mooring measurements (e) and (f). Measurements show a rapid draining of the estuary which resulted in full mixing of the water column at the DC mooring.} \label{fig:breach_nov2011}
 \end{figure}
 % end figure nov 2011 breach
 
 % figure jan 2012 breach
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=\linewidth]{chapter2/figures/breach_jan2012ef} 
 	\caption{Observations of the inlet breach on 21-22 January, 2012. No velocity data is available for this event. Wind measurements in the Pescadero marsh (a) and (b) and the DC CTD mooring measurements (c) and (d) show a wind setup event early on 21 January, and a rapid draining of the estuary which resulted in full mixing of the water column at the DC mooring.} \label{fig:breach_jan2012}
@@ -390,7 +396,7 @@ Streamflow measurements show an elevated freshwater discharge in conjunction wit
 % end figure jan 2012 breach
 
 % figure feb 2012 breach
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=\linewidth]{chapter2/figures/breach_feb2012ef} 
 	\caption{Observations of the inlet breach on 21-22 February, 2012. Wind measurements in the Pescadero marsh (a) and (b), velocity [color range $\pm$0.5 m s$^{-1}$] (c) and (d) and the DC CTD mooring measurements (e) and (f) show slow draining of the estuary. Mixing in the deep water occurred, but complete vertical mixing is absent during this event.} \label{fig:breach_feb2012}
@@ -399,7 +405,7 @@ Streamflow measurements show an elevated freshwater discharge in conjunction wit
 
 
 % figure mar 2012 breach
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=\linewidth]{chapter2/figures/breach_mar2012ef} 
 	\caption{Observations of the inlet breach on 3-4 March, 2012. Plotted are wind measurements in the Pescadero marsh (a) and (b), velocity [color range $\pm$0.5 m s$^{-1}$] (c) and (d) and the DC CTD mooring measurements (e) and (f). Observations show slow draining of the estuary. Mixing in the deep water occurred, but complete vertical mixing is absent during this event. The bed CTD conductivity cell was malfunctioning during this window and so those salinity data are not shown.} \label{fig:breach_mar2012}
