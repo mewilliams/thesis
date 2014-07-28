@@ -4,31 +4,17 @@
 \emph{(alternate title suggestions accepted)}
 
 \section{Introduction}
-\emph{why, how to quantify mixing, what processes are involved in estuaries, and how about estuaries with peripheral stuff?}
-Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally.
 
-In the open state of the Pescadero estuary, salt moves in and out as described in chapter 3. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research and millenia of cooking pasta. Here, then, I set out to characterize salt mixing and dispersion in the Pescadero estuary. 
+Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally. In the open state of the Pescadero estuary, salt moves in and out as described in chapter 3. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research and millenia of cooking pasta. Here, then, I set out to characterize salt mixing and dispersion in the Pescadero estuary. 
 
-\emph{HOW TO QUANTIFY? Dispersion processes... turbulent mixing, shear dispersion, ... scale processes? --> why looking at K$_x$ instead of $K_z$}
+Mixing and dispersion in estuaries is due to a combination of vertical and lateral processes. Shear dispersion,... tidal straining \parencite{Simpson:1990aa}, tidal trapping,.. \emph{also baroclinic processes on subtidal timescales that don't exist in these little estuaries}
 
-\emph{IMPORTANT ESTUARINE PROCESSES, AND OTHER WORK SIMILAR. Background on what I'm trying to do.  Cite Ralston \& Stacey 2005- Longitudinal dispersion... tidal straining (Simpson et al, 1990, Burchard \& Baumert 1998?),.. longitudinal dispersion (Okubu, 1973; Lissa's thesis paper?)}, here I will cite \parencite{Ralston:2005aa} and maybe also John Simpson's paper \parencite{Simpson:1990aa}. 
-
-
-\subsubsection{What papers are relevant here? Quickly describe them:}
-\parencite{okubo_effect_1973}: Shoreline irregualarities trap tracers, and this acts as a mechanism for dispersion of said tracers.  In a marsh this might function as water being trapped in the vegetation or sloughs and small channels. Because water here is slower moving, tracer will disperse back out... causing \emph{dispersion}. \emph{This analysis is based on multiple tidal cycles/subtidal flow, and thus the applicability of Okobu's analysis may be limited systems where subtidal flow doesn't really mean anything \parencite{Ralston:2005aa}}. 
-
-\parencite{Simpson:1990aa}: Tidal straining... 
+In estuaries with peripheral channels or margins, tidal trapping increases longitudinal dispersion processes \parencite{okubo_effect_1973}. 
 
 \parencite{Ralston:2005aa}: \emph{Similar thing, different estuary}
-Ralston and Stacey \cite{Ralston:2005aa} used a 1-d framework to quantify frontal mixing within the intertidal zone of mudflats in San Francisco Bay. They found \emph{K$_x$} of 10 m\textsuperscript{2} s\textsuperscript{-1} of the frontal salinity structure, and attributed this mixing to ...
+Ralston and Stacey \cite{Ralston:2005aa} used a 1-d framework to quantify frontal mixing within the intertidal zone of mudflats in San Francisco Bay. They found \emph{K$_x$} of 10 m\textsuperscript{2} s\textsuperscript{-1} of the frontal salinity structure...
 
-\emph{Giddings et al. 2012, maybe } 
-
-
-\emph{salt is conservative, implications for temperature, plankton, other stuff that advects and diffuses around...}
-
-\emph{want to quantify mixing!}
-\emph{range of K$_x$ for other estuaries? salt-wedge in particular. }
+Salt is a conservative tracer, making transport and mixing of salinity a quantifiable term. Implications of salinity transport and mixing can help to characterize similar effects on other terms such as nutrients, temperature, plankton, or suspended sediment. 
 
 \section{Methods} \label{sec:ch4methods}
 
@@ -39,11 +25,11 @@ We start with the depth-averaged 1-d advection-diffusion of salinity,
 \begin{eqnarray}
 \frac{\partial S}{\partial t} + U\frac{\partial S}{\partial x} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1dadvdiff}
 \end{eqnarray}
-where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$} is the longitudinal dispersion coefficient \emph{(or mixing term..)}. In an estuary, the salt structure is advected upstream and downstream with the tides. Moving the frame of reference along with these tides, \emph{U=0} relative to the reference frame and equation~\ref{eq:1dadvdiff} becomes
+where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$} is the longitudinal dispersion coefficient. In an estuary, the salt structure is advected upstream and downstream with the tides. Moving the frame of reference along with these tides, \emph{U=0} relative to the reference frame and equation~\ref{eq:1dadvdiff} becomes
 \begin{eqnarray}
 \frac{\partial S}{\partial t} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1ddiff}
 \end{eqnarray}
-Assuming salinitiy follows a step funtion at time $t=0$ and that the boundaries of the system remain at \emph{ocean salinity, $S=S_0$} and freshwater salinity$S=0$, an analytical solution to equation~\ref{eq:1ddiff} can be obtained,
+Assuming salinitiy follows a step funtion at time $t=0$ and that the boundaries of the system remain at ocean salinity, $S=S_0$ and freshwater salinity $S=0$, an analytical solution to equation~\ref{eq:1ddiff} can be obtained,
 \begin{eqnarray}
 S(x,t) = \frac{S_0}{2}\left(1+erf\left(\frac{x-x_c}{\sqrt{4K_xt}}\right)\right) \label{eq:S}
 \end{eqnarray}
@@ -54,7 +40,7 @@ where \emph{x$_c$} is the center of the salt front. Using observations of the sa
 \subsection{Using observations in an analytical framework} \label{ssec:ObsInto1DAdvDiff}
 To solve for \emph{K$_x$} in equation~\ref{eq:S}, the salinity structure in time and space within an estuary must be known. Salinity measurements were made in the Pescadero estuary with good temporal resolution and some longitudinal distribution during an April - June 2012 field campaign. However, longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dynamics of a whole system would be nearly impossible. So, we resort to recreating the salinity structure in time using measurements from a collocated ADV and CTD. 
 
-The sensors give a time series of salinity and velocity (0.X m above the bed at NM). Velocity is the rate of change of distance with time,
+The sensors give a time series of salinity and velocity (0.2 m above the bed at NM). Velocity is the rate of change of distance with time,
 
 \begin{eqnarray}
 U = \frac{dx}{dt} \label{eq:uEdxdt}\\
@@ -67,7 +53,7 @@ transforms the time series of point measurements of velocity and salinity (Figur
 
 %%%% Data Processing Specifics
 \subsection{Data processing} \label{ssec:DataProcessing}
-To make this dataset, velocity measurements were burst-averaged (\emph{8.3 min. burst?... specifics in previous chapter}) and an 800 s moving average was applied to the CTD measurements.  Averaging was intended to remove the infragravity oscillation component of velocity and salinity measurements to focus on tidal processes. 
+To make this dataset, velocity measurements were burst-averaged (the instruments collected data for 512 s out of every 900 s) and an 800 s moving average was applied to the CTD measurements.  Averaging was intended to remove the infragravity oscillation component of velocity and salinity measurements to focus on tidal processes. 
 
 To get \emph{K$_x$} from the recreated \emph{S(x)}, equation~\ref{eq:S} is rearranged into the linear form:
 \begin{eqnarray}
@@ -82,7 +68,7 @@ Time series of collocated velocity and salinity measurements at NM are shown in 
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{chapter4/figures/UandSvsT} 
-\caption{Velocity (a) and salinity (b) records X cm above the bed at station NM. Velocity measurements have been averaged across their X s burst and rotated into the direction of principle flow. An 800 s moving average has been applied to salinity measurements. Averaging was done to remove higher frequency oscillations.} \label{fig:UandSvsTch4}
+\caption{Velocity (a) and salinity (b) records 20 cm above the bed at station NM. Velocity measurements have been averaged across their X s burst and rotated into the direction of principle flow. An 800 s moving average has been applied to salinity measurements. Averaging was done to remove higher frequency oscillations.} \label{fig:UandSvsTch4}
 \end{figure}
 
 The time series plots of salinity and velocity (Figure~\ref{fig:UandSvsTch4}b) show that the transition from fresh to ocean salinity water occurs rapidly on the flood and the return to fresh water on ebb is a longer duration process. Also, the ebb salinity field passes the sensors in two distinct segments. On ebb, lower salinities demonstrate a much more relaxed salinity structure than higher salinities. The flood salinities do not exhibit this feature. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, as well as to approach a quantification of \emph{K$_x$}, the time series is transformed into a spatial record as described in section~\ref{sec:ch4methods}. 
@@ -161,13 +147,11 @@ where \emph{h} is the height of the water column and \emph{u$_*$} is the shear v
 K = \frac{K^{'}}{1+r} + \frac{ru_0^2}{2k(1+r)^2(1+r+\omega / k)} \label{eq:KxOkubo}
 \end{eqnarray}
 
-\emph{quoted from Fischer:} "where K$^{'}$ is the longitudinal diffusivity in the main channel itself. uniform velocity of flow in the main channel of velocity $u = u_0 \cos(\omega t)$ and a uniform distribution of traps along the sides having a ratio of trap volume to to channel volume of r and a characteristic exhange time between traps and main flow of k$^{-1}$, effective long. diffusivity is.." equation above. \emph{discussion here...}
-
-\emph{If u0 is .3, r = .5, k and omega are what are in fischer... the second term is 34.5 (first is .66K)... If I figure out what that longitudinal diff term is, can get r variation with tide? Except I expect more trapping with spring tide, and my values from the 4 days suggest opposite.}
+\emph{If u0 is .3, r = .5, k and omega are what are in fischer... the second term is 34.5 (first is .66K')... If I figure out what that longitudinal diff term is, can get r variation with tide? Except I expect more trapping with spring tide, and my values from the 4 days suggest opposite...}
 
 \section{Discussion} \label{sec:discCh4}
 
-Spatial mapping of the salinity field from time series of velocity relies on the assumption of pure advection ($X = \int{U}dt$) This allow a paramerization \emph{OF WHY THIS IS AN AWESOME METHOD}. This method lacks the ability to inform where mixing is occuring, whether it is a continuous process or controlled by a bathymetric feature elsewhere in the estuary. An informed understanding of the Pescadero estuary and measurements elsewhere in the estuary help to shed light on the likely mechanisms of salinity dispersion.
+Spatial mapping of the salinity field from time series of velocity relies on the assumption of pure advection ($X = \int{U}dt$). This allows a simple paramerization of salinity mixing for the entire estuary. This method lacks the ability to inform where mixing is occuring, whether it is a continuous process or controlled by a bathymetric feature elsewhere in the estuary. An informed understanding of the Pescadero estuary and measurements elsewhere in the estuary help to shed light on the likely mechanisms of salinity dispersion.
 
 \subsection{Why this two-part structure?}
 
@@ -216,7 +200,7 @@ Approximately 750 m upstream from the mouth of the Pescadero estuary, two creeks
 Bed sensors in each creek were approximately 100 m upstream of the confluence. Data at these sensors (Figure~\ref{fig:PCBC421:425}) confirm that these are not completely uniform channels. Less salt water moves up Pescadero Creek than Butano Creek. This could be due to higher freshwater flow from the Pescadero Creek, which has a larger watershed. The Pescadero sensor may have been approximately 50 m farther upstream from the confluence than the Butano Creek sensor (the mooring was dragged from it's initial location), and so it is possible that this difference played a big role in whether salt reached the mooring. Further differences between the two creek channels are discussed below.
 
 \subsubsection{Marsh}
-The Pescadero Creek flows into the lower estuary through a relatively constricted, channelized creek bed.  Meanwhile, the Butano Creek flow through an extensive salt marsh. This marsh floods significantly with a closed mouth (cf Chapter~\ref{ch2}), but as is the nature of salt marshes, some flooding occurs tidally. The marsh has various sloughs, and the historic Butano Creek bed has undergone massive accretion with sediments from the logged watershed (Figure~\ref{fig:geMarsh}), so the main channel has shifted, adding further complexity to Butano marsh and creek flow paths.
+The Pescadero Creek flows into the lower estuary through a relatively constricted, channelized creek bed.  Meanwhile, the Butano Creek flow through an extensive salt marsh. This marsh floods significantly with a closed mouth (cf Chapter~\ref{chPescadero}), but as is the nature of salt marshes, some flooding occurs tidally. The marsh has various sloughs, and the historic Butano Creek bed has undergone massive accretion with sediments from the logged watershed (Figure~\ref{fig:geMarsh}), so the main channel has shifted, adding further complexity to Butano marsh and creek flow paths.
 
 Bed salinity measurements in the Pescadero and Butano Creeks suggest that within the Pescadero Creek (upstream of the confluence of both the Butano and the culverts to the North Pond) do not demonstrate the same structure seen downstream of these controls. The time series of salinity is very sharp and mostly uniform on flood and ebb (Figures~\ref{fig:PCBC421:425} and~\ref{fig:PCBC511:516}). Bed salinity measurements in the Butano Creek show a slightly more relaxed flood salinity structure, and hint at a two-phase ebb salinity structure. The later time series (Figure~\ref{fig:PCBC511:516}) actually shows two pulses of salty water on the ebb, similar to surface measurements downstream. These measurements seem to implicate marsh processes in setting the two-phase salinity structure.
 
@@ -302,11 +286,8 @@ Mixing and dispersion of the salt field in the Pescadero estuary has been approa
 \begin{subfigure}{.48\textwidth}
 	\includegraphics[width=\linewidth]{chapter4/figures/PB290273_culverts.JPG}
 \end{subfigure}
-
 \caption{Photographs of culverts to North Pond, left photo 23 March, 2010, right photo 29 November, 2010. There has been further deterioration of the culverts since these photographs were taken.} \label{fig:photoCulverts}
 \end{figure}
-
-
 
 
 
@@ -320,5 +301,5 @@ Mixing and dispersion of the salt field in the Pescadero estuary has been approa
 \begin{figure}
 \centering
 	\includegraphics[width=.5\textwidth]{chapter4/figures/marsh_conf_20120519_cropped.jpeg}
-	\caption{Satellite image of the Pesacadero estuary and marsh showing the confluence of the Butano and Pescadero creeks, salt marsh, branching struture of the Butano creek, and shallow channels at low tide on 19 May, 2012. Image: Google Earth} \label{fig:geMarsh}
+	\caption{Satellite image of the Pesacadero estuary and marsh showing the confluence of the Butano and Pescadero creeks, salt marsh, branching structure of the Butano creek, and shallow channels at low tide on 19 May, 2012. Image: Google Earth} \label{fig:geMarsh}
 \end{figure}
