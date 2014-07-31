@@ -104,7 +104,7 @@ Dispersion is shown to be much greater at lower salinities than at higher salini
 		23 Apr & 14.4 & 28.3 m$^2$ s$^{-1}$ & 5.0 m$^2$ s$^{-1}$ & 34.2 m & 19.0 m & $3.1\times10^4$ s & $2.3\times10^4$ s\\ 
 		24 Apr & 14.1 & 28.7 m$^2$ s$^{-1}$ & 5.7 m$^2$ s$^{-1}$ & -137 m & -3.9 m & $3.2\times10^4$ s & $2.4\times10^4$ s\\   \hline 
 	\end{tabular}
-	\caption{Values of \emph{K$_x$} for the large flood and ebb on four days in April 2012, and corresponding salinity transition ($S_T$), center of front ($x_c$), and time used for the calculation ($t$).}\label{tab:Kxtable}
+	\caption{Values of \emph{K$_x$} for the large flood and ebb on four days in April 2012, and corresponding salinity transition ($S_T$), center of front ($x_c$), and time used for the calculation ($t$).} \label{tab:Kxtable}
 \end{center}
 \end{table}
 % -------------------------------------------------------------------------------------%
@@ -157,7 +157,7 @@ Another disperive mechanism we expect to appear in the marsh and branching chann
 \begin{eqnarray}
 K_x = \frac{K^{'}}{1+r} + \frac{ru_0^2}{2k(1+r)^2(1+r+\omega / k)} \label{eq:KxOkubo}
 \end{eqnarray}
-as reported in Fischer et al. \parencite*{fischer_mixing_1979}. $K^'$ is X, \emph{r} is X, $\omega$ is X, and \emph{k} is X. Roughly speaking, the the second term on the right in equation~\ref{eq:KxOkubo} is the increase of dispersion due to tidal trapping. \emph{Values are then...} 
+as reported in Fischer et al. \parencite{fischer_mixing_1979}. $K^'$ is X, \emph{r} is X, $\omega$ is X, and \emph{k} is X. Roughly speaking, the the second term on the right in equation~\ref{eq:KxOkubo} is the increase of dispersion due to tidal trapping. \emph{Values are then...} 
 This equation is somewhat problematic for use in the Pescadero estuary because the diffusion is XXXX over many tides, and we observe the system to reset on tidal timescales. What it does imply, however, is that tidal trapping can greatly increase longitudinal disperion within an estuary, which appears to be important in the case of low salinity dispersion in the Pescadero estuary.
 
 \emph{If u0 is .3, r = .5, k and omega are what are in fischer... the second term is 34.5 (first is .66K')... If I figure out what that longitudinal diff term is, can get r variation with tide? Except I expect more trapping with spring tide, and my values from the 4 days suggest opposite...}
@@ -231,7 +231,7 @@ Values of $K_x$ in saltier and fresher salinities remain an order of magnitude a
 
 Figure~\ref{fig:tvsS} ~\ref{fig:Kxvst}
 
-Using equation~\ref{eq:S} to get $K_x$ values required providing a value of time $t$. The time used in this calculation was $t=t_0 + t_{isopycnal}$, where $t_{isopycnal}$ was the time between the flooding and ebbing of each isopycnal past the ADV and CTD at NM. Different $K_x$ values were calculated from higher and lower salinities. The 20 PSU and 8 PSU isopycnals were selected as representative of the two separate water masses, and time between the passage of these isopycnals is given in table~\ref{}. The advantage to this method is its ability to include some time dependence in the $K_x$ value. The disadvantage is that $K_x$ varies with the decision of which isohaline to follow (and thus what value of \emph{t}). 
+Using equation~\ref{eq:S} to get $K_x$ values required providing a value of time $t$. The time used in this calculation was $t=t_0 + t_{isopycnal}$, where $t_{isopycnal}$ was the time between the flooding and ebbing of each isopycnal past the ADV and CTD at NM. Different $K_x$ values were calculated from higher and lower salinities. The 20 PSU and 8 PSU isopycnals were selected as representative of the two separate water masses, and time between the passage of these isopycnals is given in table~\ref{tab:Kxtable}. The advantage to this method is its ability to include some time dependence in the $K_x$ value. The disadvantage is that $K_x$ varies with the decision of which isohaline to follow (and thus what value of \emph{t}). 
 
 Figure~\ref{fig:tvsS} gives the time between each isopycnal for the four tides. Time is not constant, so selecting a value introduces bias to the $K_x$ calculation.
 
@@ -246,9 +246,12 @@ This analysis demonstrates the time dependence of $K_x$, but the range of values
 \subsection{Influence of water retained in deep pools of the estuary}
 Near the mouth, the water column was seen to freshen on the semidiurnal tide (Figure~\ref{fig:UandSvsTch4}) but in the deep channel upstream, freshening sometimes only occurred on the large ebb (Figure~\ref{fig:DC_salt_421_425}). The time value assumed $t$ based on the passage of the salt front past the collocated ADV and CTD at NM, a time of less than one tidal cycle. However, some of the high salinity water passing the NM sensors on the large ebb is retained for an extra tidal cycle. Recalculating $t_{isopycnal}$ using the passage of the 20 PSU isopycnal from the flood tide which initially brought salt water into the estuary (which is the previous flood on the 23 and 24 April large ebbs), the value of $K_x$ drops to 2.1 m\textsuperscript{2} s\textsuperscript{-1} and 2.5 m\textsuperscript{2} s\textsuperscript{-1}, bringing the values in line with the previous two tides. Retention time in the salt pocket seems to explain the higher mixing derived with ... 
 
-Dispersion may be lower at high salinity than estimated here if the time high salinity water is retained is double our estimates. This may explain the different values of high salinity $K_x$ on 21 \& 22 April compared to on 23 \& 24 April. 
+\emph{Dispersion may be lower at high salinity than estimated here if the time high salinity water is retained is double our estimates. This may explain the different values of high salinity $K_x$ on 21 \& 22 April compared to on 23 \& 24 April. 
 
-If the time values corresponding to the time from the previous flood to \emph{big} ebb, the values of Kx become 2.1 for 23 April and 2.5 for 24 April. 
+If the time values corresponding to the time from the previous flood to \emph{big} ebb, the values of Kx become 2.1 for 23 April and 2.5 for 24 April.}
+
+\subsection{Bias from $S_0$ value}
+The value of $S_0 = 33.5$ was used to calculate $K_x$ at high and low salinities. Figure~\ref{fig:DC_salt_421_425} shows that the surface salinity at DC only reached the value of the bed salinity on 22 April, and fell short on the other days (green line salinity $\lt$ red line salinity). Thus, a value of $S_0 = 33.5$ would overestimate dispersion at low salinities if the two-part structure is indeed sensitive to depth of \emph{SOMETHING}. 
 
 
 \section{Conclusions}
