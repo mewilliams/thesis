@@ -97,14 +97,14 @@ Dispersion is shown to be much greater at lower salinities than at higher salini
 	\begin{center}
 		\begin{tabular}{| l || c | c | c | c | c | c | c | c |}
 		\hline
-		Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_0}$ & x$_{c,fresher}$ & x$_{c,fresher}$ & t$_{S=0 \rightarrow S_T}$ & t$_{S=S_T \rightarrow S_0}$\\
+		Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_0}$ & x$_{c,S=0 \rightarrow S_T}$ & x$_{c,S=S_T \rightarrow S_0}$ & t$_{S=0 \rightarrow S_T}$ & t$_{S=S_T \rightarrow S_0}$\\
 		\hline \hline
-		21 Apr & 11.5 & 44.9 m$^2$ s$^{-1}$ & 2.2 m$^2$ s$^{-1}$ & -591 m & -9.4 m & 2.5x10$^4$ s & $2.1\times10^4$ s\\  
-		22 Apr & 10.5 & 55.6 m$^2$ s$^{-1}$ & 2.9 m$^2$ s$^{-1}$ & -714 m & -60.2 m & 3.1x10$^4$ s & 2.4x10$^4$ s\\ 
-		23 Apr & 14.4 & 28.3 m$^2$ s$^{-1}$ & 5.0 m$^2$ s$^{-1}$ & 34.2 m & 19.0 m & 3.1x10$^4$ s & 2.3x10$^4$ s\\ 
-		24 Apr & 14.1 & 28.7 m$^2$ s$^{-1}$ & 5.7 m$^2$ s$^{-1}$ & -137 m & -3.9 m & 3.2x10$^4$ s & 2.4x10$^4$ s\\   \hline 
+		21 Apr & 11.5 & 44.9 m$^2$ s$^{-1}$ & 2.2 m$^2$ s$^{-1}$ & -591 m & -9.4 m & $2.5\times10^4$ s & $2.1\times10^4$ s\\  
+		22 Apr & 10.5 & 55.6 m$^2$ s$^{-1}$ & 2.9 m$^2$ s$^{-1}$ & -714 m & -60.2 m & $3.1\times10^4$ s & $2.4\times10^4$ s\\ 
+		23 Apr & 14.4 & 28.3 m$^2$ s$^{-1}$ & 5.0 m$^2$ s$^{-1}$ & 34.2 m & 19.0 m & $3.1\times10^4$ s & $2.3\times10^4$ s\\ 
+		24 Apr & 14.1 & 28.7 m$^2$ s$^{-1}$ & 5.7 m$^2$ s$^{-1}$ & -137 m & -3.9 m & $3.2\times10^4$ s & $2.4\times10^4$ s\\   \hline 
 	\end{tabular}
-	\caption{Values of \emph{K$_x$} for the large flood and ebb on four days  in April 2012.}\label{tab:Kxtable}
+	\caption{Values of \emph{K$_x$} for the large flood and ebb on four days in April 2012, and corresponding salinity transition ($S_T$), center of front ($x_c$), and time used for the calculation ($t$).}\label{tab:Kxtable}
 \end{center}
 \end{table}
 % -------------------------------------------------------------------------------------%
@@ -115,25 +115,25 @@ Comparison to theory, hypothesized mechanisms of dispersion, reasons for the two
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_124_165} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
+\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_183_263} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
+\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_279_357} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
+\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_376_454} 
-\caption{Spatially reconstructed salinity field and \emph{K$_x$} values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
+\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
 \end{figure}
 % end Kx figures
 
@@ -142,11 +142,11 @@ Comparison to theory, hypothesized mechanisms of dispersion, reasons for the two
 
 \section{Comparison to theoretical ways to estimate $K_x$}
 
-Longitudinal dispersion caused by vertical shear \emph{(in an unstratified water column?)} was derived by Elder to be
+Longitudinal dispersion caused by vertical shear in an unstratified open channel was found by Elder to be
 \begin{eqnarray}
 K_x = 5.93hu_* \label{eq:Kshear}
 \end{eqnarray}
-where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity defined by $u_*=\sqrt{\tau_0/\rho}$ where $\tau_0$ is a bed stress and $\rho$ is water density \parencite*{elder_dispersion_1959}. The friction velocity is parameterized as $u_* = c_{_D}^{1/2}U$. In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} is $\pm$ 0.4 m s\textsuperscript{-1} with spring tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as 0.01, the largest \emph{K$_x$} by this formulation would be \emph{K}$_x =$ 0.96 m$^2$ s$^{-1}$ using the maximum value of \emph{h} and the infragravity velocity of $U = 0.6$ m s$^{-1}$. More likely values of $h = 1 m$ and $U = 0.3 m s^{-1}$ result an estimated \emph{K}$_x = 0.18$ m$^2$ s$^{-1}$. In either case, this value of \emph{K$_x$} is well below observations.
+where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity defined by $u_*=\sqrt{\tau_0/\rho}$, $\tau_0$ is a bed stress and $\rho$ is water density \parencite*{elder_dispersion_1959}. The friction velocity is parameterized by a bed drag coefficient, $c_{_D}$, as $u_* = c_{_D}^{1/2}U$. In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} is $\pm$ 0.4 m s\textsuperscript{-1} with spring tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as 0.01, the largest \emph{K$_x$} by this formulation would be \emph{K}$_x =$ 0.96 m$^2$ s$^{-1}$ using the maximum value of \emph{h} and the infragravity velocity of $U = 0.6$ m s$^{-1}$. More common values of $h = 1 m$ and $U = 0.3$ m s$^{-1}$ result an estimated \emph{K}$_x = 0.18$ m$^2$ s$^{-1}$. In either case, this value of \emph{K$_x$} is well below observations, suggesting dispersion by vertical shear is a small contributor to dynamics of salt in the estuary.
 
 Mixing processes in real estuaries are \emph{.. shear dispersion dominates... }
 
@@ -164,12 +164,13 @@ Spatial mapping of the salinity field from time series of velocity relies on the
 
 \subsection{Why this two-part structure?}
 
-Calculation of \emph{K$_x$} shows that at higher salinities ($S_T$ to $S_{ocean}$) dispersion is an order of magnitude less than dispersion in lower salinities ($S_{creek}$ to $S_T$). There are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. In most larger estuaries, movement of salt occurs on tidal and subtidal timescales. In small bar-built estuaries, tidally discontinuous ocean forcing (cf chapter 3) and short residence times may all the estuary to reset as fresh on a tidal or daily timescale, thus eliminating subtidal gravitational circulation. This is the case in the Pescadero estuary.
+\emph{what is going on with this paragraph?}
+Calculation of \emph{K$_x$} shows that at higher salinities ($S_T$ to $S_0$) dispersion is an order of magnitude less than dispersion in lower salinities (0 to $S_T$). There are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. In most larger estuaries, net salt transport occurs on subtidal timescales. In small bar-built estuaries, tidally discontinuous ocean forcing (cf chapter 3) and short residence times allow the estuary to reset as fresh on a tidal or daily timescale, thus eliminating subtidal gravitational circulation. This is the case in the Pescadero estuary.
 
 \begin{figure}[h]
 \centering
 	\includegraphics[]{chapter4/figures/WellMixedEstuary}
-	\caption{A well-mixed estuary is characterized by vertical isopycnals.} \label{fig:WellMixedEstuary}
+	\caption{A well-mixed estuary is characterized by vertical isopycnals, represented here by isohalines because density in estuaries is usually salinity dependent.} \label{fig:WellMixedEstuary}
 \end{figure}
 
 In a well mixed estuary (Figure~\ref{fig:WellMixedEstuary}), fresh water is found on the upstream side of the estuary, salt water on the ocean end, and isopycnals (which are also isohalines in the case of salinity dependent density) are vertical. In this case, the lowest salinity water is located the farthest upstream. 
@@ -177,14 +178,16 @@ In a well mixed estuary (Figure~\ref{fig:WellMixedEstuary}), fresh water is foun
 \begin{figure}[h]
 \centering
 	\includegraphics[]{chapter4/figures/SaltWedgeEstuary}
-	\caption{Highly stratified estuaries, like salt-wedge type estuaries, have both longitudinal and vertical stratification.} \label{fig:SaltWedgeEstuary}
+	\caption{Highly stratified estuaries, have both longitudinal and vertical stratification, and isopycnals are slanted.} \label{fig:SaltWedgeEstuary}
 \end{figure}
 
 In a salt-wedge estuary (Figure~\ref{fig:SaltWedgeEstuary}), isopycnals are slanted. The lowest salinity water is still the farthest upstream in an estuary, and in an estuary that freshens tidally, the lowest salinity water will also travel farther than saltier water. Additionally, density effects mean that in vertically stratified estuaries, even if salt water intrudes far up estuary, fresher water will still be on the surface. In an idealized homogeneous channel estuary, whether water reaches farther upstream or has access to the surface does not matter. But, natural estuaries are not spatially homogeneous. In the Pescadero estuary, the upstream ends of the estuary are in two creeks, and probably more importantly, the estuary sits amid a marsh complex. Given the salt-wedge type salinity structure, fresher water is given access to shallow wetlands which the saltier water cannot access. 
 
 Knowing that the Pescadero estuary is always vertically stratified, we begin to look at vertical differences and processes to explain the differences in dispersion among high and low salinities. 
 
-\subsection{Vertical processes (mixing)}
+\emph{TIE BACK TO short timescales? Tidally-discontinuous flow?}
+
+\subsection{Vertical processes}
 
 To understand the vastly different values of \emph{K$_x$} in higher and lower salinities, we look to time series of salinities at different depths in the estuary. Figure~\ref{fig:SDCApr2012} shows data from three CTDs vertically distributed in the water column at the upstream DC station, approximately 200 m upstream from the NM station (location shown on maps in chapters 2 and 3). The first subplot (a) shows the depth of each sensor. The bed sensor was fixed 20 cm above the bed and the surface sensor was floating on a buoy approximately 20 cm below the surface. The middle sensor was hanging from a buoy such that at most times its line was slack, but at high enough water levels the line went taught and the sensor was pulled down. The second subplot (b) gives salinity at these sensors.
 
