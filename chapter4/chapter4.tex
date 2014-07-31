@@ -12,16 +12,20 @@ In estuaries with peripheral channels or margins, tidal trapping increases longi
 
 Salt is a conservative tracer, making transport and mixing of salinity a quantifiable term. Implications of salinity transport and mixing can help to characterize similar effects on other terms such as nutrients, temperature, plankton, or suspended sediment. 
 
+Here, we will transform the complexities of the Pescadero estuary into a one-dimensional system to calculate dispersion of salt to understand mixing and dispersion characteristics of the estuary.
+
+\emph{enough of a transition?}
+
 \section{Methods} \label{sec:ch4methods}
 
 %% 1D Advection-diffusion
-\subsection{1D advection-diffusion} \label{ssec:1dadvdif}
+\subsection{One-dimensional advection-diffusion} \label{ssec:1dadvdif}
 
-We start with the depth-averaged 1-d advection-diffusion of salinity,
+We start with the one-dimensional depth-averaged advection-diffusion of salinity,
 \begin{eqnarray}
 \frac{\partial S}{\partial t} + U\frac{\partial S}{\partial x} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1dadvdiff}
 \end{eqnarray}
-where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$} is the longitudinal dispersion coefficient. The $K_x$ in this form is independent of time and space ($K_x\ne f(x)$).  In an estuary, the salt structure is advected upstream and downstream with the tides. Moving the frame of reference along with these tides, \emph{U=0} relative to the reference frame and equation~\ref{eq:1dadvdiff} becomes
+where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$} is the longitudinal dispersion coefficient. The $K_x$ in this form is independent of space ($K_x\ne f(x)$).  In an estuary, the salt structure is advected upstream and downstream with the tides. By moving the frame of reference along with these tides, the velocity term drops out (\emph{U=0}) equation~\ref{eq:1dadvdiff} becomes
 \begin{eqnarray}
 \frac{\partial S}{\partial t} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1ddiff}
 \end{eqnarray}
@@ -29,7 +33,12 @@ Assuming salinity follows a step function at time $t=0$ and that the boundaries 
 \begin{eqnarray}
 S(x,t) = \frac{S_0}{2}\left(1+erf\left(\frac{x-x_c}{\sqrt{4K_xt}}\right)\right) \label{eq:S}
 \end{eqnarray}
-where \emph{x$_c$} is the center of the salt front. Using observations of the salinity field, the value of \emph{K$_x$} can be obtained from this analytical solution. Here the spatially independent $K_x$ is also assumed to be invariant in time ($K_x\ne f(x,t)$). 
+where \emph{x$_c$} is the center of the salt front. This solution describes the relaxation of the salt field to be a function of time and dispersion, and predicts a form shown in figure (). Using observations of the salinity field, the value of \emph{K$_x$} can be obtained from this analytical solution. Here the spatially independent $K_x$ is also assumed to be invariant in time ($K_x\ne f(x,t)$). 
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{chapter2/figures/fig0analyticalS}
+\caption{Equation~\ref{eq:S} starts from a step function and smooths over time. In this graphic, the line grows lighter with increasing time.} \fig{fig:Sgraphic}
+\end{figure}
 
 Ralston and Stacey applied a similar one-dimensional framework to observations of frontal mixing within the intertidal zone of mudflats in Northern San Francisco Bay \parencite*{Ralston:2005aa}. There they found $K_x$ = 10 m\textsuperscript{2} s\textsuperscript{-1}... \emph{and some more words here}. 
 
