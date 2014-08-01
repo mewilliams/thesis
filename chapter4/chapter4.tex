@@ -4,7 +4,7 @@
 
 \section{Introduction}
 
-Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally. In the open state of the Pescadero estuary, salt moves in and out as described in chapter 3. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research and millenia of cooking pasta. Here, then, I set out to characterize salt mixing and dispersion in the Pescadero estuary. 
+Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally. In the open state of the Pescadero estuary, salt moves in and out as described in the previous chapter. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research and centuries of cooking pasta. Here, then, I set out to explore salt mixing and dispersion characteristics in small bar-built estuaries.
 
 
 The common framework for understanding estuarine dispersion has been developed for larger and more well-mixed estuaries. 
@@ -14,24 +14,24 @@ Mixing and dispersion in estuaries is due to a combination of vertical and later
 
 
 
-In estuaries with peripheral channels or margins, tidal trapping increases longitudinal dispersion processes. The balance between momentum and friction differs in the main channel of an estuary compared to side channels and embayments and allows for trapping...  Okubo \parencite*{okubo_effect_1973} modeled this as a diffusive process where the presence of .... increases dispersion via Fickian diffusion. This approach is intended to be valid over many tidal cycles... Missing from Okubo's analysis is the possibility that the changing friction/momentum balance in channels with bracnehs and shallow periphery could contain an advective process. MacVean and Stacey \parencite*{macvean_estuarine_2011} addressed this limitation with a new formulation of dispersion due to tidal trapping where the periphery is allowed to empty and fill on tidal timescales... 
+In estuaries with peripheral channels or margins, tidal trapping increases longitudinal dispersion processes. The balance between momentum and friction differs in the main channel of an estuary compared to side channels and embayments and allows for trapping...  Okubo \parencite*{okubo_effect_1973} modeled this as a diffusive process where the presence of .... increases dispersion via Fickian diffusion. The approach is intended to be valid over many tidal cycles... Missing from Okubo's analysis is the possibility that the changing friction/momentum balance in channels with branches and shallow periphery could be an advective process. MacVean and Stacey \parencite*{macvean_estuarine_2011} addressed this limitation with a new formulation of dispersion due to tidal trapping where the periphery is allowed to empty and fill on tidal timescales... 
 
 Salt is a conservative tracer, making transport and mixing of salinity a quantifiable term. Implications of salinity transport and mixing can help to characterize similar effects on other terms such as nutrients, temperature, plankton, or suspended sediment. 
 
-Here, we will transform the complexities of the Pescadero estuary into a one-dimensional system to calculate dispersion of salt to understand mixing and dispersion characteristics of the estuary.
+Here, we will transform the complexities of the Pescadero estuary into a one-dimensional system in order to calculate dispersion of salt to understand mixing and dispersion characteristics of the estuary.
 
 \emph{enough of a transition?}
 
 \section{Methods} \label{sec:ch4methods}
 
 %% 1D Advection-diffusion
-\subsection{One-dimensional advection-diffusion} \label{ssec:1dadvdif}
+\subsection{One-dimensional advection-diffusion equation} \label{ssec:1dadvdif}
 
 We start with the one-dimensional depth-averaged advection-diffusion of salinity,
 \begin{eqnarray}
 \frac{\partial S}{\partial t} + U\frac{\partial S}{\partial x} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1dadvdiff}
 \end{eqnarray}
-where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and \emph{K$_x$} is the longitudinal dispersion coefficient. The $K_x$ in this form is independent of space ($K_x\ne f(x)$).  In an estuary, the salt structure is advected upstream and downstream with the tides. By moving the frame of reference along with these tides, the velocity term drops out (\emph{U=0}) equation~\ref{eq:1dadvdiff} becomes
+where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and $K_x$ is the longitudinal dispersion coefficient. The $K_x$ in this form is independent of space ($K_x\ne f(x)$).  In an estuary, the salt structure is advected upstream and downstream with the tides. By moving the frame of reference along with these tides, the velocity term drops out (\emph{U=0}) equation~\ref{eq:1dadvdiff} becomes
 \begin{eqnarray}
 \frac{\partial S}{\partial t} = K_x\frac{\partial^2S}{\partial x^2} \label{eq:1ddiff}
 \end{eqnarray}
@@ -39,18 +39,18 @@ Assuming salinity follows a step function at time $t=0$ and that the boundaries 
 \begin{eqnarray}
 S(x,t) = \frac{S_0}{2}\left(1+erf\left(\frac{x-x_c}{\sqrt{4K_xt}}\right)\right) \label{eq:S}
 \end{eqnarray}
-where \emph{x$_c$} is the center of the salt front. This solution describes the relaxation of the salt field to be a function of time and dispersion, and predicts a form shown in figure (). Using observations of the salinity field, the value of \emph{K$_x$} can be obtained from this analytical solution. Here the spatially independent $K_x$ is also assumed to be invariant in time ($K_x\ne f(x,t)$). 
+where \emph{x$_c$} is the center of the salt front. This solution describes the relaxation of the salt field to be a function of time and dispersion, and predicts a form shown in figure (). Using observations of the salinity field, the value of $K_x$ can be obtained from this analytical solution. Here the spatially independent $K_x$ is also assumed to be invariant in time ($K_x\ne f(x,t)$). 
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{chapter4/figures/fig0analyticalS}
 \caption{Equation~\ref{eq:S} starts from a step function and smooths over time. In this graphic, the line grows lighter with increasing time.} \label{fig:Sgraphic}
 \end{figure}
 
-Ralston and Stacey applied a similar one-dimensional framework to observations of frontal mixing of salt within the intertidal zone of mudflats in Northern San Francisco Bay \parencite*{Ralston:2005aa}. There they found $K_x$ = 10 m\textsuperscript{2} s\textsuperscript{-1}... \emph{and some more words here!!!!!!}. 
+Ralston and Stacey applied a similar one-dimensional framework to observations of frontal mixing of salt within the intertidal zone of mudflats in Northern San Francisco Bay \parencite*{Ralston:2005aa}. There they found $K_x$ = 10 m\textsuperscript{2} s\textsuperscript{-1} due to the combination of vertical shear dispersion on stratified ebbs and lateral shear dispersion from the interaction of flow over shallow mudflats and a deeper channel. 
 
 %%% Observations --> Analytical framework
 \subsection{Using observations in an analytical framework} \label{ssec:ObsInto1DAdvDiff}
-To solve for \emph{K$_x$} in equation~\ref{eq:S}, the salinity structure in time and space within an estuary must be known. Salinity measurements were made in the Pescadero estuary with good temporal resolution and some longitudinal distribution during an April - June 2012 field campaign. However, longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dynamics of a whole system would be nearly impossible. So, we resort to recreating the salinity structure in time using measurements from a collocated ADV and CTD. 
+To solve for $K_x$ in equation~\ref{eq:S}, the salinity structure in time and space within an estuary must be known. Salinity measurements were made in the Pescadero estuary with good temporal resolution and some longitudinal distribution during an April - June 2012 field campaign. However, longitudinal salinity gradients in the Pescadero estuary as well as in other small bar-built estuaries are very sharp, so locating instruments close enough to each other to directly measure the longitudinal gradient and getting spatial coverage to understand dynamics of a whole system would be nearly impossible. So, we resort to recreating the salinity structure in time using measurements from a collocated ADV and CTD. 
 
 The sensors give a time series of salinity and velocity (0.3 m above the bed at NM, figure~\ref{fig:UandSvsTch4}). Velocity is the rate of change of distance with time,
 
@@ -67,11 +67,11 @@ transforms the time series of point measurements of velocity and salinity (Figur
 \subsection{Data processing} \label{ssec:DataProcessing}
 To make this dataset, velocity measurements were burst-averaged (the instruments collected data for 512 s out of every 900 s) and an 800 s moving average was applied to the CTD measurements.  Averaging was intended to remove the infragravity oscillation component of velocity and salinity measurements to focus on tidal processes. Velocity measurements in earth coordinates (East velocity, North velocity) were then rotated into the direction of principle flow (or maximum variance). 
 
-To get \emph{K$_x$} from the recreated \emph{S(x)}, equation~\ref{eq:S} is rearranged into the linear form:
+To get $K_x$ from the recreated \emph{S(x)}, equation~\ref{eq:S} is rearranged into the linear form:
 \begin{eqnarray}
 erf^{-1}\left(\frac{2S}{S_0}-1\right) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
 \end{eqnarray}
-and a linear fit ($y = ax + b$ where a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$) is applied. Given a linear regression fit value for \emph{a}, to solve for $K_x$, a value of \emph{t} must be determined. In this case it is appropriate to use the time between when the front floods past the sensors and subsequent ebb of said front following an isopycnal ($t_{isopycnal}$). This method assumes an infinitely sharp front at time $t_0$ (Figure~\ref{fig:Sgraphic}). Setting $t_0$ as the time at which the front floods past the sensors will overestimate \emph{K$_x$}. Thus, an estimation on the initial time from a sharp front to the flood front is made. By setting a step function at the mouth, and approximating advection velocities U = 0.1 m s$^{-1}$ and a length from the ocean to NM of 100 m, initial time, t$_0$ is 1000 s. This time is then added to the time between a selected isopycnal passing by the sensor, $t = t_{isopycnal}+t_0$. Specific considerations in selecting the isopycnal to follow, and influence of $t_0$ will be discussed in section~\ref{sec:Sensitivity}. A value for $S_0$ is also necessary, and here we have used $S_0$=33.5.
+and a linear fit ($y = ax + b$ where a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$) is applied. Given a linear regression fit value for \emph{a}, to solve for $K_x$, a value of \emph{t} must be determined. In this case it is appropriate to use the time between when the front floods past the sensors and subsequent ebb of said front following an isopycnal ($t_{isopycnal}$). This method assumes an infinitely sharp front at time $t_0$ (Figure~\ref{fig:Sgraphic}). Setting $t_0$ as the time at which the front floods past the sensors will overestimate $K_x$. Thus, an estimation on the initial time from a sharp front to the flood front is made. By setting a step function at the mouth, and approximating advection velocities U = 0.1 m s$^{-1}$ and a length from the ocean to NM of 100 m, initial time, t$_0$ is 1000 s. This time is then added to the time between a selected isopycnal passing by the sensor, $t = t_{isopycnal}+t_0$. Specific considerations in selecting the isopycnal to follow, and influence of $t_0$ will be discussed in section~\ref{sec:Sensitivity}. A value for $S_0$ is also necessary, and here we have used $S_0$=33.5.
 
 
 
@@ -83,18 +83,18 @@ Time series of collocated velocity and salinity measurements at NM are shown in 
 \caption{Velocity (a) and salinity (b) records 30 cm above the bed at station NM. Velocity measurements have been averaged across their 512 s burst and rotated into the direction of principle flow. An 800 s moving average has been applied to salinity measurements. Averaging was done to remove higher frequency oscillations.} \label{fig:UandSvsTch4}
 \end{figure}
 
-The time series plots of salinity and velocity (Figure~\ref{fig:UandSvsTch4}) show that the transition from fresh to ocean salinity water occurs rapidly on the flood and the return to fresh water on ebb is a longer duration process. Also, the ebb salinity field passes the sensors in two distinct segments with a transition on each apparent on each large ebb between 10 and 15 PSU. The flood salinities do not exhibit this feature. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, as well as to approach a quantification of \emph{K$_x$}, the time series is transformed into a spatial record as described in section~\ref{sec:ch4methods}. 
+The time series plots of salinity and velocity (Figure~\ref{fig:UandSvsTch4}) show that the transition from fresh to ocean salinity water occurs rapidly on the flood and the return to fresh water on ebb is a longer duration process. Also, the ebb salinity field passes the sensors in two distinct segments with a transition on each apparent on each large ebb between 10 and 15 PSU. The flood salinities do not exhibit this feature. To investigate whether this observation is an actual transition in salinity and not just a reduction in water velocity, as well as to approach a quantification of $K_x$, the time series is transformed into a spatial record as described in section~\ref{sec:ch4methods}. 
 
 \begin{figure}[hp]
 	\includegraphics[width=\textwidth]{chapter4/figures/SvsXfloodebb} 
 \caption{The spatially reconstructed salinity field, S(x), for four floods (a) and four ebbs (b) at NM, 30 cm above the bed. In both figures, the profiles are centered (x=0) around the S = 15 PSU pycnocline.} \label{fig:SvsXall}
 \end{figure}
 
-Figure~\ref{fig:SvsXall} shows the salt front on flood (a) and on ebb (b) for the four large tides on 21 - 25 April, 2012. Spatial mapping of the salinity field shows that the estuary transforms  the salinity front from a smooth, sharp structure on flood to a two-part relaxed structure on ebb, where $S(x)$ is much more relaxed among lower salinities than among higher salinities. This mirrors the time series salinity and implies that there is a physical change in the salt field between flood and ebb. This non uniform structure requires the calculation of two different values of \emph{K$_x$} for the higher and lower salinities.
+Figure~\ref{fig:SvsXall} shows the salt front on flood (a) and on ebb (b) for the four large tides on 21 - 25 April, 2012. Spatial mapping of the salinity field shows that the estuary transforms  the salinity front from a smooth, sharp structure on flood to a two-part relaxed structure on ebb, where $S(x)$ is much more relaxed among lower salinities than among higher salinities. This mirrors the time series salinity and implies that there is a physical change in the salt field between flood and ebb. This non uniform structure requires the calculation of two different values of $K_x$ for the higher and lower salinities.
 
-By fitting the error function curve to the two ebb salinity fields determined by the salinity of the transition point ($S_T$), values of \emph{K$_x$} are thus calculated for the higher ($K_{x,S_T\rightarrow S_0}$) and lower salinities ($K_{x,0\rightarrow S_T}$) in the four tidal cycles (Table~\ref{tab:Kxtable} and Figures~\ref{fig:Kx421}-~\ref{fig:Kx424}). Averaged across the four days, \emph{K$_x$} = 4.1 m$^2$s$^{-1}$ at higher salinity and \emph{K$_x$} = 45.4 m$^2$s$^{-1}$ at lower salinity. Values of \emph{t} for \emph{K$_x$} calculations are taken to be the time between when the 8 PSU and 20 PSU isopycnals flood and ebb past the sensor for lower and higher salinity \emph{K$_x$} values, respectively. 
+By fitting the error function curve to the two ebb salinity fields determined by the salinity of the transition point ($S_T$), values of $K_x$ are thus calculated for the higher ($K_{x,S_T\rightarrow S_0}$) and lower salinities ($K_{x,0\rightarrow S_T}$) in the four tidal cycles (Table~\ref{tab:Kxtable} and Figures~\ref{fig:Kx421}-~\ref{fig:Kx424}). Averaged across the four days, $K_x$ = 4.1 m$^2$s$^{-1}$ at higher salinity and $K_x$ = 45.4 m$^2$s$^{-1}$ at lower salinity. Values of \emph{t} for $K_x$ calculations are taken to be the time between when the 8 PSU and 20 PSU isopycnals flood and ebb past the sensor for lower and higher salinity $K_x$ values, respectively. 
 
-Dispersion is shown to be much greater at lower salinities than at higher salinities in the Pescadero estuary which is reflected in the more relaxed $S(x)$ curves from $S=0 to S_T$.  Values of \emph{K$_x$} are an order of magnitude higher in lower salinities than in higher salinities. Dispersion coefficients in lower salinity water (\emph{K$_{x,S=0 \rightarrow S_T}$}), are higher in the first two days than in the last two. Dispersion coefficients in higher salinity water (\emph{K$_{x,S=S_T \rightarrow S_0}$}) are lower in the first two days than in the second two days. 
+Dispersion is shown to be much greater at lower salinities than at higher salinities in the Pescadero estuary which is reflected in the more relaxed $S(x)$ curves from $S=0 to S_T$.  Values of $K_x$ are an order of magnitude higher in lower salinities than in higher salinities. Dispersion coefficients in lower salinity water (\emph{K$_{x,S=0 \rightarrow S_T}$}), are higher in the first two days than in the last two. Dispersion coefficients in higher salinity water (\emph{K$_{x,S=S_T \rightarrow S_0}$}) are lower in the first two days than in the second two days. 
 
 % --------------TABLES ---------------------------------------------------------------%
 \begin{table}[h]
@@ -105,12 +105,12 @@ Dispersion is shown to be much greater at lower salinities than at higher salini
 		\hline
 		Date & S$_{T}$ & K$_{x,S=0 \rightarrow S_T}$ &  K$_{x,S=S_T \rightarrow S_0}$ & x$_{c,S=0 \rightarrow S_T}$ & x$_{c,S=S_T \rightarrow S_0}$ & t$_{S=0 \rightarrow S_T}$ & t$_{S=S_T \rightarrow S_0}$\\
 		\hline \hline
-		21 Apr & 11.5 & 44.9 m$^2$ s$^{-1}$ & 2.2 m$^2$ s$^{-1}$ & -591 m & -9.4 m & $2.5\times10^4$ s & $2.1\times10^4$ s\\  
-		22 Apr & 10.5 & 55.6 m$^2$ s$^{-1}$ & 2.9 m$^2$ s$^{-1}$ & -714 m & -60.2 m & $3.1\times10^4$ s & $2.4\times10^4$ s\\ 
-		23 Apr & 14.4 & 28.3 m$^2$ s$^{-1}$ & 5.0 m$^2$ s$^{-1}$ & 34.2 m & 19.0 m & $3.1\times10^4$ s & $2.3\times10^4$ s\\ 
-		24 Apr & 14.1 & 28.7 m$^2$ s$^{-1}$ & 5.7 m$^2$ s$^{-1}$ & -137 m & -3.9 m & $3.2\times10^4$ s & $2.4\times10^4$ s\\   \hline 
+		21 Apr & 11.5 & 44.9 m$^2$s$^{-1}$ & 2.2 m$^2$s$^{-1}$ & -591 m & -9.4 m & $2.1\times10^4$ s & $2.5\times10^4$ s\\  
+		22 Apr & 10.5 & 55.6 m$^2$s$^{-1}$ & 2.9 m$^2$s$^{-1}$ & -714 m & -60.2 m & $2.4\times10^4$ s & $3.1\times10^4$ s\\ 
+		23 Apr & 14.4 & 28.3 m$^2$s$^{-1}$ & 5.0 m$^2$s$^{-1}$ & 34.2 m & 19.0 m & $2.3\times10^4$ s & $3.1\times10^4$ s\\  
+		24 Apr & 14.1 & 28.7 m$^2$s$^{-1}$ & 5.7 m$^2$s$^{-1}$ & -137 m & -3.9 m & $2.4\times10^4$ s & $3.2\times10^4$ s\\    \hline 
 	\end{tabular}
-	\caption{Values of \emph{K$_x$} for the large flood and ebb on four days in April 2012, and corresponding salinity transition ($S_T$), center of front ($x_c$), and time used for the calculation ($t$).} \label{tab:Kxtable}
+	\caption{Values of $K_x$ for the large flood and ebb on four days in April 2012, and corresponding salinity transition ($S_T$), center of front ($x_c$), and time used for the calculation ($t$).} \label{tab:Kxtable}
 \end{center}
 \end{table}
 % -------------------------------------------------------------------------------------%
@@ -121,38 +121,38 @@ Comparison to theory, hypothesized mechanisms of dispersion, reasons for the two
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_124_165} 
-\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
+\caption{Spatially reconstructed salinity field, $S(x)$, and $K_x$ values for the large tidal cycle on 21 April, 2012. } \label{fig:Kx421}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_183_263} 
-\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
+\caption{Spatially reconstructed salinity field, $S(x)$, and $K_x$ values for the large tidal cycle on 22 April, 2012. } \label{fig:Kx422}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_279_357} 
-\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
+\caption{Spatially reconstructed salinity field, $S(x)$, and $K_x$ values for the large tidal cycle on 23 April, 2012. } \label{fig:Kx423}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 	\includegraphics[width=.9\textwidth]{chapter4/figures/SvXwKx_376_454} 
-\caption{Spatially reconstructed salinity field, $S(x)$, and \emph{K$_x$} values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
+\caption{Spatially reconstructed salinity field, $S(x)$, and $K_x$ values for the large tidal cycle on 24 April, 2012.} \label{fig:Kx424}
 \end{figure}
 % end Kx figures
 
 
 
 
-\section{Comparison to theoretical ways to estimate $K_x$}
+\section{Comparison to theoretical estimations of $K_x$}
 
 Longitudinal dispersion caused by vertical shear in an unstratified open channel was found by Elder to be
 \begin{eqnarray}
 K_x = 5.93hu_* \label{eq:Kvertshear}
 \end{eqnarray}
-where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity defined by $u_*=\sqrt{\tau_0/\rho}$, $\tau_0$ is a bed stress and $\rho$ is water density \parencite*{elder_dispersion_1959}. The friction velocity is parameterized by a bed drag coefficient, $c_{_D}$, as $u_* = c_{_D}^{1/2}U$. In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} can be $\pm$ 0.4 m s\textsuperscript{-1} with spring tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as 0.01, the largest \emph{K$_x$} by this formulation would be \emph{K}$_x =$ 0.96 m$^2$ s$^{-1}$ using the maximum value of \emph{h} and the infragravity velocity of $U = 0.6$ m s$^{-1}$. Values appropriate to this dataset of $h = 1 m$ and $U = 0.2$ m s$^{-1}$ result an estimated \emph{K}$_x = 0.12$ m$^2$ s$^{-1}$. In either case, this value of \emph{K$_x$} is well below observations, suggesting dispersion by vertical shear is a small contributor to dynamics of salt in the estuary.
+where \emph{h} is the height of the water column and \emph{u$_*$} is the shear velocity defined by $u_*=\sqrt{\tau_0/\rho}$, $\tau_0$ is a bed stress and $\rho$ is water density \parencite*{elder_dispersion_1959}. The friction velocity is parameterized by a bed drag coefficient, $c_{_D}$, as $u_* = c_{_D}^{1/2}U$. In the Pescadero estuary, \emph{h} ranges from 0.2 m to 2.7 m depending on location in the estuary and tidal conditions, \emph{U} can be $\pm$ 0.4 m s\textsuperscript{-1} with spring tides, and surges due to infragravity motions may result in positive velocities of 0.6 m s\textsuperscript{-1}. Estimating c$_D$ as 0.01, the largest $K_x$ by this formulation would be \emph{K}$_x =$ 0.96 m$^2$ s$^{-1}$ using the maximum value of \emph{h} and the infragravity velocity of $U = 0.6$ m s$^{-1}$. Values appropriate to this dataset of $h = 1 m$ and $U = 0.2$ m s$^{-1}$ result an estimated \emph{K}$_x = 0.12$ m$^2$ s$^{-1}$. In either case, this value of $K_x$ is well below observations, suggesting dispersion by vertical shear is a small contributor to dynamics of salt in the estuary.
 
 Lateral shear dispersion tends to dominate over vertical shear dispersion in most estuaries that are not very very wide. In rivers, lateral shear is time invariant, but in estuaries the oscillatory flow may partially reverse the dispersion. Whether this is the case depends on a timescale of lateral mixing. Longitudinal dispersion by lateral shear is given to be
 \begin{eqnarray}
@@ -187,7 +187,7 @@ Spatial mapping of the salinity field from time series of velocity relies on the
 \subsection{Why this two-part structure?}
 
 \emph{what is going on with this paragraph?}
-Calculation of \emph{K$_x$} shows that at higher salinities ($S_T$ to $S_0$) dispersion is an order of magnitude less than dispersion in lower salinities (0 to $S_T$). There are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. In most larger estuaries, net salt transport occurs on subtidal timescales. In small bar-built estuaries, tidally discontinuous ocean forcing (cf chapter 3) and short residence times allow the estuary to reset as fresh on a tidal or daily timescale, thus eliminating subtidal gravitational circulation. This is the case in the Pescadero estuary.
+Calculation of $K_x$ shows that at higher salinities ($S_T$ to $S_0$) dispersion is an order of magnitude less than dispersion in lower salinities (0 to $S_T$). There are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. In most larger estuaries, net salt transport occurs on subtidal timescales. In small bar-built estuaries, tidally discontinuous ocean forcing (cf chapter 3) and short residence times allow the estuary to reset as fresh on a tidal or daily timescale, thus eliminating subtidal gravitational circulation. This is the case in the Pescadero estuary.
 
 \begin{figure}[h]
 \centering
@@ -211,7 +211,7 @@ Knowing that the Pescadero estuary is always vertically stratified, we begin to 
 
 \subsection{Vertical processes}
 
-To understand the vastly different values of \emph{K$_x$} in higher and lower salinities, we look to time series of salinities at different depths in the estuary. Figure~\ref{fig:SDCApr2012} shows data from three CTDs vertically distributed in the water column at the upstream DC station, approximately 200 m upstream from the NM station (location shown on maps in chapters 2 and 3). The first subplot (a) shows the depth of each sensor. The bed sensor was fixed 20 cm above the bed and the surface sensor was floating on a buoy approximately 20 cm below the surface. The middle sensor was hanging from a buoy such that at most times its line was slack, but at high enough water levels the line went taught and the sensor was pulled down. The second subplot (b) gives salinity at these sensors.
+To understand the vastly different values of $K_x$ in higher and lower salinities, we look to time series of salinities at different depths in the estuary. Figure~\ref{fig:SDCApr2012} shows data from three CTDs vertically distributed in the water column at the upstream DC station, approximately 200 m upstream from the NM station (location shown on maps in chapters 2 and 3). The first subplot (a) shows the depth of each sensor. The bed sensor was fixed 20 cm above the bed and the surface sensor was floating on a buoy approximately 20 cm below the surface. The middle sensor was hanging from a buoy such that at most times its line was slack, but at high enough water levels the line went taught and the sensor was pulled down. The second subplot (b) gives salinity at these sensors.
 
 Some features of vertical salinity differences are apparent in this plot. The bed sensor (blue lines on figure~\ref{fig:SDCApr2012}) shows that during this period of time salt completely leaves the estuary daily on the large ebb, but does not freshen completely on the small ebb. (Figure~\ref{fig:UandSvsTch4} confirms salt advects out, but as described in chapter 3, salt can become trapped in the deep region where the DC mooring is located). The mid-column sensor (blue lines on figure~\ref{fig:SDCApr2012}) in (b) shows a similar structure to the CTD collocated with the ADV at NM (Figure~\ref{fig:UandSvsTch4}). The surface salinity at DC on the diurnal high high tide has two peaks (Figure ~\ref{fig:SDCApr2012}b, green line). The first peak is attributed to advection of the salt field upstream with the flood tide, and the fast drop should be the movement of saline surface waters back downstream with the coupled effect of the ebbing tide and buoyancy-driven restratification of the flow. A second peak in surface salinity occurs as the high salinity at depth begins to lower. We hypothesize that this peak represents water that had been trapped upstream now moving past the lower estuary sensors. 
 
@@ -242,12 +242,14 @@ The Pescadero Creek flows into the lower estuary through a relatively constricte
 
 Bed salinity measurements in the Pescadero and Butano Creeks suggest that within the Pescadero Creek (upstream of the confluence of both the Butano and the culverts to the North Pond) do not demonstrate the same structure seen downstream of these controls. The time series of salinity is very sharp and mostly uniform on flood and ebb (Figures~\ref{fig:PCBC421:425} and~\ref{fig:PCBC511:516}). Bed salinity measurements in the Butano Creek show a slightly more relaxed flood salinity structure, and hint at a two-phase ebb salinity structure. The later time series (Figure~\ref{fig:PCBC511:516}) actually shows two pulses of salty water on the ebb, similar to surface measurements downstream. These measurements seem to implicate marsh processes in setting the two-phase salinity structure.
 
+\emph{TRAPPING COULD BE ADVECTIVE OR DIFFUSIVE PROCESS}
+
 \subsubsection{Culverts and flow to North Pond}
-The North Pond in the Pescadero marsh is connected to the Pescadero creek through a channel and dilapidated culverts (Figures~\ref{fig:geNP} and~\ref{fig:photoCulverts}). The culverts through a levee were designed to be able to regulate flow to the North Pond, but sluice gates and culverts have since rusted and fallen into disrepair and culverts remain perennially open, allowing slow flooding and draining of the shallow North Pond. The highly constricted flow into and out of the culverts... \emph{connect back to observed salinity}
+The North Pond in the Pescadero marsh is connected to the Pescadero creek through a channel and dilapidated culverts (Figures~\ref{fig:geNP} and~\ref{fig:photoCulverts}). The culverts through a levee were designed to be able to regulate flow to the North Pond, but the control gates and culverts have since rusted and fallen into disrepair and culverts remain perennially open, allowing slow flooding and draining of the shallow North Pond. Flow into and out of the culverts is bathymetrically controlled because water levels below the bottom of the culverts cannot pass. The constricted flow could trap and release salt water either in accordance with the momentum-friction imbalance previous described, or by the physical barrier transforming a section of the estuary from open-channel flow to pipe flow and back. 
 
 \section{Sensitivity to inputs/assumptions} \label{sec:Sensitivity}
 
-Values of $K_x$ in saltier and fresher salinities remain an order of magnitude apart, but are sensitive to assumptions made in the analysis.
+Values of $K_x$ in saltier and fresher salinities remain an order of magnitude apart, but are sensitive to assumptions made in the analysis. Much of the variation described below stems from the fitting of a one-dimensional equation that does not account for vertical variability. 
 
 \subsection{Time dependence}
 
@@ -312,14 +314,14 @@ In this way, we have have been able to capture and interpret vertical and longit
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{chapter4/figures/PCBC_salt_516_520}
-	\caption{Bed CTD sensor measurements in the Pescadero (PC - blue line) and Butano (BC - red line) creeks 25 days after the measurements in figure~\ref{fig:PCBC421:425}. (a) gives the sensor depth and (b) gives the salinity. Here, the bed sensor in Butano creek measures two pulses of more saline water as well as an altered dS/dt similar to downstream sensors - suggesting the mechanism for bifurcated K$_x$ calculations near the mouth occurs upstream of the Butano sensor. The less truncated behavior of the PC depth record compared to figure~\ref{fig:PCBC421:425} could be from bed movement or movement of the mooring. A faulty CTD at BC only recorded for X weeks at a time, so data are missing between X and X.}  \label{fig:PCBC511:516}
+	\caption{Bed CTD sensor measurements in the Pescadero (PC - blue line) and Butano (BC - red line) creeks 25 days after the measurements in figure~\ref{fig:PCBC421:425}. (a) gives the sensor depth and (b) gives the salinity. Here, the bed sensor in Butano creek measures two pulses of more saline water as well as an altered dS/dt similar to downstream sensors - suggesting the mechanism for bifurcated $K_x$ calculations near the mouth occurs upstream of the Butano sensor. The less truncated behavior of the PC depth record compared to figure~\ref{fig:PCBC421:425} could be from bed movement or movement of the mooring. A faulty CTD at BC only recorded for X weeks at a time, so data are missing between X and X.}  \label{fig:PCBC511:516}
 \end{figure}
 
 
 \begin{figure}
 \centering
 	\includegraphics[height=.4\textheight]{chapter4/figures/timefrontpassagebysalt}
-	\caption{Time \emph{t} used to compute K$_x$ for the two-phase salinity structure. Time at salinity = 20 was used for the higher salinity calculation and time at salinity = 10 was used for the lower salinity calculation.}  \label{fig:tvsS}
+	\caption{Time \emph{t} used to compute $K_x$ for the two-phase salinity structure. Time at salinity = 20 was used for the higher salinity calculation and time at salinity = 10 was used for the lower salinity calculation.}  \label{fig:tvsS}
 \end{figure}
 
 
@@ -327,7 +329,7 @@ In this way, we have have been able to capture and interpret vertical and longit
 \begin{figure}
 \centering
 	\includegraphics[height=.6\textheight]{chapter4/figures/Kx_variation_with_time}
-	\caption{A range of K$_x$ computed using \emph{t} from different isopycnals (Figure~\ref{fig:tvsS}).}  \label{fig:Kxvst}
+	\caption{A range of $K_x$ computed using \emph{t} from different isopycnals (Figure~\ref{fig:tvsS}).}  \label{fig:Kxvst}
 \end{figure}
 
 
