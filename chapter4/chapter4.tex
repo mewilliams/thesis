@@ -7,20 +7,17 @@
 Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally. In the open state of the Pescadero estuary, salt moves in and out as described in the previous chapter. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research and centuries of cooking pasta. Here, then, I set out to explore salt mixing and dispersion characteristics in small bar-built estuaries.
 
 
-The common framework for understanding estuarine dispersion has been developed for larger and more well-mixed estuaries. 
+The common framework for understanding estuarine dispersion has been developed for larger and more well-mixed estuaries. Gravitational circulation - estuarine circulation on subtidal timescales - is driven primarily by the density gradeitn between ocean water and freshwater, but also includes contributions from wind, the earth's rotation, and inertial and frictional effects \parencite{fischer_mixing_1976}. This gravitational circulation is the main driver of salt transport in most large estuaries. 
 
+Vertical and lateral shear flow in estuaries is created by friction at the bed or channel edges, and the effect of salinity gradients may alter the shear flow. In estuaries, lateral shear dispersion is typically the dominant dispersion mechanism on tidal timescales \parencite{fischer_mixing_1979}. As described in the previous chapter, California's small bar-built estuaries disconnect from the ocean on diurnal timescales. This feature cuts off the open boundaries necessary for density-driven exchange flow, and thus we expect no subtidal currents to exist and the focus must be on tidal timescale processes. 
 
-Mixing and dispersion in estuaries is due to a combination of vertical and lateral processes. Shear dispersion,... tidal straining \parencite{Simpson:1990aa}, tidal trapping,.. \emph{also baroclinic processes on subtidal timescales that don't exist in these little estuaries}
+In estuaries with peripheral channels or margins, tidal trapping increases longitudinal dispersion processes. The balance between momentum and friction differs in the main channel of an estuary compared to side channels and embayments and allows for trapping.  Okubo \parencite*{okubo_effect_1973} modeled this as a diffusive process where the presence of traps increases dispersion via Fickian diffusion. The approach is intended to be valid over many tidal cycles. Missing from Okubo's analysis is the possibility that the changing friction/momentum balance in channels with branches and shallow periphery could be an advective process. MacVean and Stacey \parencite*{macvean_estuarine_2011} addressed this limitation with a new formulation of dispersion due to tidal trapping where the periphery is allowed to empty and fill on tidal timescales.
 
-
-
-In estuaries with peripheral channels or margins, tidal trapping increases longitudinal dispersion processes. The balance between momentum and friction differs in the main channel of an estuary compared to side channels and embayments and allows for trapping...  Okubo \parencite*{okubo_effect_1973} modeled this as a diffusive process where the presence of .... increases dispersion via Fickian diffusion. The approach is intended to be valid over many tidal cycles... Missing from Okubo's analysis is the possibility that the changing friction/momentum balance in channels with branches and shallow periphery could be an advective process. MacVean and Stacey \parencite*{macvean_estuarine_2011} addressed this limitation with a new formulation of dispersion due to tidal trapping where the periphery is allowed to empty and fill on tidal timescales... 
-
-Salt is a conservative tracer, making transport and mixing of salinity a quantifiable term. Implications of salinity transport and mixing can help to characterize similar effects on other terms such as nutrients, temperature, plankton, or suspended sediment. 
+Salt is a conservative tracer, making transport and mixing of salinity a quantifiable term, and the tracer a popular one in understanding estuarine dynamics. Monismith et al. \parencite*{monismith_structure_2002} examined the salinity structure with time in Northern San Francisco Bay to understand the intrusion of salinity in relation to freshwater flow important to the Sacramento-San Joaquin delta ecosystem and the municipal drinking water supply. Hetland and Geyer \parencite{hetland_idealized_2004} used salinity in a numerical modelling study of idealized estuaries similar to the Hudson River or James River estuary to .... 
+ Implications of salinity transport and mixing can help to characterize similar effects on other terms such as nutrients, temperature, plankton, or suspended sediment. 
 
 Here, we will transform the complexities of the Pescadero estuary into a one-dimensional system in order to calculate dispersion of salt to understand mixing and dispersion characteristics of the estuary.
 
-\emph{enough of a transition?}
 
 \section{Methods} \label{sec:ch4methods}
 
@@ -166,9 +163,9 @@ and the lateral dispersion is scaled as $K_y = 0.6u_*h$. The quantity, $\left[\f
 
 Using the values of $U$, $h$ from the vertical shear dispersion estimate above, an approximate estuary width of $W=20$m, and setting $T$ equal to $t_{isopycnal}$, the value $\left[\frac{1}{T^{'}}f(T^{'})\right]$ is found to be approximately 0.18 because the lateral mixing time is an order of magnitude higher that the time that salt is retained in the Pescadero estuary for one tidal cycle. Characteristic times, $t_{isopycnal}=2\times10^4$s to $3\times10^4$s (Table~\ref{tab:Kxtable}) give a range of lateral shear dispersion coefficients of 2.9m$^2$ s$^{-1}$ for lower salinity water to 4.3 m$^2$ s$^{-1}$ for higher salinity water which spends more time in the estuary. 
 
-Though these calculations of longitudinal dispersion by lateral shear rely on a lot of approximations, they do suggest two things: (1) at lower salinities, lateral shear dispersion alone cannot cause the dispersion obverved, and (2) at high salinities, lateral shear dispersion may account for dispersion observed.
+Though these calculations of longitudinal dispersion by lateral shear rely on a lot of approximations, they do suggest two things: (1) at lower salinities, lateral shear dispersion alone cannot cause the dispersion observed, and (2) at high salinities, lateral shear dispersion may account for dispersion observed.
 
-Another disperive mechanism we expect to appear in the marsh and branching channel Pescadero estuary is dispersion due to tidal trapping. Okubo \parencite*{okubo_effect_1973} solved for the dispersive effects of tidal trapping by considering it to be a diffusive flux, having the form in oscillatory tidal flow of
+Another dispersive mechanism we expect to appear in the marsh and branching channel Pescadero estuary is dispersion due to tidal trapping. Okubo \parencite*{okubo_effect_1973} solved for the dispersive effects of tidal trapping by considering it to be a diffusive flux, having the form in oscillatory tidal flow of
 \begin{eqnarray}
 K_x = \frac{K^{'}}{1+r} + \frac{ru_0^2}{2k(1+r)^2(1+r+\omega / k)} \label{eq:KxOkubo}
 \end{eqnarray}
@@ -182,11 +179,10 @@ This equation is somewhat problematic for use in the Pescadero estuary because t
 
 \section{Discussion} \label{sec:discCh4}
 
-Spatial mapping of the salinity field from time series of velocity relies on the assumption of pure advection ($X = \int{U}dt$). This allows a simple paramerization of salinity mixing for the entire estuary. This method lacks the ability to inform where mixing is occuring, whether it is a continuous process or controlled by a bathymetric feature elsewhere in the estuary. An informed understanding of the Pescadero estuary and measurements elsewhere in the estuary help to shed light on the likely mechanisms of salinity dispersion.
+Spatial mapping of the salinity field from time series of velocity relies on the assumption of pure advection ($X = \int{U}dt$). This allows a simple parametrization of salinity mixing for the entire estuary. This method lacks the ability to inform where mixing is occurring, whether it is a continuous process or controlled by a bathymetric feature elsewhere in the estuary. An informed understanding of the Pescadero estuary and measurements elsewhere in the estuary help to shed light on the likely mechanisms of salinity dispersion.
 
 \subsection{Why this two-part structure?}
 
-\emph{what is going on with this paragraph?}
 Calculation of $K_x$ shows that at higher salinities ($S_T$ to $S_0$) dispersion is an order of magnitude less than dispersion in lower salinities (0 to $S_T$). There are two ways to think salinity dependent mixing: as a longitudinal or a vertical process. In most larger estuaries, net salt transport occurs on subtidal timescales. In small bar-built estuaries, tidally discontinuous ocean forcing (cf chapter 3) and short residence times allow the estuary to reset as fresh on a tidal or daily timescale, thus eliminating subtidal gravitational circulation. This is the case in the Pescadero estuary.
 
 \begin{figure}[h]
@@ -205,9 +201,7 @@ In a well mixed estuary (Figure~\ref{fig:WellMixedEstuary}), fresh water is foun
 
 In a salt-wedge estuary (Figure~\ref{fig:SaltWedgeEstuary}), isopycnals are slanted. The lowest salinity water is still the farthest upstream in an estuary, and in an estuary that freshens tidally, the lowest salinity water will also travel farther than saltier water. Additionally, density effects mean that in vertically stratified estuaries, even if salt water intrudes far up estuary, fresher water will still be on the surface. In an idealized homogeneous channel estuary, whether water reaches farther upstream or has access to the surface does not matter. But, natural estuaries are not spatially homogeneous. In the Pescadero estuary, the upstream ends of the estuary are in two creeks, and probably more importantly, the estuary sits amid a marsh complex. Given the salt-wedge type salinity structure, fresher water is given access to shallow wetlands which the saltier water cannot access. 
 
-Knowing that the Pescadero estuary is always vertically stratified, we begin to look at vertical differences and processes to explain the differences in dispersion among high and low salinities. 
-
-\emph{TIE BACK TO short timescales? Tidally-discontinuous flow?}
+Knowing that the Pescadero estuary is nearly always vertically stratified, we begin to look at vertical differences and processes to explain the differences in dispersion among high and low salinities. The short residence time of salt water in the open estuary also means that lower salinity water is usually retained for longer time within the estuary (the exception being when high salinity water becomes bathymetrically trapped in deep regions of the estuary), so dispersive processes generally have longer time to act on fresher water. 
 
 \subsection{Vertical processes}
 
@@ -226,7 +220,7 @@ The variation in salinity here follows a spring-neap cycle. The early part and l
 
 Furthermore, the salinity of the second pulse of water increases and decreases going into and out of the spring tide. The second spring tide saw higher salinities than the first. The difference in these two spring tides was twofold: (1) higher freshwater flow was present during the earlier dataset, and (2) the amplitude of the tides on the second spring was higher. 
 
-The spring-neap variation of the salinity of lagged pulses is shown to influence the transition salinity such that a wider range of salinities exhibit high dispersion when the salinity of this pulse is higher. Perhaps more importantly, the absense of a second pulse of surface salinity during the neap tides likely shuts down the low-salinity dispersion mechanism.  
+The spring-neap variation of the salinity of lagged pulses is shown to influence the transition salinity such that a wider range of salinities exhibit high dispersion when the salinity of this pulse is higher. Perhaps more importantly, the absence of a second pulse of surface salinity during the neap tides likely shuts down the low-salinity dispersion mechanism.  
 
 \subsection{Longitudinal processes}
 
@@ -242,12 +236,12 @@ The Pescadero Creek flows into the lower estuary through a relatively constricte
 
 Bed salinity measurements in the Pescadero and Butano Creeks suggest that within the Pescadero Creek (upstream of the confluence of both the Butano and the culverts to the North Pond) do not demonstrate the same structure seen downstream of these controls. The time series of salinity is very sharp and mostly uniform on flood and ebb (Figures~\ref{fig:PCBC421:425} and~\ref{fig:PCBC511:516}). Bed salinity measurements in the Butano Creek show a slightly more relaxed flood salinity structure, and hint at a two-phase ebb salinity structure. The later time series (Figure~\ref{fig:PCBC511:516}) actually shows two pulses of salty water on the ebb, similar to surface measurements downstream. These measurements seem to implicate marsh processes in setting the two-phase salinity structure.
 
-\emph{TRAPPING COULD BE ADVECTIVE OR DIFFUSIVE PROCESS}
+Without more measurements, the location of tidal trapping within the marsh cannot be determined. Trapping is likely an advective process due to interaction of sloughs and shallow channels with the main channel, but may also contain a significant diffusive component due to flow interaction with shallow marshes and vegetation.
 
 \subsubsection{Culverts and flow to North Pond}
 The North Pond in the Pescadero marsh is connected to the Pescadero creek through a channel and dilapidated culverts (Figures~\ref{fig:geNP} and~\ref{fig:photoCulverts}). The culverts through a levee were designed to be able to regulate flow to the North Pond, but the control gates and culverts have since rusted and fallen into disrepair and culverts remain perennially open, allowing slow flooding and draining of the shallow North Pond. Flow into and out of the culverts is bathymetrically controlled because water levels below the bottom of the culverts cannot pass. The constricted flow could trap and release salt water either in accordance with the momentum-friction imbalance previous described, or by the physical barrier transforming a section of the estuary from open-channel flow to pipe flow and back. 
 
-\section{Sensitivity to inputs/assumptions} \label{sec:Sensitivity}
+\section{Sensitivity to inputs and assumptions} \label{sec:Sensitivity}
 
 Values of $K_x$ in saltier and fresher salinities remain an order of magnitude apart, but are sensitive to assumptions made in the analysis. Much of the variation described below stems from the fitting of a one-dimensional equation that does not account for vertical variability. 
 
@@ -268,23 +262,17 @@ Time $t_0$, the time from an infinitely sharp interface to the flood \emph{S(x)}
 This analysis demonstrates the time dependence of $K_x$, but the range of values remains reasonable and within the range of appropriate time values $K_{x,fresher}\gg K_{x,saltier}$. 
 
 \subsection{Influence of water retained in deep pools of the estuary}
-Near the mouth, the water column was seen to freshen on the semidiurnal tide (Figure~\ref{fig:UandSvsTch4}) but in the deep channel upstream, freshening sometimes only occurred on the large ebb (Figure~\ref{fig:DC_salt_421_425}). The time value assumed $t$ based on the passage of the salt front past the collocated ADV and CTD at NM, a time of less than one tidal cycle. However, some of the high salinity water passing the NM sensors on the large ebb is retained for an extra tidal cycle. Recalculating $t_{isopycnal}$ using the passage of the 20 PSU isopycnal from the flood tide which initially brought salt water into the estuary (which is the previous flood on the 23 and 24 April large ebbs), the value of $K_x$ drops to 2.1 m\textsuperscript{2} s\textsuperscript{-1} and 2.5 m\textsuperscript{2} s\textsuperscript{-1}, bringing the values in line with the previous two tides. Retention time in the salt pocket seems to explain the higher mixing derived with ... 
-
-\emph{Dispersion may be lower at high salinity than estimated here if the time high salinity water is retained is double our estimates. This may explain the different values of high salinity $K_x$ on 21 \& 22 April compared to on 23 \& 24 April.} 
-
-\emph{If the time values corresponding to the time from the previous flood to \emph{big} ebb, the values of Kx become 2.1 for 23 April and 2.5 for 24 April.}
+Near the mouth, the water column was seen to freshen on the semidiurnal tide (Figure~\ref{fig:UandSvsTch4}) but in the deep channel upstream, freshening sometimes only occurred on the large ebb (red line, figure~\ref{fig:DC_salt_421_425}). The $K_x$ calculation assumed $t$ based on the passage of the salt front past the collocated ADV and CTD at NM, a time of less than one tidal cycle. However, some of the high salinity water passing the NM sensors on the large ebb has been retained for two tidal cycles. Recalculating $t_{isopycnal}$ using the passage of the 20 PSU isopycnal from the flood tide which initially brought salt water into the estuary (which is the previous flood on the 23 and 24 April large ebbs), the value of $K_x$ drops to 2.1 m\textsuperscript{2} s\textsuperscript{-1} and 2.5 m\textsuperscript{2} s\textsuperscript{-1}, bringing the values in line with the previous two tides. Retention time in the salt pocket seems to explain the higher dispersion coefficient derived with a shorter time than physically realistic.
 
 \subsection{Bias from $S_0$ value}
-The value of $S_0 = 33.5$ was used to calculate $K_x$ at high and low salinities because it was representative of the salt field seen to flood past the NM collocated ADV and CTD. Figure~\ref{fig:DC_salt_421_425} shows that the surface salinity at DC only reached the value of the bed salinity on 22 April, and fell short on the other days (green line salinity $<$ red line salinity). 
-
-
-Thus, a value of $S_0 = 33.5$ would overestimate dispersion at low salinities if the two-part structure is indeed sensitive to depth of \emph{SOMETHING}. 
-
+The value of $S_0 = 33.5$ was used to calculate $K_x$ at high and low salinities because it was representative of the salt field seen to flood past the NM collocated ADV and CTD. Figure~\ref{fig:DC_salt_421_425} shows that the surface salinity at DC only reached the value of the bed salinity on 22 April, and fell short on the other days (green line salinity $<$ red line salinity). If the flood is also treated as having a two-part structure, calculating $K_x$ for lower salinities with $S_0<33.5$ reduces the dispersion coefficient. Setting $S_0=25$ reduces $K_x$ to 20 - 45 m$^2$ s$^{-1}$. Again, this bias is due to a one-dimensional assumption in a non one-dimensional estuary, but the overall conclusions remain the same. 
 
 \section{Conclusions}
 
 Mixing and dispersion of the salt field in the Pescadero estuary has been approached via application of the one-dimensional advection-diffusion equation to the salinity field in the estuary. By recreating the longitudinal salt structure in the estuary, it became apparent that the estuary was dispersing higher salinity water much less than low salinity water, and through calculation of the longitudinal dispersion coefficient, $K_x$, this difference was quantified to be an order of magnitude higher among lower salinities than higher salinities. Looking at the vertical structure of salinity revealed that on the large ebb tide, high surface salinities rapidly relaxed, and a second pulse of salty water followed the relaxation. This pulse may have induced vertical mixing in the water column, and certainly influenced the more dispersed salinity structure at lower salinities. 
-Upstream processes are implicated in tidal trapping which causes this second pulse of salty water.  The exact location or mechanism of trapping is not distinguishable by our dataset, but as the salinity of the second pulse becomes higher during spring tides, it appears that there is a bathymetric effect only accessible to surface waters. With spring tides, the water level becomes higher and higher salinity water which is lower in the water column due to density effects has access to the tidal trap(s). This effect should then feed back into the range of salinities which experiences high dispersion. 
+
+Upstream processes are implicated in tidal trapping which causes this second pulse of salty water.  The exact location or mechanism of trapping is not distinguishable by our dataset, but as the salinity of the second pulse becomes higher during spring tides, it appears that there is a bathymetric effect only accessible to surface waters. With spring tides, the water level becomes higher and higher salinity water which is lower in the water column due to density effects has access to the tidal trap(s). This effect should then feed back into the range of salinities which experiences high dispersion.
+
 In this way, we have have been able to capture and interpret vertical and longitudinal processes within a one-dimensional equation analysis. Findings, though location-specific in detail, should be relevant to highly stratified estuaries in general. 
 
 
