@@ -11,13 +11,36 @@
 \usepackage{epsfig}
 
 % color... 
-\usepackage{xcolor}
-\color{blue}
+% \usepackage{xcolor}
+% \color{blue}
 
 
 \usepackage[style=authoryear, maxcitenames=2, maxbibnames=99, url=false, clearlang=true, isbn=false, firstinits]{biblatex} %STYLE OPTION ADDED BY AUDRIC COLLIGNON 07/26/2012: use author (year) citation style
 \renewbibmacro{in:}{} %ADDED BY AUDRIC COLLIGNON 07/27/2012: remove In: in front of journal name in bibliography
 \urlstyle{same}
+
+
+% \renewbibmacro*{volume+number+eid}{%
+%   \printfield{volume}%
+% %  \setunit*{\adddot}% DELETED
+%   \setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+%   \printfield{number}%
+%   \setunit{\addcomma\space}%
+%   \printfield{eid}}
+% \DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+% This gets volume.number to be volume(number)
+\usepackage{xpatch}
+% No dot before number of articles
+\xpatchbibmacro{volume+number+eid}{%
+  \setunit*{\adddot}%
+}{%
+}{}{}
+% Number of articles in parentheses
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+
+
 
 \setcounter{tocdepth}{3} % 3 will put up to subsubsections into the TOC
 \setcounter{secnumdepth}{2} % 2 labels sections, 3 labels subsections. 
@@ -60,7 +83,7 @@
 % \approvalpage %!!! REMOVE IN FINAL VERSION !!!
 \copyrightpage  % INCLUDE IN FINAL VERSION
 
-%\include{abstract/abstract}  % PUT THIS BACK WHEN YOU'VE WRITTEN AN ABSTRACT.
+\include{abstract/abstract}  % PUT THIS BACK WHEN YOU'VE WRITTEN AN ABSTRACT.
 
 \begin{frontmatter}
 
@@ -76,8 +99,9 @@ To my mom, Arlene
 \tableofcontents
 \clearpage
 \listoffigures
-\clearpage
+% \clearpage
 \listoftables
+% \clearpage
 
 \begin{acknowledgements}
 % write acknowledgements here... include committee, officemates, massive list of field help, ... 
