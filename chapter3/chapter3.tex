@@ -82,6 +82,30 @@ of approximately 10 km of sandy beach with three other small inlets.
 The inlet is approximately 100 m long, and opens into a shallow lagoonal
 estuary (Figure \ref{f1_maps}b) 
 
+
+\begin{figure}[tp]
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.8\linewidth]{chapter3/figures/fig1a.pdf}
+	%\caption{1a}
+	\label{fig:sfig1a_coastline}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{chapter3/figures/figure1b_ed2.png}
+	%\caption{1b}
+	\label{fig:sfig1b_pdomap}
+\end{subfigure}
+\caption{(a) The Pescadero estuary sits on the California coast between Monterey
+and San Francisco Bays. The location of sensors referenced for tidal
+and wave conditions are shown. (b) The coastline and depth at high
+tide in the Pescadero estuary. Pescadero Creek flows into the estuary
+from the northeast, and Butano Creek from the south. The narrow channel
+connects the estuary to a northern pond through culverts.}
+\label{f1_maps}
+\end{figure}
+
+
 The lower estuary has a maximum high tide depth of approximately 2.7
 m, in the deep channel 350 m upstream from the mouth (Figure \ref{f1_maps}b) and maximum spring tidal range of 1.4 m. The mouth of this estuary
 typically closes with sand between August and October due to nearshore
@@ -144,6 +168,8 @@ Tidal, freshwater, and ocean wave condition measurements were obtained
 from NOAA and USGS gauges (cf. \ref{sub:ext_cond}).
 
 
+
+
 \subsubsection{Data processing\label{sub:Data-processing}}
 
 Estuarine depth measurements were made using several bed-mounted CTDs
@@ -196,6 +222,21 @@ rainstorm of water year 2012 occurred between April 11 and 15, so
 freshwater was present in the Pescadero estuary during the study,
 but no rain was recorded (Figure \ref{f2_QTHs}a). 
 
+
+\begin{figure}[tp]
+\includegraphics[width=\linewidth]{chapter3/figures/figure2_externalsensors.pdf}
+
+\protect\caption{Conditions during field deployment. The freshwater streamflow into
+the estuary (a) is scaled up by watershed area from the USGS Pescadero
+gauge (11162500). San Francisco tidal water level data (b) is given
+by NOAA measurements at Crissy Field (9414290). The NOAA NDBC buoy
+(46012) gives ocean significant wave height (c) 40 km WNW of the Pescadero
+estuary. Gray area indicates period that sensors were collecting data.
+Higher frequency measurements were obtained during the first 5 days
+to three weeks of the experiment, but CTD and some velocity data were
+collected for the entire shaded period. \label{f2_QTHs}}
+\end{figure}
+
 The California coast experiences a mixed semi-diurnal tide. The tidal
 range is between 1.1 m and 2.7 m at the closest NOAA gauge in San
 Francisco (NOAA 9414290, Figure \ref{f1_maps}a, Figure \ref{f2_QTHs}b).
@@ -224,6 +265,34 @@ a picture of tidally-varying estuarine-ocean connection emerges. Tidal
 attenuation in the Pescadero estuary occurs only on the large ebb
 of the semidiurnal mixed tide. Throughout the rest of the tidal cycle,
 the ocean and estuarine water levels are nearly the same.
+
+
+\begin{figure}
+\centering
+\includegraphics{chapter3/figures/figure0_schematic}
+
+\protect\caption{For most of the mixed semidiurnal tidal cycle, the estuary and ocean
+water levels are approximately the same, allowing for connection between
+the nearshore and estuarine environments. As the tide falls to it's
+daily low low state, the ocean retreats below the mouth of the perched
+estuary.\label{f4_wl_schematic}}
+\end{figure}
+
+\begin{figure}[tp]
+\includegraphics[width=\linewidth]{chapter3/figures/figure3_3day.pdf}
+
+\protect\caption{Time series of water level (a), depth-averaged velocity (b), and estuarine
+significant wave height (c). Ocean water level variations (a - gray
+line) due to tides are much greater than the estuarine water level
+changes (a - black and red line). Depth-averaged velocity (b) at DC
+shows a sinusoidal velocity and a frictionally controlled velocity
+during different phases of the tide. The presence of water surface
+oscillations is determined by an estuarine significant wave height
+(c). A threshold of 1 cm determines the presence of ``waves'' and
+the water level (a) and depth-averaged velocity (b) time series have
+been color-coded to presence of of this infragravity forcing (black
+- nearshore forced, red - no infragravity oscillations). \label{f3_HUHse}}
+\end{figure}
 
 This two-phase connection where for 16-17 hours of the 24 h tidal
 cycle the nearshore and estuary are connected but for 7-8 hours the
@@ -276,6 +345,36 @@ the relationship between ocean tides and estuarine tides are nearly
 to tidal water level. When $H_{s,e}$ falls below this threshold,
 the relation between the estuarine and ocean water level diverges,
 and a disconnected state persists (Figure \ref{f3_HUHse}a,c).
+
+
+
+%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
+\begin{figure}[tp]
+\includegraphics[width=\linewidth]{chapter3/figures/fig4_onetide_ADV.pdf}
+\includegraphics[width=\linewidth]{chapter3/figures/fig4_zoomed_ADV.pdf}
+\protect\caption{Measurements from an ADV measuring 20 cm above the bed at the NM station.
+(a) is the pressure record and (b) shows u and v components of velocity
+where u is principle flow determined by the 7.5 day dataset, and v
+is lateral flow orthogonal to u. The remaining plots (c-f) show two
+bursts when the tide was flooding (c,e) and ebbing (d,f) at approximately
+the same water depth. During flood large velocity oscillations occur
+with the surface motions. On ebb, these wave-like oscillations are
+cutoff in both pressure and velocity. The first 25 s of each pressure
+burst has been removed due to apparent aliasing. \label{f5_adv}}
+\end{figure}
+
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\linewidth]{chapter3/figures/fig5_vps_U_P_edited.pdf}
+
+\protect\caption{Variance preserving spectra of (a) depth (1 Hz CTD measurement), (b)
+u, and (c) v (8 Hz ADV measurements). Where data exists, spectra are
+computed on each burst. The white dashed lines indicate the infragravity
+frequency limits of $\frac{1}{300}$ Hz to $\frac{1}{30}$ Hz. The
+CTD was always submerged but the ADV came out of the water at some
+low tides. \label{f6_spectra}}
+\end{figure}
 
 Infragravity motions, aside from suggesting that the ocean and nearshore
 water levels are high enough to maintain a connection with the estuary
@@ -380,6 +479,30 @@ ocean tides, but even neglecting the long friction ebb, the variation
 in tidal amplitude within the estuary is highly non-linear and cannot
 be explained by ocean tidal forcing alone. 
 
+
+%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
+\begin{figure}
+\begin{subfigure}{.666\textwidth}
+	\centering
+\includegraphics[width=\textwidth]{chapter3/figures/figure7_alternate.pdf}
+\end{subfigure}
+\begin{subfigure}{.333\textwidth}
+\includegraphics[width=\textwidth]{chapter3/figures/figure7d_wavesetup_swh_vs_setup.pdf}
+\end{subfigure}
+\protect\caption{The relation between ocean water level and estuarine water level depends on ocean wave conditions for much of the tide. By subtracting the
+semidiurnal high tide in San Francisco (a, gray line) from the high
+tide water level in Pescadero (a, black/red line), the resulting setup
+(b) is in agreement with the size of ocean waves as given by the deep
+water wave buoy (c). This relationship is illustrated in (e) where
+figures (b) and (c) are plotted against each other on a time interpolant.
+An increase of 1 m in ocean waves causes a 10 cm increase in estuarine
+water level setup within the estuary. The amplitude of estuarine wave
+height also increases with larger waves (d) with an approximate 3
+cm increase in the maximum estuarine wave height for every 1 m increase
+in ocean significant wave height (f). \label{f7_setup}}
+\end{figure}
+
+
 The tidal water level variation in the Pescadero estuary is shown
 to be an attenuated but wave-amplified version of the ocean tides.
 As observed in other coastal lagoons (e.g. \cite{malhadas_effect_2009}),
@@ -403,7 +526,25 @@ the estuary. As the ocean significant wave height increases, so does
 the tidally-modulated estuarine significant wave height (Figure \ref{f7_setup}d).
 Comparing peak $H_{s,e}$ values to the ocean significant wave height
 $H_{s,o}$, we see a 1 m increase in ocean waves increases the maximum
-estuarine significant wave height by 3 cm.
+estuarine significant wave height by 3 cm. 
+
+%%%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics{chapter3/figures/figure8_u_h.pdf}
+\includegraphics[width=0.7\linewidth]{chapter3/figures/f_extra_FC_cd.pdf}
+
+\protect\caption{The general trend of oscillation between ocean/wave forced and non-wavy
+persists through the spring-neap cycle, shown by three weeks of estuarine
+water level (a) and depth-averaged velocity (b) data. Depth and velocity
+data are plotted against each other in (c) and (d) for the spring
+tides (28 April to 4 May is excluded). The frictionally controlled
+regime is clear during the spring by the shape of $\overline{u}$,
+plotted with $h^{\frac{1}{2}}$ in (d), but with higher low tide during
+the neap, the ebb may not be long or ocean water level low enough
+to reach a frictional state. \label{f8_ltHU}}
+\end{figure}
+
 
 With this alteration of tidal timescale water levels by wave setup,
 either the duration of high tide or the tidal velocities would have
@@ -556,6 +697,15 @@ small estuaries where residence time during the open state is small
 or wind-mixing is limited, energetic velocity bursts due to infragravity
 in the nearshore should be a dominant driver of buoyancy mixing. 
 
+
+\begin{figure}
+\includegraphics{chapter3/figures/figure10_KE_all.pdf}\protect\caption{Velocity and kinetic energy measurements by the ADV at NM. Principle
+flow $u$ is depicted in black and lateral flow $v$ is gray in (a),
+and kinetic energy of both horizontal components of velocity is given
+in (b). \label{f9_KE}}
+\end{figure}
+
+
 In larger, density stratified estuaries, such as the Russian River
 estuary, these high energy events likely contribute to buoyancy mixing
 near the mouth, thus setting the salinity of ocean-sourced water being
@@ -625,6 +775,17 @@ tidal energy \parencite{wolanski_undular_2004} while breaking tidal bores
 contribute an energetic burst of turbulent kinetic energy (TKE) \parencite{simpson_reynolds_2004}. The bore structure in the Pescadero estuary as the tide rises is usually undular but has been observed to be breaking when the ocean wave climate is very large. 
 
 
+
+\begin{figure}
+\centering
+\includegraphics{chapter3/figures/mouth_yz_schematic.pdf} \caption{At low water, the inlet tends to be channelized and flow is laterally
+restricted. As the water level increases, flow across the flat beach
+is possible, introducing further non-linearities to wave motions.} \label{f10_mouth_yz}
+
+\end{figure}
+
+
+
 \subsection{Salt transport}
 
 
@@ -634,6 +795,20 @@ The salt response to the tidally disconnected forcing should depend
 on freshwater inflow, size, and shape of the estuary. The response
 of the salt field in the Pescadero estuary is described here in general
 terms applicable to other salt stratified bar-built estuaries.
+
+%%%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
+\begin{figure}
+\includegraphics[width=\linewidth]{chapter3/figures/figure_saltprofile_xz_edited.pdf}
+
+\includegraphics[width=.9\linewidth]{chapter3/figures/figure_saltprofile_h_u_t.pdf}
+
+\protect\caption{Interpolated salt cross-sections of the Pescadero estuary for six
+different times (a-f) on the tidal cycle, shown in (g,h). Location
+of CTDs used for interpolation are shown with (+), and x is positive
+upstream. (g,h) gives the estuarine water level and depth-averaged
+velocity at DC corresponding to the salt-profiles above. \label{f10_Sxz}}
+\end{figure}
+
 
 Looking first at salt movement at several snapshots in time in an
 estuarine cross section, Figure \ref{f10_Sxz} (a-f) depicts the salt
@@ -649,6 +824,21 @@ of freshwater flow, the longitudinal stratification relaxes to vertical
 stratification (Figure \ref{f10_Sxz}c) and a reversal of the pycnoclines
 may occur (Figure \ref{f10_Sxz}d). Salt water continues to be removed
 from the salt trap through the rest of the ebb (Figure \ref{f10_Sxz}e).
+
+
+
+\begin{figure}
+\includegraphics[width=\linewidth]{chapter3/figures/figure9_z_t_salt_vel_shear_wcb_edited.pdf}
+\protect\caption{Salinity, velocity, and vertical shear with time for three conditions
+during the field deployment. The first column (a,c,g) shows conditions
+during a spring tide with higher freshwater flow. The second column
+(b,e,h) gives neap conditions and an intermediate freshwater flow,
+and the third column (c,f,i) gives spring conditions for larger spring
+tides than previously and with less freshwater flow into the estuary.
+\label{f11_SUtz}}
+\end{figure}
+
+
 
 Figure \ref{f11_SUtz} depicts the changing salinity and velocity
 structure and shear ($\frac{\partial u}{\partial z}$) with time over
@@ -772,187 +962,4 @@ quantify this connection.
 
 %**********************************************************************************************************************************************************************************************
 % FIGURES
-
-
-\begin{figure}[t]
-\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=.8\linewidth]{chapter3/figures/fig1a.pdf}
-	%\caption{1a}
-	\label{fig:sfig1a_coastline}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=\linewidth]{chapter3/figures/figure1b_ed2.png}
-	%\caption{1b}
-	\label{fig:sfig1b_pdomap}
-\end{subfigure}
-\caption{(a) The Pescadero estuary sits on the California coast between Monterey
-and San Francisco Bays. The location of sensors referenced for tidal
-and wave conditions are shown. (b) The coastline and depth at high
-tide in the Pescadero estuary. Pescadero Creek flows into the estuary
-from the northeast, and Butano Creek from the south. The narrow channel
-connects the estuary to a northern pond through culverts.}
-\label{f1_maps}
-\end{figure}
-
-
-\begin{figure}
-\includegraphics[width=\linewidth]{chapter3/figures/figure2_externalsensors.pdf}
-
-\protect\caption{Conditions during field deployment. The freshwater streamflow into
-the estuary (a) is scaled up by watershed area from the USGS Pescadero
-gauge (11162500). San Francisco tidal water level data (b) is given
-by NOAA measurements at Crissy Field (9414290). The NOAA NDBC buoy
-(46012) gives ocean significant wave height (c) 40 km WNW of the Pescadero
-estuary. Gray area indicates period that sensors were collecting data.
-Higher frequency measurements were obtained during the first 5 days
-to three weeks of the experiment, but CTD and some velocity data were
-collected for the entire shaded period. \label{f2_QTHs}}
-
-
-\end{figure}
-
-
-\begin{figure}
-\includegraphics[width=\linewidth]{chapter3/figures/figure3_3day.pdf}
-
-\protect\caption{Time series of water level (a), depth-averaged velocity (b), and estuarine
-significant wave height (c). Ocean water level variations (a - gray
-line) due to tides are much greater than the estuarine water level
-changes (a - black and red line). Depth-averaged velocity (b) at DC
-shows a sinusoidal velocity and a frictionally controlled velocity
-during different phases of the tide. The presence of water surface
-oscillations is determined by an estuarine significant wave height
-(c). A threshold of 1 cm determines the presence of ``waves'' and
-the water level (a) and depth-averaged velocity (b) time series have
-been color-coded to presence of of this infragravity forcing (black
-- nearshore forced, red - no infragravity oscillations). \label{f3_HUHse}}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics{chapter3/figures/figure0_schematic}
-
-\protect\caption{For most of the mixed semidiurnal tidal cycle, the estuary and ocean
-water levels are approximately the same, allowing for connection between
-the nearshore and estuarine environments. As the tide falls to it's
-daily low low state, the ocean retreats below the mouth of the perched
-estuary.\label{f4_wl_schematic}}
-\end{figure}
-
-%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
-\begin{figure}
-\includegraphics[width=\linewidth]{chapter3/figures/fig4_onetide_ADV.pdf}
-\includegraphics[width=\linewidth]{chapter3/figures/fig4_zoomed_ADV.pdf}
-\protect\caption{Measurements from an ADV measuring 20 cm above the bed at the NM station.
-(a) is the pressure record and (b) shows u and v components of velocity
-where u is principle flow determined by the 7.5 day dataset, and v
-is lateral flow orthogonal to u. The remaining plots (c-f) show two
-bursts when the tide was flooding (c,e) and ebbing (d,f) at approximately
-the same water depth. During flood large velocity oscillations occur
-with the surface motions. On ebb, these wave-like oscillations are
-cutoff in both pressure and velocity. The first 25 s of each pressure
-burst has been removed due to apparent aliasing. \label{f5_adv}}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{chapter3/figures/fig5_vps_U_P_edited.pdf}
-
-\protect\caption{Variance preserving spectra of (a) depth (1 Hz CTD measurement), (b)
-u, and (c) v (8 Hz ADV measurements). Where data exists, spectra are
-computed on each burst. The white dashed lines indicate the infragravity
-frequency limits of $\frac{1}{300}$ Hz to $\frac{1}{30}$ Hz. The
-CTD was always submerged but the ADV came out of the water at some
-low tides. \label{f6_spectra}}
-\end{figure}
-
-
-%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
-\begin{figure}
-\begin{subfigure}{.666\textwidth}
-	\centering
-\includegraphics[width=\textwidth]{chapter3/figures/figure7_alternate.pdf}
-\end{subfigure}
-\begin{subfigure}{.333\textwidth}
-\includegraphics[width=\textwidth]{chapter3/figures/figure7d_wavesetup_swh_vs_setup.pdf}
-\end{subfigure}
-\protect\caption{The relation between ocean water level and estuarine water level depends on ocean wave conditions for much of the tide. By subtracting the
-semidiurnal high tide in San Francisco (a, gray line) from the high
-tide water level in Pescadero (a, black/red line), the resulting setup
-(b) is in agreement with the size of ocean waves as given by the deep
-water wave buoy (c). This relationship is illustrated in (e) where
-figures (b) and (c) are plotted against each other on a time interpolant.
-An increase of 1 m in ocean waves causes a 10 cm increase in estuarine
-water level setup within the estuary. The amplitude of estuarine wave
-height also increases with larger waves (d) with an approximate 3
-cm increase in the maximum estuarine wave height for every 1 m increase
-in ocean significant wave height (f). \label{f7_setup}}
-\end{figure}
-
-
-%%%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
-\begin{figure}
-\centering
-\includegraphics{chapter3/figures/figure8_u_h.pdf}
-\includegraphics[width=0.7\linewidth]{chapter3/figures/f_extra_FC_cd.pdf}
-
-\protect\caption{The general trend of oscillation between ocean/wave forced and non-wavy
-persists through the spring-neap cycle, shown by three weeks of estuarine
-water level (a) and depth-averaged velocity (b) data. Depth and velocity
-data are plotted against each other in (c) and (d) for the spring
-tides (28 April to 4 May is excluded). The frictionally controlled
-regime is clear during the spring by the shape of $\overline{u}$,
-plotted with $h^{\frac{1}{2}}$ in (d), but with higher low tide during
-the neap, the ebb may not be long or ocean water level low enough
-to reach a frictional state. \label{f8_ltHU}}
-\end{figure}
-
-
-\begin{figure}
-\includegraphics{chapter3/figures/figure10_KE_all.pdf}\protect\caption{Velocity and kinetic energy measurements by the ADV at NM. Principle
-flow $u$ is depicted in black and lateral flow $v$ is gray in (a),
-and kinetic energy of both horizontal components of velocity is given
-in (b). \label{f9_KE}}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics{chapter3/figures/mouth_yz_schematic.pdf} \caption{At low water, the inlet tends to be channelized and flow is laterally
-restricted. As the water level increases, flow across the flat beach
-is possible, introducing further non-linearities to wave motions.} \label{f10_mouth_yz}
-
-\end{figure}
-
-
-
-%%%%%%% NEEDS SUBFIGURES!!%%%%%%%%%%
-\begin{figure}
-\includegraphics[width=\linewidth]{chapter3/figures/figure_saltprofile_xz_edited.pdf}
-
-\includegraphics[width=.9\linewidth]{chapter3/figures/figure_saltprofile_h_u_t.pdf}
-
-\protect\caption{Interpolated salt cross-sections of the Pescadero estuary for six
-different times (a-f) on the tidal cycle, shown in (g,h). Location
-of CTDs used for interpolation are shown with (+), and x is positive
-upstream. (g,h) gives the estuarine water level and depth-averaged
-velocity at DC corresponding to the salt-profiles above. \label{f10_Sxz}}
-\end{figure}
-
-
-\begin{figure}
-\includegraphics[width=\linewidth]{chapter3/figures/figure9_z_t_salt_vel_shear_wcb_edited.pdf}
-\protect\caption{Salinity, velocity, and vertical shear with time for three conditions
-during the field deployment. The first column (a,c,g) shows conditions
-during a spring tide with higher freshwater flow. The second column
-(b,e,h) gives neap conditions and an intermediate freshwater flow,
-and the third column (c,f,i) gives spring conditions for larger spring
-tides than previously and with less freshwater flow into the estuary.
-\label{f11_SUtz}}
-\end{figure}
-
 
