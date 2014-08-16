@@ -4,7 +4,7 @@
 
 \section{Introduction}
 
-Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally. In the open state of the Pescadero estuary, salt moves in and out as described in the previous chapter. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research. Here, salt mixing and dispersion characteristics in small bar-built estuaries is explored.
+Salt transport in small, bar-built estuaries tends to be frontal. Sharp gradients exist between freshwater and salt water, both vertically and horizontally. In the open state of the Pescadero estuary, salt moves in and out as described in chapter 3. This general description treats salt water and freshwater as relatively immiscible, a character deemed untrue by decades of estuarine physics research. Here, salt mixing and dispersion characteristics in small bar-built estuaries are explored.
 
 
 The common framework for understanding estuarine dispersion has been developed for larger and more well-mixed estuaries. Gravitational circulation - estuarine circulation on subtidal timescales - is driven primarily by the density gradient between ocean water and freshwater, but also includes contributions from wind, the earth's rotation, and inertial and frictional effects \parencite{fischer_mixing_1976}. This gravitational circulation is the main driver of salt transport in most large estuaries, and dispersion in this case is by vertical shear on subtidal timescales. 
@@ -15,7 +15,7 @@ In estuaries with peripheral channels or margins, tidal trapping increases longi
 
 Salt is a conservative tracer, making transport and mixing of salinity a quantifiable term, and the tracer a popular one in understanding estuarine dynamics. Monismith et al. \parencite*{monismith_structure_2002} examined the salinity structure with time in Northern San Francisco Bay to understand the intrusion of salinity in relation to freshwater flow important to the Sacramento-San Joaquin delta ecosystem and the municipal drinking water supply. They found the longitudinal dispersion, $K_x$, to be dependent on freshwater flow rate and location in the estuary, and varying from under 10$^1$ m$^2$ s$^{-1}$ to over 10$^3$ m$^2$ s$^{-1}$. Lerczak et al. \parencite*{lerczak_mechanisms_2006} examined salinity dispersion in the Hudson River, and found it to be driven by vertical shear dispersion induced by gravitation circulation, with values of $K_x$ up to 2500 m$^2$ s$^{-1}$. Implications of salinity transport and mixing can help to characterize similar effects on other terms such as nutrients, temperature, plankton, or suspended sediment. 
 
-Here, we will transform the complexities of the Pescadero estuary into a one-dimensional system in order to calculate dispersion of salt to understand mixing and dispersion characteristics of the estuary.
+Here, we will transform the complexities of the Pescadero estuary into a one-dimensional system in order to calculate dispersion of salt to understand mixing and dispersion characteristics of the estuary. This framework allows comparison to other estuaries.
 
 
 \section{Methods} \label{sec:ch4methods}
@@ -33,7 +33,7 @@ where \emph{S} is salinity, \emph{U} is depth-averaged velocity, and $K_x$ is th
 \end{eqnarray}
 Assuming salinity follows a step function at time $t=0$ and that the boundaries of the system remain at ocean salinity, $S=S_0$ and freshwater salinity $S=0$, an analytical solution to equation~\ref{eq:1ddiff} can be obtained,
 \begin{eqnarray}
-S(x,t) = \frac{S_0}{2}\left(1+erf\left(\frac{x-x_c}{\sqrt{4K_xt}}\right)\right) \label{eq:S}
+S(x,t) = \frac{S_0}{2}\left(1-erf\left(\frac{x-x_c}{\sqrt{4K_xt}}\right)\right) \label{eq:S}
 \end{eqnarray}
 where \emph{x$_c$} is the center of the salt front. This solution describes the relaxation of the salt field to be a function of time and dispersion, and predicts a form shown in figure~\ref{fig:Sgraphic}. Using observations of the salinity field, the value of $K_x$ can be obtained from this analytical solution. Here the spatially independent $K_x$ is also assumed to be invariant in time ($K_x\ne f(x,t)$). 
 
@@ -65,7 +65,7 @@ To make this dataset, velocity measurements were burst-averaged (the instruments
 
 To get $K_x$ from the recreated \emph{S(x)}, equation~\ref{eq:S} is rearranged into the linear form:
 \begin{eqnarray}
-erf^{-1}\left(\frac{2S}{S_0}-1\right) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
+erf^{-1}\left(1-\frac{2S}{S_0}\right) = \frac{x-x_c}{\sqrt{4K_xt}} \label{eq:linfitS}
 \end{eqnarray}
 and a linear fit ($y = ax + b$ where a = $\frac{1}{\sqrt{4K_xt}}$ and b = $\frac{-x_c}{\sqrt{4K_xt}}$) is applied. Given a linear regression fit value for \emph{a}, to solve for $K_x$, a value of \emph{t} must be determined. In this case it is appropriate to use the time between when the front floods past the sensors and subsequent ebb of said front following an isopycnal ($t_{isopycnal}$). This method assumes an infinitely sharp front at time $t_0$ (Figure~\ref{fig:Sgraphic}). Setting $t_0$ as the time at which the front floods past the sensors will overestimate $K_x$. Thus, an estimation on the initial time from a sharp front to the flood front is made. By setting a step function at the mouth, and approximating advection velocities U = 0.1 m s$^{-1}$ and a length from the ocean to NM of 100 m, initial time, t$_0$ is 1000 s. This time is then added to the time between a selected isopycnal passing by the sensor, $t = t_{isopycnal}+t_0$. Specific considerations in selecting the isopycnal to follow, and influence of $t_0$ will be discussed in section~\ref{sec:Sensitivity}. A value for $S_0$ is also necessary, and here we have used $S_0$=33.5.
 
@@ -174,7 +174,7 @@ K_x = \frac{2}{3}K^{'} + 15.6 \mathrm{m}^2 \mathrm{s}^{-1} \label{eq:KxOkubownum
 \end{eqnarray}
 showing that tidal trapping can greatly increase longitudinal dispersion, and is the likely mechanism for the high dispersion coefficient calculated for lower salinity waters in the Pescadero estuary. Roughly speaking, the second term on the right in equation~\ref{eq:KxOkubo} is the increase of dispersion due to tidal trapping.
 
-This equation is somewhat problematic for use in the Pescadero estuary because tidal trapping as a diffusive term should be over many tides, and we observe the system to reset on tidal timescales. What it does imply, however, is that tidal trapping can greatly increase longitudinal dispersion within an estuary. A more appropriate calculation may be that providd in MacVean and Stacey ~\parencite*{macvean_estuarine_2011}. Their formulation still quantifies dispersion over many tides, but as an advective process. A better understanding of where advective trapping occurs and measurements that do not exist for this dataset would be required to apply their method to this system. 
+This equation is somewhat problematic for use in the Pescadero estuary because tidal trapping as a diffusive term should be over many tides, and we observe the system to reset on tidal timescales. What it does imply, however, is that tidal trapping can greatly increase longitudinal dispersion within an estuary. A more appropriate calculation may be that provided in MacVean and Stacey ~\parencite*{macvean_estuarine_2011}. Their formulation still quantifies dispersion over many tides, but as an advective process. A better understanding of where advective trapping occurs and measurements that do not exist for this dataset would be required to apply their method to this system. 
 
 \section{Discussion} \label{sec:discCh4}
 
@@ -341,9 +341,9 @@ The value of $S_0 = 33.5$ was used to calculate $K_x$ at high and low salinities
 
 \section{Conclusions}
 
-Mixing and dispersion of the salt field in the Pescadero estuary has been approached via application of the one-dimensional advection-diffusion equation to the salinity field in the estuary. By recreating the longitudinal salt structure in the estuary, it became apparent that the estuary was dispersing higher salinity water much less than low salinity water, and through calculation of the longitudinal dispersion coefficient, $K_x$, this difference was quantified to be an order of magnitude higher among lower salinities than higher salinities. Looking at the vertical structure of salinity revealed that on the large ebb tide, high surface salinities rapidly relaxed, and a second pulse of salty water followed the relaxation. This pulse may have induced vertical mixing in the water column, and certainly influenced the more dispersed salinity structure at lower salinities. 
+Mixing and dispersion of the salt field in the Pescadero estuary has been approached via application of the one-dimensional advection-diffusion equation to the salinity field in the estuary. By recreating the longitudinal salt structure in the estuary, it became apparent that the estuary was dispersing higher salinity water much less than low salinity water, and through calculation of the longitudinal dispersion coefficient, $K_x$, this difference was quantified to be an order of magnitude higher among lower salinities than higher salinities. Looking at the vertical structure of salinity revealed that on the large ebb tide, high surface salinities rapidly relaxed, and a second pulse of salty water followed the relaxation. This pulse may have induced vertical mixing in the water column, and certainly influenced the more dispersed salinity structure at lower salinities. The one-dimensional framework simplifies some complexities of the system yet captures dispersion by different physical processes. 
 
 Upstream processes are implicated in trapping which causes this second pulse of salty water.  The exact location or mechanism of trapping is not distinguishable by our dataset, but it is probably within the Butano marsh. As the salinity of the second pulse becomes higher during spring tides, it appears that there is a bathymetric effect only accessible to surface waters. With spring tides, the water level becomes higher and higher salinity water which is lower in the water column due to density effects has access to the tidal trap(s). This effect should then feed back into the range of salinities which experiences high dispersion.
 
-In this way, we have have been able to capture and interpret vertical and longitudinal processes within a one-dimensional equation analysis. Findings, though location-specific in detail, should be relevant to highly stratified estuaries in general. 
+In this way, we have been able to capture and interpret vertical and longitudinal processes within a one-dimensional equation analysis. Findings, though location-specific in detail, should be relevant to highly stratified estuaries in general. The small dispersion coefficient among high salinities is expected for an estuary that remains highly stratified, though dispersion coefficient calculations are rare in this type of estuary. The higher dispersion coefficient among lower salinity water seems to emphasize the role of shallow traps in setting dispersion characteristics and may be comparable to dispersion in more well mixed estuaries with different mechanisms of mixing and dispersion.
 
